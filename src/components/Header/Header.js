@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import { Font } from 'expo'
 import { Actions } from 'react-native-router-flux'
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 import RenderText from './../RenderText'
 
@@ -17,7 +18,7 @@ export default class Header extends React.Component {
       return (
         <View style={styles.HeaderLeft}>
           <TouchableOpacity onPress={() => Actions.pop()}>
-            <RenderText style='h2' text='L' />
+            <Icon name="arrow-back" size={16} color="#fff" />
           </TouchableOpacity>
         </View>
       )

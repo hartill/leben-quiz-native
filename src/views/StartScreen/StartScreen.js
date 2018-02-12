@@ -1,7 +1,8 @@
 import React from 'react'
-import { StyleSheet, Text, View, TouchableHighlight, Picker } from 'react-native'
+import { StyleSheet, Text, View, TouchableHighlight, Picker, AsyncStorage } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 import { Font } from 'expo'
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 import Header from './../../components/Header'
 import RenderText from './../../components/RenderText'
@@ -9,10 +10,34 @@ import RenderText from './../../components/RenderText'
 export default class StartScreen extends React.Component {
   state = {
     ready: false,
+    userLocation: '',
   }
 
   componentWillMount(){
     this._loadAssetsAsync()
+    this.getKey()
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    console.log(nextState.userLocation)
+  }
+
+  async getKey() {
+    try {
+      const value = await AsyncStorage.getItem('@LebenStore:userLocation')
+      this.setState({userLocation: value})
+    } catch (error) {
+      console.log("Error retrieving data" + error)
+    }
+  }
+
+  async saveKey(value) {
+    try {
+      await AsyncStorage.setItem('@LebenStore:userLocation', value);
+      this.setState({userLocation: value})
+    } catch (error) {
+      console.log("Error saving data" + error);
+    }
   }
 
   async _loadAssetsAsync(){
@@ -35,6 +60,8 @@ export default class StartScreen extends React.Component {
           <Header title='Welcome' icons={false} />
           <View style={styles.ContentContainer}>
             <Picker
+              selectedValue = {this.state.userLocation}
+              onValueChange={(value) => this.saveKey(value)}
               style={[styles.Picker]}
               itemStyle={styles.PickerItem}
               mode='dropdown'
@@ -46,17 +73,32 @@ export default class StartScreen extends React.Component {
             </Picker>
             <TouchableHighlight onPress={() => Actions.screenTwo()}>
               <View style={[styles.Button, styles.Blue, styles.TopSpacing]}>
+                <View style={[styles.ButtonText]}>
                   <RenderText style='p2' text='Screen One' />
+                </View>
+                <View style={[styles.ButtonIcon]}>
+                  <Icon name="arrow-forward" size={16} color="#fff" />
+                </View>
               </View>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => Actions.screenTwo()}>
               <View style={[styles.Button, styles.Red, styles.TopSpacing]}>
-                  <RenderText style='p2' text='Screen Two' />
+              <View style={[styles.ButtonText]}>
+                <RenderText style='p2' text='Screen Two' />
+              </View>
+              <View style={[styles.ButtonIcon]}>
+                <Icon name="arrow-forward" size={16} color="#fff" />
+              </View>
               </View>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => Actions.screenTwo()}>
               <View style={[styles.Button, styles.Green, styles.TopSpacing]}>
-                  <RenderText style='p2' text='Screen Three' />
+              <View style={[styles.ButtonText]}>
+                <RenderText style='p2' text='Screen Three' />
+              </View>
+              <View style={[styles.ButtonIcon]}>
+                <Icon name="arrow-forward" size={16} color="#fff" />
+              </View>
               </View>
             </TouchableHighlight>
           </View>
@@ -94,10 +136,21 @@ const styles = StyleSheet.create({
     fontFamily: 'montserrat',
   },
   Button: {
+    position: 'relative',
     flexBasis: 50,
     backgroundColor: '#37b1e3',
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  ButtonText: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  ButtonIcon: {
+    position: 'absolute',
+    right: 10,
   },
   Blue: {
     backgroundColor: '#37b1e3',
