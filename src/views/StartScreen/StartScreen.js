@@ -18,10 +18,6 @@ export default class StartScreen extends React.Component {
     this.getKey()
   }
 
-  componentWillUpdate(nextProps, nextState) {
-    console.log(nextState.userLocation)
-  }
-
   async getKey() {
     try {
       const value = await AsyncStorage.getItem('@LebenStore:userLocation')
@@ -53,6 +49,7 @@ export default class StartScreen extends React.Component {
       this.setState({ready: true})
     }
   }
+
   render() {
     if(this.state.ready){
       return (

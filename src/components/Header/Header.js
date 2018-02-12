@@ -29,7 +29,7 @@ export default class Header extends React.Component {
     if (this.props.icons === true) {
       return (
         <View style={styles.HeaderRight}>
-          <RenderText style='h2' text='R' />
+          <Icon name="view-module" size={16} color="#fff" />
         </View>
       )
     }
