@@ -6,21 +6,42 @@ import { Actions } from 'react-native-router-flux'
 import RenderText from './../RenderText'
 
 export default class Header extends React.Component {
+    constructor(props) {
+    super(props)
+    this.renderButtonLeft = this.renderButtonLeft.bind(this)
+    this.renderButtonRight = this.renderButtonRight.bind(this)
+  }
+
+  renderButtonLeft() {
+    if (this.props.icons === true) {
+      return (
+        <View style={styles.HeaderLeft}>
+          <TouchableOpacity onPress={() => Actions.pop()}>
+            <RenderText style='h2' text='L' />
+          </TouchableOpacity>
+        </View>
+      )
+    }
+  }
+
+  renderButtonRight() {
+    if (this.props.icons === true) {
+      return (
+        <View style={styles.HeaderRight}>
+          <RenderText style='h2' text='R' />
+        </View>
+      )
+    }
+  }
 
   render() {
     return (
       <View style={styles.HeaderContainer}>
-        <View style={styles.HeaderLeft}>
-          <TouchableOpacity onPress={() => Actions.pop()}>
-            <RenderText style='p' text='L' />
-          </TouchableOpacity>
-        </View>
+        {this.renderButtonLeft()}
         <View style={styles.HeaderCenter}>
           <RenderText style='h1' text={this.props.title !== null ? this.props.title : 'untitled'} />
         </View>
-        <View style={styles.HeaderRight}>
-          <RenderText style='p' text='R' />
-        </View>
+        {this.renderButtonRight()}
       </View>
     )
   }

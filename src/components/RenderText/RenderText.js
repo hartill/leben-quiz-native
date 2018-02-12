@@ -41,13 +41,21 @@ const styles = StyleSheet.create({
   h1: {
     fontFamily: 'montserrat',
     color: '#fff',
-    fontWeight: 'bold',
+    fontSize: 18,
+  },
+  h2: {
+    fontFamily: 'montserrat',
+    color: '#fff',
     fontSize: 18,
   },
   p: {
     fontFamily: 'montserrat',
+    color: '#555',
+    fontSize: 16,
+  },
+  p2: {
+    fontFamily: 'montserrat',
     color: '#fff',
-    fontWeight: 'normal',
-    fontSize: 14,
+    fontSize: 16,
   },
 });
