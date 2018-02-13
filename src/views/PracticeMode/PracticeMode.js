@@ -5,14 +5,18 @@ import Header from './../../components/Header'
 import RenderText from './../../components/RenderText'
 
 import QuizContainer from './../../components/Quiz/QuizContainer'
-import quizQuestions from './../../data/quizQuestions'
 
-export default class ScreenTwo extends React.Component {
+export default class PracticeMode extends React.Component {
+  constructor(props) {
+    super(props)
+    this.questions = this.props.questions
+    this.numberOfQuestions = this.props.numberOfQuestions
+  }
   render() {
-    let question = quizQuestions[1]
+    let question = this.questions[1]
     return (
       <View style={styles.AppContainer}>
-        <Header title='Screen Two' icons={true}/>
+        <Header title='Trainieren' icons={true}/>
         <QuizContainer question={question}/>
         <View style={styles.FooterContainer}>
           <RenderText style='p2' text='Page Content, screen 2'/>

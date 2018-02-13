@@ -7,15 +7,32 @@ import Icon from 'react-native-vector-icons/MaterialIcons'
 import Header from './../../components/Header'
 import RenderText from './../../components/RenderText'
 
+import quizQuestions from './../../data/quizQuestions'
+import badenWurttembergQuestions from './../../data//badenWurttembergQuestions'
+import bayernQuestions from './../../data//bayernQuestions'
+import berlinQuestions from './../../data//berlinQuestions'
+
 export default class StartScreen extends React.Component {
-  state = {
+  constructor(props) {
+  super(props)
+  this.state = {
     ready: false,
-    userLocation: '',
+    userLocation: 'none',
   }
+  this.questions = quizQuestions
+  this.numberOfQuestions = 300
+
+  this.loadQuestionOptions = this.loadQuestionOptions.bind(this)
+}
 
   componentWillMount(){
     this._loadAssetsAsync()
     this.getKey()
+    this.loadQuestionOptions()
+  }
+
+  componentDidUpdate(nextProps, nextState) {
+    this.loadQuestionOptions()
   }
 
   async getKey() {
@@ -50,6 +67,28 @@ export default class StartScreen extends React.Component {
     }
   }
 
+  loadQuestionOptions() {
+    this.questions = quizQuestions
+    this.numberOfQuestions = 300
+    if (this.state.userLocation !== 'none') {
+      this.numberOfQuestions = 310
+      let location = this.state.userLocation
+      switch (location) {
+        case 'badenWurttemberg':
+          this.questions = this.questions.concat(badenWurttembergQuestions)
+          break
+        case 'bayern':
+          this.questions = this.questions.concat(bayernQuestions)
+          break
+        case 'berlin':
+          this.questions = this.questions.concat(berlinQuestions)
+          break
+        default:
+          this.questions = this.questions.concat(badenWurttembergQuestions)
+      }
+    }
+  }
+
   render() {
     if(this.state.ready){
       return (
@@ -63,35 +102,47 @@ export default class StartScreen extends React.Component {
               itemStyle={styles.PickerItem}
               mode='dropdown'
             >
-              <Picker.Item color='#fff' label = "Choose:" value = "undefined"/>
-              <Picker.Item color='#fff' label = "Steve" value = "steve" />
-              <Picker.Item color='#fff' label = "Ellen" value = "ellen" />
-              <Picker.Item color='#fff' label = "Maria" value = "maria" />
+              <Picker.Item color='#fff' label = "Standort wählen:" value = "none"/>
+              <Picker.Item color='#fff' label = "Baden-Württemberg" value = "badenWurttemberg" />
+              <Picker.Item color='#fff' label = "Bayern" value = "bayern" />
+              <Picker.Item color='#fff' label = "Berlin" value = "berlin" />
             </Picker>
-            <TouchableHighlight onPress={() => Actions.screenTwo()}>
+            <TouchableHighlight
+              onPress={() => Actions.practiceMode({
+                  questions: this.questions,
+                  numberOfQuestions: this.numberOfQuestions,
+                })}>
               <View style={[styles.Button, styles.Blue, styles.TopSpacing]}>
                 <View style={[styles.ButtonText]}>
-                  <RenderText style='p2' text='Screen One' />
+                  <RenderText style='p2' text='Trainieren' />
                 </View>
                 <View style={[styles.ButtonIcon]}>
                   <Icon name="arrow-forward" size={16} color="#fff" />
                 </View>
               </View>
             </TouchableHighlight>
-            <TouchableHighlight onPress={() => Actions.screenTwo()}>
+            <TouchableHighlight
+              onPress={() => Actions.practiceMode({
+                  questions: this.questions,
+                  numberOfQuestions: this.numberOfQuestions,
+                })}>
               <View style={[styles.Button, styles.Red, styles.TopSpacing]}>
               <View style={[styles.ButtonText]}>
-                <RenderText style='p2' text='Screen Two' />
+                <RenderText style='p2' text='Probeprüfung' />
               </View>
               <View style={[styles.ButtonIcon]}>
                 <Icon name="arrow-forward" size={16} color="#fff" />
               </View>
               </View>
             </TouchableHighlight>
-            <TouchableHighlight onPress={() => Actions.screenTwo()}>
+            <TouchableHighlight
+              onPress={() => Actions.practiceMode({
+                  questions: this.questions,
+                  numberOfQuestions: this.numberOfQuestions,
+                })}>
               <View style={[styles.Button, styles.Green, styles.TopSpacing]}>
               <View style={[styles.ButtonText]}>
-                <RenderText style='p2' text='Screen Three' />
+                <RenderText style='p2' text='Fragenkatalog' />
               </View>
               <View style={[styles.ButtonIcon]}>
                 <Icon name="arrow-forward" size={16} color="#fff" />

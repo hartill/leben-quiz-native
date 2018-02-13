@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import { Router, Scene } from 'react-native-router-flux'
 
 import StartScreen from './src/views/StartScreen'
-import ScreenTwo from './src/views/ScreenTwo'
+import PracticeMode from './src/views/PracticeMode'
 
 export default class App extends React.Component {
   render() {
@@ -15,8 +15,8 @@ export default class App extends React.Component {
             direction="RightToleft"
             initial
           />
-          <Scene key="screenTwo"
-            component={ScreenTwo}
+          <Scene key="practiceMode"
+            component={PracticeMode}
           />
         </Scene>
       </Router>
