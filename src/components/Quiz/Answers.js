@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, TouchableHighlight } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
 import RenderText from './../../components/RenderText'
@@ -14,12 +14,14 @@ export default class Answers extends React.Component {
     let output = []
     for (let i=0; i<question.answers.length; i++) {
       output.push (
-        <View style={styles.AnswerOption} key={i}>
-          <View style={styles.AnswerSelection}>
-            <Icon name="check-circle" size={16} color="#e6e6e6" />
+        <TouchableHighlight onPress={null} key={i}>
+          <View style={styles.AnswerOption}>
+            <View style={styles.AnswerSelection}>
+              <Icon name="check-circle" size={16} color="#e6e6e6" />
+            </View>
+            <RenderText style='p' text={question.answers[i].content} />
           </View>
-          <RenderText style='p' text={question.answers[i].content} />
-        </View>
+        </TouchableHighlight>
       )
     }
     return output
