@@ -16,22 +16,32 @@ export default class Header extends React.Component {
   renderButtonLeft() {
     if (this.props.icons === true) {
       return (
-        <View style={styles.HeaderLeft}>
-          <TouchableOpacity onPress={() => Actions.pop()}>
-            <Icon name="arrow-back" size={16} color="#fff" />
-          </TouchableOpacity>
-        </View>
+        <TouchableOpacity onPress={() => Actions.pop()} style={styles.HeaderLeft}>
+          <Icon name="arrow-back" size={16} color="#fff" />
+        </TouchableOpacity>
       )
     }
   }
 
   renderButtonRight() {
     if (this.props.icons === true) {
-      return (
-        <View style={styles.HeaderRight}>
-          <Icon name="view-module" size={16} color="#fff" />
-        </View>
-      )
+      if (this.props.viewProgress === false) {
+        return (
+          <TouchableOpacity
+            onPress={() => {this.props.handleViewProgress()}}
+            style={styles.HeaderRight}>
+            <Icon name="view-module" size={16} color="#fff" />
+          </TouchableOpacity>
+        )
+      } else {
+        return (
+          <TouchableOpacity
+            onPress={() => {this.props.handleViewProgress()}}
+            style={styles.HeaderRight}>
+            <Icon name="close" size={16} color="#fff" />
+          </TouchableOpacity>
+        )
+      }
     }
   }
 

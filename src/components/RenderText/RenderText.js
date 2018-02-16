@@ -58,4 +58,9 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
   },
+  pSmall: {
+    fontFamily: 'montserrat',
+    color: '#fff',
+    fontSize: 12,
+  },
 });

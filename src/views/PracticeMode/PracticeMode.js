@@ -6,6 +6,7 @@ import RenderText from './../../components/RenderText'
 
 import QuizContainer from './../../components/Quiz/QuizContainer'
 import QuizFooter from './../../components/Quiz/QuizFooter'
+import QuestionOverview from './../../components/Quiz/QuestionOverview'
 
 export default class PracticeMode extends React.Component {
   constructor(props) {
@@ -22,11 +23,12 @@ export default class PracticeMode extends React.Component {
       showAnswer: false,
     }
 
-    //this.handleViewProgress = this.handleViewProgress.bind(this)
+    this.handleViewProgress = this.handleViewProgress.bind(this)
     this.onAnswerSelected = this.onAnswerSelected.bind(this)
     this.displayAnswers = this.displayAnswers.bind(this)
     this.generateNextQuestion = this.generateNextQuestion.bind(this)
     this.nextQuestion = this.nextQuestion.bind(this)
+    this.restart = this.restart.bind(this)
     //this.restart = this.restart.bind(this)
   }
 
@@ -106,6 +108,18 @@ export default class PracticeMode extends React.Component {
     }))
   }
 
+  handleViewProgress() {
+    if (this.state.viewProgress === true) {
+      this.setState(prevState => ({
+        viewProgress: false
+      }))
+    } else {
+      this.setState(prevState => ({
+        viewProgress: true
+      }))
+    }
+  }
+
   nextQuestion() {
     if (this.state.progress.length >= this.numberOfQuestions) {
       this.setState({
@@ -136,22 +150,62 @@ generateNextQuestion(questions) {
   return questions[randomNumbersIndex]
 }
 
+restart() {
+  this.setState((prevState, props) => {
+    return {
+      progress: [],
+      incorrect: [],
+      completed: false,
+      showAnswer: false,
+      selectedAnswer: null
+    }
+  })
+}
+
+renderContent() {
+  let renderOutput = []
+  if (this.state.viewProgress) {
+    renderOutput.push(
+      <QuestionOverview
+        numberOfQuestions={this.props.numberOfQuestions}
+        progress={this.state.progress}
+        incorrect={this.state.incorrect}
+        key='qo1'
+      />
+    )
+  } else {
+    renderOutput.push(
+      <QuizContainer
+        question={this.state.question}
+        onAnswerSelected={this.onAnswerSelected}
+        selectedAnswer={this.state.selectedAnswer}
+        showAnswer={this.state.showAnswer}
+        key='qo2'
+      />
+    )
+  }
+  return renderOutput
+}
+
   render() {
+    let title = this.state.viewProgress ? 'Fragenübersicht' : 'Trainieren'
     return (
       <View style={styles.AppContainer}>
-        <Header title='Trainieren' icons={true}/>
-        <QuizContainer
-          question={this.state.question}
-          onAnswerSelected={this.onAnswerSelected}
-          selectedAnswer={this.state.selectedAnswer}
-          showAnswer={this.state.showAnswer}
+        <Header
+          title={title}
+          icons={true}
+          viewProgress={this.state.viewProgress}
+          handleViewProgress={this.handleViewProgress}
         />
+        {this.renderContent()}
         <QuizFooter
           showAnswer={this.state.showAnswer}
           nextQuestion={this.nextQuestion}
           displayAnswers={this.displayAnswers}
           progress={this.state.progress}
+          viewProgress={this.state.viewProgress}
           numberOfQuestions={this.props.numberOfQuestions}
+          restart={this.restart}
         />
       </View>
     );

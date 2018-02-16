@@ -93,7 +93,7 @@ export default class StartScreen extends React.Component {
     if(this.state.ready){
       return (
         <View style={styles.AppContainer}>
-          <Header title='Welcome' icons={false} />
+          <Header title='Leben In Deutschland Test' icons={false} />
           <View style={styles.ContentContainer}>
             <Picker
               selectedValue = {this.state.userLocation}

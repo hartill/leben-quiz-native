@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, ScrollView } from 'react-native'
 
 import RenderText from './../../components/RenderText'
 import Answers from './Answers'
@@ -10,7 +10,7 @@ export default class QuizContainer extends React.Component {
   }
   render() {
     return (
-      <View style={styles.ContentContainer}>
+      <ScrollView contentContainerStyle={styles.ContentContainer}>
         <View style={styles.ContentHeaderContainer}>
           <View style={styles.ContentHeaderLeft}>
             <RenderText style='h2' text={this.props.question.id} />
@@ -31,7 +31,7 @@ export default class QuizContainer extends React.Component {
             onAnswerSelected={this.props.onAnswerSelected}
           />
         </View>
-      </View>
+      </ScrollView>
     )
   }
 }
