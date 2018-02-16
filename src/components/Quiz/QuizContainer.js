@@ -1,13 +1,15 @@
 import React from 'react'
-import { StyleSheet, Text, View, ScrollView } from 'react-native'
+import { StyleSheet, Text, View, ScrollView, Image } from 'react-native'
 
 import RenderText from './../../components/RenderText'
 import Answers from './Answers'
+import ImageLightbox from './ImageLightbox.js'
 
 export default class QuizContainer extends React.Component {
   constructor(props) {
     super(props)
   }
+
   render() {
     return (
       <ScrollView contentContainerStyle={styles.ContentContainer}>
@@ -22,7 +24,7 @@ export default class QuizContainer extends React.Component {
         <View style={styles.ContentBody}>
           <RenderText style='p' text={this.props.question.question} />
           {
-            //this.props.question.image !== undefined ? this.props.renderImage(image) : null
+            this.props.question.image !== undefined ? <ImageLightbox image = {this.props.question.image}/> : null
           }
           <Answers
             question={this.props.question}

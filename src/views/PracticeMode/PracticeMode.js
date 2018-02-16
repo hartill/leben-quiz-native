@@ -147,7 +147,8 @@ generateNextQuestion(questions) {
     }
   }
   let randomNumbersIndex = randNumber - 1
-  return questions[randomNumbersIndex]
+  //return questions[randomNumbersIndex]
+  return questions[20]
 }
 
 restart() {
