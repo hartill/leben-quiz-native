@@ -5,6 +5,9 @@ import RenderText from './../../components/RenderText'
 import Answers from './Answers'
 
 export default class QuizContainer extends React.Component {
+  constructor(props) {
+    super(props)
+  }
   render() {
     return (
       <View style={styles.ContentContainer}>
@@ -18,8 +21,15 @@ export default class QuizContainer extends React.Component {
         </View>
         <View style={styles.ContentBody}>
           <RenderText style='p' text={this.props.question.question} />
-          {this.props.question.image !== undefined ? this.props.renderImage(image) : null}
-          <Answers question={this.props.question} />
+          {
+            //this.props.question.image !== undefined ? this.props.renderImage(image) : null
+          }
+          <Answers
+            question={this.props.question}
+            showAnswer={this.props.showAnswer}
+            selectedAnswer={this.props.selectedAnswer}
+            onAnswerSelected={this.props.onAnswerSelected}
+          />
         </View>
       </View>
     )
