@@ -36,6 +36,7 @@ export default class Answers extends React.Component {
       output.push (
         <TouchableHighlight
           onPress={() => {this.props.onAnswerSelected(question.answers[i].key, i, question.id)}}
+          underlayColor='#fff'
           key={i}
           disabled={disabled}>
           <View style={[styles.AnswerOption, answerHighlight]}>
@@ -65,8 +66,10 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   AnswerOption: {
-    paddingTop: 15,
-    paddingBottom: 15,
+    paddingTop: 10,
+    paddingBottom: 10,
+    marginTop: 5,
+    marginBottom: 5,
     flexDirection: 'row',
     alignItems: 'stretch',
     justifyContent: 'flex-start',

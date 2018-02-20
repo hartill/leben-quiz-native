@@ -108,6 +108,7 @@ export default class StartScreen extends React.Component {
               <Picker.Item color='#fff' label = "Berlin" value = "berlin" />
             </Picker>
             <TouchableHighlight
+              underlayColor='#23212b'
               onPress={() => Actions.practiceMode({
                   questions: this.questions,
                   numberOfQuestions: this.numberOfQuestions,
@@ -122,6 +123,7 @@ export default class StartScreen extends React.Component {
               </View>
             </TouchableHighlight>
             <TouchableHighlight
+              underlayColor='#23212b'
               onPress={() => Actions.practiceMode({
                   questions: this.questions,
                   numberOfQuestions: this.numberOfQuestions,
@@ -136,6 +138,7 @@ export default class StartScreen extends React.Component {
               </View>
             </TouchableHighlight>
             <TouchableHighlight
+              underlayColor='#23212b'
               onPress={() => Actions.practiceMode({
                   questions: this.questions,
                   numberOfQuestions: this.numberOfQuestions,
@@ -172,16 +175,13 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   Picker: {
-    //backgroundColor: '#23212b',
-    //borderColor: '#23212b',
-    //borderBottomWidth: 1,
-    //borderTopWidth: 1,
-    //borderColor: '#fff',
+    //height: '20%',
   },
   PickerItem: {
     //may not work on android
     color: '#fff',
     fontFamily: 'montserrat',
+    fontSize: 16,
   },
   Button: {
     position: 'relative',

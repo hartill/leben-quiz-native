@@ -105,7 +105,7 @@ export default class QuizFooter extends React.Component {
 
 const styles = StyleSheet.create({
   FooterContainer: {
-    flexBasis: '12%',
+    flexBasis: 56,
     backgroundColor: '#23212b',
     alignItems: 'stretch',
     justifyContent: 'center',

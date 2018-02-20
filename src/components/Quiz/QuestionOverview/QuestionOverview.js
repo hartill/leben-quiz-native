@@ -42,33 +42,30 @@ export default class QuestionOverview extends React.Component {
   render() {
     return (
       <View style={styles.ContentContainer}>
-      <FlatList
-        style={styles.ContentContainer}
-        numColumns='5'
-        data={this.renderUserProgress()}
-        renderItem={({item}) =>
-          <View style={styles.QuestionOverviewBox} key={item.key}>
-            <View style={[styles.QuestionOverviewBoxInner, item.boxStyle]}>
-              <RenderText
-                style='p2'
-                text={item.key}
-              />
-              {item.incorrectCount > 0 ?
-                <View style={styles.IncorrectBox}>
-                  <RenderText
-                    style='pSmall'
-                    text={item.incorrectCount + 'x'}
-                  />
-                </View>
-                : null
-              }
+        <FlatList
+          style={styles.ContentContainer}
+          numColumns='5'
+          data={this.renderUserProgress()}
+          renderItem={({item}) =>
+            <View style={styles.QuestionOverviewBox} key={item.key}>
+              <View style={[styles.QuestionOverviewBoxInner, item.boxStyle]}>
+                <RenderText
+                  style='p2'
+                  text={item.key}
+                />
+                {item.incorrectCount > 0 ?
+                  <View style={styles.IncorrectBox}>
+                    <RenderText
+                      style='pSmall'
+                      text={item.incorrectCount + 'x'}
+                    />
+                  </View>
+                  : null
+                }
+              </View>
             </View>
-          </View>
-        }
-      />
-        {
-          //this.renderUserProgress()
-        }
+          }
+        />
       </View>
     )
   }

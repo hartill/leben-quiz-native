@@ -51,6 +51,9 @@ export default class PracticeMode extends React.Component {
     try {
       const value = await AsyncStorage.getItem('@LebenStore:progress')
       .then(req => JSON.parse(req))
+      if (value === null) {
+        value = []
+      }
       this.setState({progress: value})
     } catch (error) {
       console.log("Error retrieving data" + error)
@@ -69,6 +72,9 @@ export default class PracticeMode extends React.Component {
     try {
       const value = await AsyncStorage.getItem('@LebenStore:incorrect')
       .then(req => JSON.parse(req))
+      if (value === null) {
+        value = []
+      }
       this.setState({incorrect: value})
     } catch (error) {
       console.log("Error retrieving data" + error)
@@ -148,7 +154,7 @@ generateNextQuestion(questions) {
   }
   let randomNumbersIndex = randNumber - 1
   //return questions[randomNumbersIndex]
-  return questions[20]
+  return questions[54]
 }
 
 restart() {

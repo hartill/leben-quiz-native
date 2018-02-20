@@ -60,7 +60,7 @@ export default class Header extends React.Component {
 
 const styles = StyleSheet.create({
   HeaderContainer: {
-    flexBasis: '12%',
+    flexBasis: 56,
     flexDirection: 'row',
     alignItems: 'flex-end',
     justifyContent: 'space-between',
@@ -73,13 +73,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   HeaderLeft: {
-    flexBasis: '15%',
+    flexBasis: 56,
     paddingBottom: 15,
     alignItems: 'center',
     justifyContent: 'center',
   },
   HeaderRight: {
-    flexBasis: '15%',
+    flexBasis: 56,
     paddingBottom: 15,
     alignItems: 'center',
     justifyContent: 'center',

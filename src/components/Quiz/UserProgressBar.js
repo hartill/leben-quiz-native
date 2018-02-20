@@ -10,7 +10,7 @@ export default class UserProgressBar extends React.Component {
   }
 
   render() {
-    let userProgress = this.props.progress.length
+    let userProgress = this.props.progress === null ? 0 : this.props.progress.length
     let numberOfQuestions = this.props.numberOfQuestions
     let userProgressPercent = Math.round(100 - (userProgress / numberOfQuestions * 100))
     this.userProgressStyle = String(userProgressPercent) + '%'
