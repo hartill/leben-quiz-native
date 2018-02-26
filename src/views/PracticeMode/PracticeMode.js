@@ -7,6 +7,7 @@ import RenderText from './../../components/RenderText'
 import QuizContainer from './../../components/Quiz/QuizContainer'
 import QuizFooter from './../../components/Quiz/QuizFooter'
 import QuestionOverview from './../../components/Quiz/QuestionOverview'
+import Gameover from './../../components/Quiz/Gameover'
 
 export default class PracticeMode extends React.Component {
   constructor(props) {
@@ -29,7 +30,6 @@ export default class PracticeMode extends React.Component {
     this.generateNextQuestion = this.generateNextQuestion.bind(this)
     this.nextQuestion = this.nextQuestion.bind(this)
     this.restart = this.restart.bind(this)
-    //this.restart = this.restart.bind(this)
   }
 
   componentWillMount() {
@@ -153,8 +153,7 @@ generateNextQuestion(questions) {
     }
   }
   let randomNumbersIndex = randNumber - 1
-  //return questions[randomNumbersIndex]
-  return questions[54]
+  return questions[randomNumbersIndex]
 }
 
 restart() {
@@ -180,6 +179,10 @@ renderContent() {
         key='qo1'
       />
     )
+  } else if (this.state.completed) {
+    renderOutput.push(
+      <Gameover key='qo3'/>
+    )
   } else {
     renderOutput.push(
       <QuizContainer
@@ -196,6 +199,9 @@ renderContent() {
 
   render() {
     let title = this.state.viewProgress ? 'Fragenübersicht' : 'Trainieren'
+    if (this.state.completed) {
+      title = 'Alle richtig!'
+    }
     return (
       <View style={styles.AppContainer}>
         <Header
@@ -211,6 +217,7 @@ renderContent() {
           displayAnswers={this.displayAnswers}
           progress={this.state.progress}
           viewProgress={this.state.viewProgress}
+          completed={this.state.completed}
           numberOfQuestions={this.props.numberOfQuestions}
           restart={this.restart}
         />

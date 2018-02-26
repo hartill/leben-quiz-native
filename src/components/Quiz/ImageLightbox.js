@@ -1,7 +1,9 @@
 import React from 'react'
-import { StyleSheet, Text, View, TouchableHighlight, Image, Modal } from 'react-native'
+import { StyleSheet, Text, View, TouchableHighlight, Image, Modal, Dimensions } from 'react-native'
 
 import RenderText from './../../components/RenderText'
+
+const deviceWidth = Dimensions.get('window').width;
 
 export default class ImageLightBox extends React.Component {
   constructor(props) {
@@ -53,7 +55,7 @@ export default class ImageLightBox extends React.Component {
     let imageRef = 'image' + questionId.toString()
     return (
       <View style={styles.LightboxcontainerInner}>
-        <Image source={images[imageRef]} />
+        <Image source={images[imageRef]} style={styles.LightboxImage} resizeMode={'contain'} />
       </View>
     )
   }
@@ -74,7 +76,7 @@ export default class ImageLightBox extends React.Component {
           </TouchableHighlight>
         </Modal>
         <TouchableHighlight
-          underlayColor='#fff'
+          underlayColor='#e6e6e6'
           onPress={() => {this.openLightbox()}}
           style={styles.MessageContainer}>
           <RenderText style='p' text='Bild Ansehen' />
@@ -110,7 +112,7 @@ const styles = StyleSheet.create({
     paddingBottom: 5,
     alignItems: 'center',
     justifyContent: 'center',
-    borderColor: '#e6e6e6',
+    borderColor: '#555',
     borderWidth: 1,
   },
   LightboxContainer: {
@@ -124,7 +126,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  LightboxcontainerInner: {
-
-  }
+  LightboxContainerInner: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  LightboxImage: {
+    flex: 1,
+    width: deviceWidth,
+  },
 });

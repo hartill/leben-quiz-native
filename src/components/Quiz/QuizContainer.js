@@ -22,10 +22,12 @@ export default class QuizContainer extends React.Component {
           </View>
         </View>
         <ScrollView contentContainerStyle={styles.ContentBody}>
-          <RenderText style='p' text={this.props.question.question} />
-          {
-            this.props.question.image !== undefined ? <ImageLightbox question = {this.props.question}/> : null
-          }
+          <View style={styles.Question}>
+            <RenderText style='p' text={this.props.question.question} />
+            {
+              this.props.question.image !== undefined ? <ImageLightbox question = {this.props.question}/> : null
+            }
+          </View>
           <Answers
             question={this.props.question}
             showAnswer={this.props.showAnswer}
@@ -42,7 +44,7 @@ const styles = StyleSheet.create({
   ContentContainer: {
     flex: 1,
     alignItems: 'stretch',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     backgroundColor: '#fff',
   },
   ContentHeaderContainer: {
@@ -67,8 +69,12 @@ const styles = StyleSheet.create({
   ContentBody: {
     flex: 1,
     backgroundColor: '#fff',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'stretch',
     padding: 15,
   },
+  Question: {
+    backgroundColor: '#e6e6e6',
+    padding: 15,
+  }
 });

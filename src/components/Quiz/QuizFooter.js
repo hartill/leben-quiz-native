@@ -24,7 +24,7 @@ export default class QuizFooter extends React.Component {
 
   renderButton() {
     let output=[]
-    if (this.props.viewProgress) {
+    if (this.props.viewProgress || this.props.completed) {
       output.push(
         <TouchableHighlight
           onPress={() => this.openModal()}
