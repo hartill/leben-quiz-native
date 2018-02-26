@@ -53,6 +53,32 @@ export default class StartScreen extends React.Component {
     }
   }
 
+  async removeProgress() {
+    try {
+      await AsyncStorage.removeItem('@LebenStore:progress');
+      return true;
+    }
+    catch(exception) {
+      return false;
+    }
+  }
+
+  async removeIncorrect() {
+    try {
+      await AsyncStorage.removeItem('@LebenStore:incorrect');
+      return true;
+    }
+    catch(exception) {
+      return false;
+    }
+  }
+
+  handleChangeOfLocation(value) {
+    this.saveKey(value)
+    this.removeProgress()
+    this.removeIncorrect()
+  }
+
   async _loadAssetsAsync(){
     try {
       await Font.loadAsync({
@@ -97,7 +123,7 @@ export default class StartScreen extends React.Component {
           <View style={styles.ContentContainer}>
             <Picker
               selectedValue = {this.state.userLocation}
-              onValueChange={(value) => this.saveKey(value)}
+              onValueChange={(value) => this.handleChangeOfLocation(value)}
               style={[styles.Picker]}
               itemStyle={styles.PickerItem}
               mode='dropdown'
