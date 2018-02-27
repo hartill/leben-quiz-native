@@ -168,6 +168,7 @@ restart() {
       incorrect: [],
       completed: false,
       showAnswer: false,
+      viewProgress: false,
       selectedAnswer: null
     }
   })

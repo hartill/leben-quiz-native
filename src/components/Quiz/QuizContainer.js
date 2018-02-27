@@ -78,7 +78,6 @@ const styles = StyleSheet.create({
     paddingLeft: 15,
   },
   ContentBody: {
-    flex: 1,
     backgroundColor: '#fff',
     justifyContent: 'flex-start',
     alignItems: 'stretch',
