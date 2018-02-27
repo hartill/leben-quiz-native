@@ -6,17 +6,19 @@ import RenderText from './../RenderText'
 export default class UserProgressBar extends React.Component {
   constructor(props) {
     super(props)
-    let userProgressStyle
+    let userProgressRight
+    let userProgressColor
   }
 
   render() {
     let userProgress = this.props.progress === null ? 0 : this.props.progress.length
     let numberOfQuestions = this.props.numberOfQuestions
     let userProgressPercent = Math.round(100 - (userProgress / numberOfQuestions * 100))
-    this.userProgressStyle = String(userProgressPercent) + '%'
+    this.userProgressRight = String(userProgressPercent) + '%'
+    this.userProgressColor = this.props.mode === 2 ? '#11a6ce' : '#2CC990'
     return (
       <View style={styles.FooterLeft}>
-        <View style={[styles.UserProgress, {right: this.userProgressStyle}]} />
+        <View style={[styles.UserProgress, {right: this.userProgressRight}, {backgroundColor: this.userProgressColor}]} />
         <RenderText style='p2' text={userProgress + ' / ' + numberOfQuestions}/>
       </View>
     )

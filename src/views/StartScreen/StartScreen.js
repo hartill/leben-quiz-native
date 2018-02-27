@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, TouchableHighlight, Picker, AsyncStorage } from 'react-native'
+import { StyleSheet, Text, View, TouchableHighlight, Picker, AsyncStorage, Modal } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 import { Font } from 'expo'
 import Icon from 'react-native-vector-icons/MaterialIcons'
@@ -18,12 +18,25 @@ export default class StartScreen extends React.Component {
   this.state = {
     ready: false,
     userLocation: 'none',
+    modalOpen: false,
   }
   this.questions = quizQuestions
   this.numberOfQuestions = 300
 
   this.loadQuestionOptions = this.loadQuestionOptions.bind(this)
 }
+
+  openModal() {
+    this.setState({
+      modalOpen: true,
+    })
+  }
+
+  closeModal() {
+    this.setState({
+      modalOpen: false,
+    })
+  }
 
   componentWillMount(){
     this._loadAssetsAsync()
@@ -73,10 +86,22 @@ export default class StartScreen extends React.Component {
     }
   }
 
+  async removeExamProgress() {
+    try {
+      await AsyncStorage.removeItem('@LebenStore:examProgress');
+      return true;
+    }
+    catch(exception) {
+      return false;
+    }
+  }
+
   handleChangeOfLocation(value) {
     this.saveKey(value)
     this.removeProgress()
     this.removeIncorrect()
+    this.removeExamProgress()
+    this.closeModal()
   }
 
   async _loadAssetsAsync(){
@@ -116,68 +141,102 @@ export default class StartScreen extends React.Component {
   }
 
   render() {
+    let userLocationOutput = 'Standort wählen'
+    if (this.state.userLocation === 'badenWurttemberg') {
+      userLocationOutput = 'Baden-Württemberg'
+    } else if (this.state.userLocation === 'bayern') {
+      userLocationOutput = 'Bayern'
+    } else if (this.state.userLocation === 'berlin') {
+      userLocationOutput = 'Berlin'
+    }
     if(this.state.ready){
       return (
         <View style={styles.AppContainer}>
           <Header title='Leben In Deutschland Test' icons={false} />
           <View style={styles.ContentContainer}>
-            <Picker
-              selectedValue = {this.state.userLocation}
-              onValueChange={(value) => this.handleChangeOfLocation(value)}
-              style={[styles.Picker]}
-              itemStyle={styles.PickerItem}
-              mode='dropdown'
-            >
-              <Picker.Item color='#fff' label = "Standort wählen:" value = "none"/>
-              <Picker.Item color='#fff' label = "Baden-Württemberg" value = "badenWurttemberg" />
-              <Picker.Item color='#fff' label = "Bayern" value = "bayern" />
-              <Picker.Item color='#fff' label = "Berlin" value = "berlin" />
-            </Picker>
             <TouchableHighlight
               underlayColor='#23212b'
-              onPress={() => Actions.practiceMode({
-                  questions: this.questions,
-                  numberOfQuestions: this.numberOfQuestions,
-                })}>
-              <View style={[styles.Button, styles.Blue, styles.TopSpacing]}>
+              onPress={() => {this.openModal()}}
+              style={styles.ChooseLocation}>
+              <View style={[styles.Button, styles.Grey, styles.TopSpacing]}>
                 <View style={[styles.ButtonText]}>
-                  <RenderText style='p2' text='Trainieren' />
+                  <RenderText style='p2' text={userLocationOutput} />
+                </View>
+                <View style={[styles.ButtonIcon]}>
+                  <Icon name="expand-more" size={16} color="#fff" />
+                </View>
+              </View>
+            </TouchableHighlight>
+            <Modal
+              visible={this.state.modalOpen}
+              animationType={'slide'}
+              onRequestClose={() => {this.closeModal()}}
+              >
+              <TouchableHighlight
+                underlayColor='#23212b'
+                onPress={() => {this.closeModal()}}
+                style={styles.ModalContainer}>
+                  <Picker
+                    selectedValue = {this.state.userLocation}
+                    onValueChange={(value) => this.handleChangeOfLocation(value)}
+                    style={styles.Picker}
+                    itemStyle={styles.PickerItem}
+                    mode='dropdown'
+                  >
+                    <Picker.Item color='#fff' label = "keiner" value = "none"/>
+                    <Picker.Item color='#fff' label = "Baden-Württemberg" value = "badenWurttemberg" />
+                    <Picker.Item color='#fff' label = "Bayern" value = "bayern" />
+                    <Picker.Item color='#fff' label = "Berlin" value = "berlin" />
+                  </Picker>
+              </TouchableHighlight>
+            </Modal>
+            <View style={styles.ButtonContainer}>
+              <TouchableHighlight
+                underlayColor='#23212b'
+                onPress={() => Actions.practiceMode({
+                    questions: this.questions,
+                    numberOfQuestions: this.numberOfQuestions,
+                  })}>
+                <View style={[styles.Button, styles.Blue, styles.TopSpacing]}>
+                  <View style={[styles.ButtonText]}>
+                    <RenderText style='p2' text='Trainieren' />
+                  </View>
+                  <View style={[styles.ButtonIcon]}>
+                    <Icon name="arrow-forward" size={16} color="#fff" />
+                  </View>
+                </View>
+              </TouchableHighlight>
+              <TouchableHighlight
+                underlayColor='#23212b'
+                onPress={() => Actions.mockExam({
+                    questions: this.questions,
+                    numberOfQuestions: this.numberOfQuestions,
+                  })}>
+                <View style={[styles.Button, styles.Red, styles.TopSpacing]}>
+                <View style={[styles.ButtonText]}>
+                  <RenderText style='p2' text='Probeprüfung' />
                 </View>
                 <View style={[styles.ButtonIcon]}>
                   <Icon name="arrow-forward" size={16} color="#fff" />
                 </View>
-              </View>
-            </TouchableHighlight>
-            <TouchableHighlight
-              underlayColor='#23212b'
-              onPress={() => Actions.practiceMode({
-                  questions: this.questions,
-                  numberOfQuestions: this.numberOfQuestions,
-                })}>
-              <View style={[styles.Button, styles.Red, styles.TopSpacing]}>
-              <View style={[styles.ButtonText]}>
-                <RenderText style='p2' text='Probeprüfung' />
-              </View>
-              <View style={[styles.ButtonIcon]}>
-                <Icon name="arrow-forward" size={16} color="#fff" />
-              </View>
-              </View>
-            </TouchableHighlight>
-            <TouchableHighlight
-              underlayColor='#23212b'
-              onPress={() => Actions.practiceMode({
-                  questions: this.questions,
-                  numberOfQuestions: this.numberOfQuestions,
-                })}>
-              <View style={[styles.Button, styles.Green, styles.TopSpacing]}>
-              <View style={[styles.ButtonText]}>
-                <RenderText style='p2' text='Fragenkatalog' />
-              </View>
-              <View style={[styles.ButtonIcon]}>
-                <Icon name="arrow-forward" size={16} color="#fff" />
-              </View>
-              </View>
-            </TouchableHighlight>
+                </View>
+              </TouchableHighlight>
+              <TouchableHighlight
+                underlayColor='#23212b'
+                onPress={() => Actions.questionCatalogue({
+                    questions: this.questions,
+                    numberOfQuestions: this.numberOfQuestions,
+                  })}>
+                <View style={[styles.Button, styles.Green, styles.TopSpacing]}>
+                <View style={[styles.ButtonText]}>
+                  <RenderText style='p2' text='Fragenkatalog' />
+                </View>
+                <View style={[styles.ButtonIcon]}>
+                  <Icon name="arrow-forward" size={16} color="#fff" />
+                </View>
+                </View>
+              </TouchableHighlight>
+            </View>
           </View>
         </View>
       );
@@ -197,20 +256,40 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#23212b',
     alignItems: 'stretch',
-    justifyContent: 'flex-start',
+    justifyContent: 'space-around',
     padding: 15,
   },
+  ChooseLocation: {
+    alignItems: 'stretch',
+    justifyContent: 'center',
+  },
+  ModalContainer: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    bottom: 0,
+    right: 0,
+    backgroundColor: '#3e4651',
+    zIndex: 5,
+    alignItems: 'stretch',
+    justifyContent: 'center',
+  },
   Picker: {
-    //height: '20%',
   },
   PickerItem: {
     //may not work on android
+    //height: 75,
+    textAlign: 'center',
     color: '#fff',
     fontFamily: 'montserrat',
     fontSize: 16,
   },
+  ButtonContainer: {
+    alignItems: 'stretch',
+    justifyContent: 'space-around',
+  },
   Button: {
-    position: 'relative',
+    //position: 'relative',
     flexBasis: 50,
     backgroundColor: '#37b1e3',
     flexDirection: 'row',
@@ -225,6 +304,9 @@ const styles = StyleSheet.create({
   ButtonIcon: {
     position: 'absolute',
     right: 10,
+  },
+  Grey: {
+    backgroundColor: '#3e4651',
   },
   Blue: {
     backgroundColor: '#37b1e3',

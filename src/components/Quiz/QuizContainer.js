@@ -8,12 +8,23 @@ import ImageLightbox from './ImageLightbox.js'
 export default class QuizContainer extends React.Component {
   constructor(props) {
     super(props)
+    let quizHeaderColor
   }
 
   render() {
+    switch(this.props.mode) {
+      case 2:
+        this.quizHeaderColor = '#dd5152'
+        break
+      case 3:
+        this.quizHeaderColor = '#2cc990'
+        break
+      default:
+        this.quizHeaderColor = '#11a6ce'
+    }
     return (
       <View style={styles.ContentContainer}>
-        <View style={styles.ContentHeaderContainer}>
+        <View style={[styles.ContentHeaderContainer, {backgroundColor: this.quizHeaderColor}]}>
           <View style={styles.ContentHeaderLeft}>
             <RenderText style='h2' text={this.props.question.id} />
           </View>
@@ -74,7 +85,9 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   Question: {
-    backgroundColor: '#e6e6e6',
-    padding: 15,
+    paddingBottom: 15,
+    paddingTop: 15,
+    paddingLeft: 5,
+    paddingRight: 5,
   }
 });

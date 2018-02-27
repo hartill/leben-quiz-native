@@ -55,6 +55,11 @@ export default class PracticeMode extends React.Component {
         value = []
       }
       this.setState({progress: value})
+      if (value.length >= this.numberOfQuestions) {
+        this.setState({
+          completed: true
+        })
+      }
     } catch (error) {
       console.log("Error retrieving data" + error)
     }

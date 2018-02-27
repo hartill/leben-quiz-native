@@ -112,8 +112,7 @@ const styles = StyleSheet.create({
     paddingBottom: 5,
     alignItems: 'center',
     justifyContent: 'center',
-    borderColor: '#555',
-    borderWidth: 1,
+    backgroundColor: '#e6e6e6',
   },
   LightboxContainer: {
     position: 'absolute',

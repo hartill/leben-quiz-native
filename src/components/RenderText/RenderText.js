@@ -48,6 +48,11 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 18,
   },
+  h3: {
+    fontFamily: 'montserrat',
+    color: '#555',
+    fontSize: 18,
+  },
   p: {
     fontFamily: 'montserrat',
     color: '#555',

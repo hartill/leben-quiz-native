@@ -39,22 +39,30 @@ export default class QuizFooter extends React.Component {
         output.push(
           <TouchableHighlight
             onPress={() => {this.props.nextQuestion()}}
-            key='qf1'
+            key='qf2'
             style={styles.FooterRight}
           >
             <Icon name="arrow-forward" size={16} color="#fff" />
           </TouchableHighlight>
         )
       } else {
-        output.push(
-          <TouchableHighlight
-            onPress={() => {this.props.displayAnswers()}}
-            key='qf2'
-            style={styles.FooterRight}
-          >
-              <RenderText style='p2' text='Ich weiß nicht'/>
-          </TouchableHighlight>
-        )
+        if (this.props.mode === 2) {
+          output.push(
+            <View style={styles.FooterRightDeactive} key='qf3'>
+              <Icon name="arrow-forward" size={16} color="#fff" style={styles.IconDeactive} />
+            </View>
+          )
+        } else {
+          output.push(
+            <TouchableHighlight
+              onPress={() => {this.props.displayAnswers()}}
+              key='qf4'
+              style={styles.FooterRight}
+            >
+                <RenderText style='p2' text='Ich weiß nicht'/>
+            </TouchableHighlight>
+          )
+        }
       }
     }
     return output
@@ -96,6 +104,7 @@ export default class QuizFooter extends React.Component {
         <UserProgressBar
           progress={this.props.progress}
           numberOfQuestions={this.props.numberOfQuestions}
+          mode={this.props.mode}
         />
         {this.renderButton()}
       </View>
@@ -116,6 +125,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#DD5152',
+  },
+  FooterRightDeactive: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#3e4651',
+  },
+  IconDeactive: {
+    opacity: .5,
   },
   modalContainer: {
     flex: 1,

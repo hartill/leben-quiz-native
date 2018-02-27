@@ -4,6 +4,8 @@ import { Router, Scene } from 'react-native-router-flux'
 
 import StartScreen from './src/views/StartScreen'
 import PracticeMode from './src/views/PracticeMode'
+import MockExam from './src/views/MockExam'
+import QuestionCatalogue from './src/views/QuestionCatalogue'
 
 export default class App extends React.Component {
   constructor() {
@@ -40,6 +42,14 @@ export default class App extends React.Component {
           />
           <Scene key="practiceMode"
             component={PracticeMode}
+            onLayout={this._onLayout}
+          />
+          <Scene key="mockExam"
+            component={MockExam}
+            onLayout={this._onLayout}
+          />
+          <Scene key="questionCatalogue"
+            component={QuestionCatalogue}
             onLayout={this._onLayout}
           />
         </Scene>
