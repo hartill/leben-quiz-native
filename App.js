@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, StatusBar, Dimensions } from 'react-native'
 import { Router, Scene } from 'react-native-router-flux'
+import { Font } from 'expo'
 
 import StartScreen from './src/views/StartScreen'
 import PracticeMode from './src/views/PracticeMode'
@@ -14,9 +15,14 @@ export default class App extends React.Component {
     this.state = {
       width: Dimensions.get('window').width,
       height: Dimensions.get('window').height,
+      isReady: false,
     }
 
     this.onLayout = this.onLayout.bind(this);
+  }
+
+  componentWillMount(){
+    this._loadAssetsAsync()
   }
 
   componentDidMount() {
@@ -30,30 +36,54 @@ export default class App extends React.Component {
     });
   }
 
+  async _loadAssetsAsync(){
+    try {
+      await Font.loadAsync({
+        'montserrat': require('./assets/fonts/Montserrat-Regular.ttf'),
+      })
+    }
+    catch(e) {
+      Log.error(e)
+    }
+    finally {
+      this.setState({isReady: true})
+    }
+  }
+
   render() {
-    return (
-      <Router>
-        <Scene key="root" hideNavBar={true} onLayout={this._onLayout}>
-          <Scene key="startScreen"
-            onLayout={this._onLayout}
-            component={StartScreen}
-            direction="RightToleft"
-            initial
-          />
-          <Scene key="practiceMode"
-            component={PracticeMode}
-            onLayout={this._onLayout}
-          />
-          <Scene key="mockExam"
-            component={MockExam}
-            onLayout={this._onLayout}
-          />
-          <Scene key="questionCatalogue"
-            component={QuestionCatalogue}
-            onLayout={this._onLayout}
-          />
-        </Scene>
-      </Router>
-    )
+    if(this.state.isReady){
+      return (
+        <Router>
+          <Scene key="root" hideNavBar={true} onLayout={this._onLayout}>
+            <Scene key="startScreen"
+              onLayout={this._onLayout}
+              component={StartScreen}
+              direction="RightToleft"
+              initial
+            />
+            <Scene key="practiceMode"
+              component={PracticeMode}
+              onLayout={this._onLayout}
+            />
+            <Scene key="mockExam"
+              component={MockExam}
+              onLayout={this._onLayout}
+            />
+            <Scene key="questionCatalogue"
+              component={QuestionCatalogue}
+              onLayout={this._onLayout}
+            />
+          </Scene>
+        </Router>
+      )
+    } else {
+      return null
+    }
   }
 }
+
+const styles = StyleSheet.create({
+  Montserrat: {
+    fontFamily: 'montserrat',
+  },
+});

@@ -1,7 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View, TouchableHighlight, Picker, AsyncStorage, Modal } from 'react-native'
 import { Actions } from 'react-native-router-flux'
-import { Font } from 'expo'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
 import Header from './../../components/Header'
@@ -16,7 +15,6 @@ export default class StartScreen extends React.Component {
   constructor(props) {
   super(props)
   this.state = {
-    ready: false,
     userLocation: 'none',
     modalOpen: false,
   }
@@ -39,7 +37,6 @@ export default class StartScreen extends React.Component {
   }
 
   componentWillMount(){
-    this._loadAssetsAsync()
     this.getKey()
     this.loadQuestionOptions()
   }
@@ -104,20 +101,6 @@ export default class StartScreen extends React.Component {
     this.closeModal()
   }
 
-  async _loadAssetsAsync(){
-    try {
-      await Font.loadAsync({
-        'montserrat': require('./../../../assets/fonts/Montserrat-Regular.ttf'),
-      })
-    }
-    catch(e) {
-      Log.error(e)
-    }
-    finally {
-      this.setState({ready: true})
-    }
-  }
-
   loadQuestionOptions() {
     this.questions = quizQuestions
     this.numberOfQuestions = 300
@@ -149,99 +132,96 @@ export default class StartScreen extends React.Component {
     } else if (this.state.userLocation === 'berlin') {
       userLocationOutput = 'Berlin'
     }
-    if(this.state.ready){
-      return (
-        <View style={styles.AppContainer}>
-          <Header title='Leben In Deutschland Test' icons={false} />
-          <View style={styles.ContentContainer}>
+    return (
+      <View style={styles.AppContainer}>
+        <Header title='Leben In Deutschland Test' icons={false} />
+        <View style={styles.ContentContainer}>
+          <TouchableHighlight
+            underlayColor='#23212b'
+            onPress={() => {this.openModal()}}
+            style={styles.ChooseLocation}>
+            <View style={[styles.Button, styles.Grey, styles.TopSpacing]}>
+              <View style={[styles.ButtonText]}>
+                <RenderText style='p2' text={userLocationOutput} />
+              </View>
+              <View style={[styles.ButtonIcon]}>
+                <Icon name="expand-more" size={16} color="#fff" />
+              </View>
+            </View>
+          </TouchableHighlight>
+          <Modal
+            visible={this.state.modalOpen}
+            animationType={'slide'}
+            onRequestClose={() => {this.closeModal()}}
+            >
             <TouchableHighlight
               underlayColor='#23212b'
-              onPress={() => {this.openModal()}}
-              style={styles.ChooseLocation}>
-              <View style={[styles.Button, styles.Grey, styles.TopSpacing]}>
+              onPress={() => {this.closeModal()}}
+              style={styles.ModalContainer}>
+                <Picker
+                  selectedValue = {this.state.userLocation}
+                  onValueChange={(value) => this.handleChangeOfLocation(value)}
+                  style={styles.Picker}
+                  itemStyle={styles.PickerItem}
+                  mode='dropdown'
+                >
+                  <Picker.Item color='#fff' label = "keiner" value = "none"/>
+                  <Picker.Item color='#fff' label = "Baden-Württemberg" value = "badenWurttemberg" />
+                  <Picker.Item color='#fff' label = "Bayern" value = "bayern" />
+                  <Picker.Item color='#fff' label = "Berlin" value = "berlin" />
+                </Picker>
+            </TouchableHighlight>
+          </Modal>
+          <View style={styles.ButtonContainer}>
+            <TouchableHighlight
+              underlayColor='#23212b'
+              onPress={() => Actions.practiceMode({
+                  questions: this.questions,
+                  numberOfQuestions: this.numberOfQuestions,
+                })}>
+              <View style={[styles.Button, styles.Blue, styles.TopSpacing]}>
                 <View style={[styles.ButtonText]}>
-                  <RenderText style='p2' text={userLocationOutput} />
+                  <RenderText style='p2' text='Trainieren' />
                 </View>
                 <View style={[styles.ButtonIcon]}>
-                  <Icon name="expand-more" size={16} color="#fff" />
+                  <Icon name="arrow-forward" size={16} color="#fff" />
                 </View>
               </View>
             </TouchableHighlight>
-            <Modal
-              visible={this.state.modalOpen}
-              animationType={'slide'}
-              onRequestClose={() => {this.closeModal()}}
-              >
-              <TouchableHighlight
-                underlayColor='#23212b'
-                onPress={() => {this.closeModal()}}
-                style={styles.ModalContainer}>
-                  <Picker
-                    selectedValue = {this.state.userLocation}
-                    onValueChange={(value) => this.handleChangeOfLocation(value)}
-                    style={styles.Picker}
-                    itemStyle={styles.PickerItem}
-                    mode='dropdown'
-                  >
-                    <Picker.Item color='#fff' label = "keiner" value = "none"/>
-                    <Picker.Item color='#fff' label = "Baden-Württemberg" value = "badenWurttemberg" />
-                    <Picker.Item color='#fff' label = "Bayern" value = "bayern" />
-                    <Picker.Item color='#fff' label = "Berlin" value = "berlin" />
-                  </Picker>
-              </TouchableHighlight>
-            </Modal>
-            <View style={styles.ButtonContainer}>
-              <TouchableHighlight
-                underlayColor='#23212b'
-                onPress={() => Actions.practiceMode({
-                    questions: this.questions,
-                    numberOfQuestions: this.numberOfQuestions,
-                  })}>
-                <View style={[styles.Button, styles.Blue, styles.TopSpacing]}>
-                  <View style={[styles.ButtonText]}>
-                    <RenderText style='p2' text='Trainieren' />
-                  </View>
-                  <View style={[styles.ButtonIcon]}>
-                    <Icon name="arrow-forward" size={16} color="#fff" />
-                  </View>
-                </View>
-              </TouchableHighlight>
-              <TouchableHighlight
-                underlayColor='#23212b'
-                onPress={() => Actions.mockExam({
-                    questions: this.questions,
-                    numberOfQuestions: this.numberOfQuestions,
-                  })}>
-                <View style={[styles.Button, styles.Red, styles.TopSpacing]}>
-                <View style={[styles.ButtonText]}>
-                  <RenderText style='p2' text='Probeprüfung' />
-                </View>
-                <View style={[styles.ButtonIcon]}>
-                  <Icon name="arrow-forward" size={16} color="#fff" />
-                </View>
-                </View>
-              </TouchableHighlight>
-              <TouchableHighlight
-                underlayColor='#23212b'
-                onPress={() => Actions.questionCatalogue({
-                    questions: this.questions,
-                    numberOfQuestions: this.numberOfQuestions,
-                  })}>
-                <View style={[styles.Button, styles.Green, styles.TopSpacing]}>
-                <View style={[styles.ButtonText]}>
-                  <RenderText style='p2' text='Fragenkatalog' />
-                </View>
-                <View style={[styles.ButtonIcon]}>
-                  <Icon name="arrow-forward" size={16} color="#fff" />
-                </View>
-                </View>
-              </TouchableHighlight>
-            </View>
+            <TouchableHighlight
+              underlayColor='#23212b'
+              onPress={() => Actions.mockExam({
+                  questions: this.questions,
+                  numberOfQuestions: this.numberOfQuestions,
+                })}>
+              <View style={[styles.Button, styles.Red, styles.TopSpacing]}>
+              <View style={[styles.ButtonText]}>
+                <RenderText style='p2' text='Probeprüfung' />
+              </View>
+              <View style={[styles.ButtonIcon]}>
+                <Icon name="arrow-forward" size={16} color="#fff" />
+              </View>
+              </View>
+            </TouchableHighlight>
+            <TouchableHighlight
+              underlayColor='#23212b'
+              onPress={() => Actions.questionCatalogue({
+                  questions: this.questions,
+                  numberOfQuestions: this.numberOfQuestions,
+                })}>
+              <View style={[styles.Button, styles.Green, styles.TopSpacing]}>
+              <View style={[styles.ButtonText]}>
+                <RenderText style='p2' text='Fragenkatalog' />
+              </View>
+              <View style={[styles.ButtonIcon]}>
+                <Icon name="arrow-forward" size={16} color="#fff" />
+              </View>
+              </View>
+            </TouchableHighlight>
           </View>
         </View>
-      );
-    }
-    return null
+      </View>
+    );
   }
 }
 
