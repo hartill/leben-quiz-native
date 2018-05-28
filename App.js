@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, StatusBar, Dimensions } from 'react-native'
+import { StyleSheet, Text, View, StatusBar, Dimensions, SafeAreaView } from 'react-native'
 import { Router, Scene } from 'react-native-router-flux'
 import { Font } from 'expo'
 
@@ -53,28 +53,30 @@ export default class App extends React.Component {
   render() {
     if(this.state.isReady){
       return (
-        <Router>
-          <Scene key="root" hideNavBar={true} onLayout={this._onLayout}>
-            <Scene key="startScreen"
-              onLayout={this._onLayout}
-              component={StartScreen}
-              direction="RightToleft"
-              initial
-            />
-            <Scene key="practiceMode"
-              component={PracticeMode}
-              onLayout={this._onLayout}
-            />
-            <Scene key="mockExam"
-              component={MockExam}
-              onLayout={this._onLayout}
-            />
-            <Scene key="questionCatalogue"
-              component={QuestionCatalogue}
-              onLayout={this._onLayout}
-            />
-          </Scene>
-        </Router>
+        <SafeAreaView style={styles.safeArea}>
+          <Router>
+            <Scene key="root" hideNavBar={true} onLayout={this._onLayout}>
+              <Scene key="startScreen"
+                onLayout={this._onLayout}
+                component={StartScreen}
+                direction="RightToleft"
+                initial
+              />
+              <Scene key="practiceMode"
+                component={PracticeMode}
+                onLayout={this._onLayout}
+              />
+              <Scene key="mockExam"
+                component={MockExam}
+                onLayout={this._onLayout}
+              />
+              <Scene key="questionCatalogue"
+                component={QuestionCatalogue}
+                onLayout={this._onLayout}
+              />
+            </Scene>
+          </Router>
+        </SafeAreaView>
       )
     } else {
       return null
@@ -86,4 +88,8 @@ const styles = StyleSheet.create({
   Montserrat: {
     fontFamily: 'montserrat',
   },
+  safeArea: {
+    flex: 1,
+    backgroundColor: '#1D1B24'
+  }
 });
