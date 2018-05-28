@@ -4,6 +4,7 @@
     "sdkVersion": "25.0.0",
     "icon": "./assets/310-icon.png",
     "version": "1.0.0",
+    "slug": "310_leben_in_deutschland_test",
     "splash": {
       "image": "./assets/splash.png",
       "backgroundColor": "#23212b",
