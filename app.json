@@ -5,10 +5,14 @@
     "icon": "./assets/310-icon.png",
     "version": "1.0.0",
     "slug": "310_leben_in_deutschland_test",
+    "primaryColor": "#23212b",
     "splash": {
       "image": "./assets/splash.png",
       "backgroundColor": "#23212b",
       "resizeMode": "contain",
+    },
+    "android": {
+      "package": "com.yourcompany.yourappname"
     }
   }
 }
