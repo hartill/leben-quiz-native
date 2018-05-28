@@ -54,7 +54,12 @@ export default class App extends React.Component {
     if(this.state.isReady){
       return (
         <SafeAreaView style={styles.safeArea}>
-          <Router>
+          <Router getSceneStyle={() => ({
+            elevation: 0,
+            shadowOpacity: 0,
+            borderBottomWidth: 0,
+          })}
+          >
             <Scene key="root" hideNavBar={true} onLayout={this._onLayout}>
               <Scene key="startScreen"
                 onLayout={this._onLayout}
@@ -90,6 +95,6 @@ const styles = StyleSheet.create({
   },
   safeArea: {
     flex: 1,
-    backgroundColor: '#1D1B24'
+    backgroundColor: '#23212b'
   }
 });
