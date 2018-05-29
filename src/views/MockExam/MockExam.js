@@ -173,7 +173,7 @@ export default class MockExam extends React.Component {
     if (this.state.viewProgress) {
       renderOutput.push(
         <ExamQuestionOverview
-          numberOfQuestions={this.props.numberOfQuestions}
+          numberOfQuestions={this.numberOfQuestions}
           examProgress={this.state.examProgress}
           key='qo1'
         />
@@ -182,7 +182,7 @@ export default class MockExam extends React.Component {
       renderOutput.push(
         <Results
           examProgress={this.state.examProgress}
-          numberOfQuestions={this.props.numberOfQuestions}
+          numberOfQuestions={this.numberOfQuestions}
           key='qo3'
         />
       )
