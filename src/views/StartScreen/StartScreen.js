@@ -1,10 +1,11 @@
 import React from 'react'
-import { StyleSheet, Text, View, TouchableHighlight, Picker, AsyncStorage, Modal } from 'react-native'
+import { StyleSheet, Text, View, TouchableHighlight, TouchableOpacity, AsyncStorage, Modal } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
 import Header from './../../components/Header'
 import RenderText from './../../components/RenderText'
+import LocationSelectionList from './../../components/LocationSelectionList'
 
 import quizQuestions from './../../data/quizQuestions'
 import badenWurttembergQuestions from './../../data//badenWurttembergQuestions'
@@ -132,6 +133,7 @@ export default class StartScreen extends React.Component {
     } else if (this.state.userLocation === 'berlin') {
       userLocationOutput = 'Berlin'
     }
+
     return (
       <View style={styles.AppContainer}>
         <Header title='Leben In Deutschland Test' icons={false} />
@@ -154,7 +156,33 @@ export default class StartScreen extends React.Component {
             animationType={'slide'}
             onRequestClose={() => {this.closeModal()}}
             >
-            <TouchableHighlight
+            <View style={styles.ModalContainer}>
+              <TouchableOpacity
+                key={'none'}
+                onPress={() => {this.handleChangeOfLocation("none")}}
+                style={ this.state.userLocation === "none" ? styles.selectedLocationOption : styles.locationOption }>
+                  <RenderText style='p2' text="keiner" />
+              </TouchableOpacity>
+              <TouchableOpacity
+                key={'badenWurttemberg'}
+                onPress={() => {this.handleChangeOfLocation("badenWurttemberg")}}
+                style={ this.state.userLocation === "badenWurttemberg" ? styles.selectedLocationOption : styles.locationOption }>
+                  <RenderText style='p2' text="Baden-Württemberg" />
+              </TouchableOpacity>
+              <TouchableOpacity
+                key={'bayern'}
+                onPress={() => {this.handleChangeOfLocation("bayern")}}
+                style={ this.state.userLocation === "bayern" ? styles.selectedLocationOption : styles.locationOption }>
+                  <RenderText style='p2' text="Bayern" />
+              </TouchableOpacity>
+              <TouchableOpacity
+                key={'berlin'}
+                onPress={() => {this.handleChangeOfLocation("berlin")}}
+                style={ this.state.userLocation === "berlin" ? styles.selectedLocationOption : styles.locationOption }>
+                  <RenderText style='p2' text="Berlin" />
+              </TouchableOpacity>
+            </View>
+            {/*<TouchableHighlight
               underlayColor='#23212b'
               onPress={() => {this.closeModal()}}
               style={styles.ModalContainer}>
@@ -170,7 +198,7 @@ export default class StartScreen extends React.Component {
                   <Picker.Item color='#fff' label = "Bayern" value = "bayern" />
                   <Picker.Item color='#fff' label = "Berlin" value = "berlin" />
                 </Picker>
-            </TouchableHighlight>
+            </TouchableHighlight>*/}
           </Modal>
           <View style={styles.ButtonContainer}>
             <TouchableHighlight
@@ -254,15 +282,23 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     justifyContent: 'center',
   },
-  Picker: {
+  locationOption: {
+    flexBasis: 55,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderColor: 'rgba(256,256,256,0.2)',
+    borderStyle: 'solid',
+    borderTopWidth: 1,
   },
-  PickerItem: {
-    //may not work on android
-    //height: 75,
-    textAlign: 'center',
-    color: '#fff',
-    fontFamily: 'montserrat',
-    fontSize: 16,
+  selectedLocationOption: {
+    flexBasis: 55,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderColor: 'rgba(256,256,256,0.3)',
+    borderStyle: 'solid',
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    backgroundColor: 'rgba(256,256,256,0.1)'
   },
   ButtonContainer: {
     alignItems: 'stretch',
