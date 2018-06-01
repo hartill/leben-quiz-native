@@ -1,9 +1,10 @@
 {
   "expo": {
-    "name": "310: Leben in Deutschland Test",
+    "name": "Leben in Deutschland",
+    "description": "Practice for the Leben in Deutschland Test.",
     "sdkVersion": "25.0.0",
-    "icon": "./assets/310-icon.png",
-    "version": "1.0.0",
+    "icon": "./assets/leben-in-deutschland-icon.png",
+    "version": "1.0.2",
     "slug": "310_leben_in_deutschland_test",
     "primaryColor": "#23212b",
     "splash": {
@@ -12,7 +13,13 @@
       "resizeMode": "contain",
     },
     "android": {
-      "package": "com.yourcompany.yourappname"
-    }
+      "package": "com.jameshartill.leben_in_deutschland_test",
+      "permissions": [],
+      "versionCode": 3,
+    },
+    "androidStatusBar": {
+      "barStyle": "dark-content",
+      "backgroundColor": "#23212b",
+    },
   }
 }

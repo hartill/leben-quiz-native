@@ -9,14 +9,14 @@ export default class Results extends React.Component {
     this.renderResults = this.renderResults.bind(this)
   }
 
-  renderResults(examProgress) {
+  renderResults() {
     let output = []
     let correctAnswers = 0
     let incorrectAnswers = 0
     for (let i = 0; i < this.props.examProgress.length; i++) {
       this.props.examProgress[i].userScore === 1 ? correctAnswers += 1 : incorrectAnswers += 1
     }
-    let percentageCorrect = correctAnswers / this.props.numberOfQuestions * 100
+    let percentageCorrect = (correctAnswers / this.props.numberOfQuestions) * 100
     let testPassed = percentageCorrect >= 50 ? true : false
     let accentStyle = testPassed ? '#2CC990' : '#DD5152'
     output.push(
