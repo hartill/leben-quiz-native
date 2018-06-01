@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, TouchableHighlight, TouchableOpacity, AsyncStorage, Modal } from 'react-native'
+import { StyleSheet, Text, View, TouchableHighlight, TouchableOpacity, ScrollView, AsyncStorage, Modal, SafeAreaView  } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
@@ -8,9 +8,22 @@ import RenderText from './../../components/RenderText'
 import LocationSelectionList from './../../components/LocationSelectionList'
 
 import quizQuestions from './../../data/quizQuestions'
-import badenWurttembergQuestions from './../../data//badenWurttembergQuestions'
-import bayernQuestions from './../../data//bayernQuestions'
-import berlinQuestions from './../../data//berlinQuestions'
+import badenWurttembergQuestions from './../../data/badenWurttembergQuestions'
+import bayernQuestions from './../../data/bayernQuestions'
+import berlinQuestions from './../../data/berlinQuestions'
+import brandenburgQuestions from './../../data/brandenburgQuestions'
+import bremenQuestions from './../../data/bremenQuestions'
+import hamburgQuestions from './../../data/hamburgQuestions'
+import hessenQuestions from './../../data/hessenQuestions'
+import mecklenburgVorpommernQuestions from './../../data/mecklenburgVorpommernQuestions'
+import niedersachsenQuestions from './../../data/niedersachsenQuestions'
+import nordrheinWestfalenQuestions from './../../data/nordrheinWestfalenQuestions'
+import rheinlandPfalzQuestions from './../../data/rheinlandPfalzQuestions'
+import saarlandQuestions from './../../data/saarlandQuestions'
+import sachsenQuestions from './../../data/sachsenQuestions'
+import sachsenAnhaltQuestions from './../../data/sachsenAnhaltQuestions'
+import schleswigHolsteinQuestions from './../../data/schleswigHolsteinQuestions'
+import thuringenQuestions from './../../data/thuringenQuestions'
 
 export default class StartScreen extends React.Component {
   constructor(props) {
@@ -95,10 +108,12 @@ export default class StartScreen extends React.Component {
   }
 
   handleChangeOfLocation(value) {
-    this.saveKey(value)
-    this.removeProgress()
-    this.removeIncorrect()
-    this.removeExamProgress()
+    if (this.state.userLocation !== value) {
+      this.saveKey(value)
+      this.removeProgress()
+      this.removeIncorrect()
+      this.removeExamProgress()
+    }
     this.closeModal()
   }
 
@@ -118,8 +133,47 @@ export default class StartScreen extends React.Component {
         case 'berlin':
           this.questions = this.questions.concat(berlinQuestions)
           break
+        case 'brandenburg':
+          this.questions = this.questions.concat(brandenburgQuestions)
+          break
+        case 'bremen':
+          this.questions = this.questions.concat(bremenQuestions)
+          break
+        case 'hamburg':
+          this.questions = this.questions.concat(hamburgQuestions)
+          break
+        case 'hessen':
+          this.questions = this.questions.concat(hessenQuestions)
+          break
+        case 'mecklenburgVorpommern':
+          this.questions = this.questions.concat(mecklenburgVorpommernQuestions)
+          break
+        case 'niedersachsen':
+          this.questions = this.questions.concat(niedersachsenQuestions)
+          break
+        case 'nordrheinWestfalen':
+          this.questions = this.questions.concat(nordrheinWestfalenQuestions)
+          break
+        case 'rheinlandPfalz':
+          this.questions = this.questions.concat(rheinlandPfalzQuestions)
+          break
+        case 'saarland':
+          this.questions = this.questions.concat(saarlandQuestions)
+          break
+        case 'sachsen':
+          this.questions = this.questions.concat(sachsenQuestions)
+          break
+        case 'sachsenAnhalt':
+          this.questions = this.questions.concat(sachsenAnhaltQuestions)
+          break
+        case 'schleswigHolstein':
+          this.questions = this.questions.concat(schleswigHolsteinQuestions)
+          break
+        case 'thuringen':
+          this.questions = this.questions.concat(thuringenQuestions)
+          break
         default:
-          this.questions = this.questions.concat(badenWurttembergQuestions)
+          this.questions = this.questions.concat(sachsenQuestions)
       }
     }
   }
@@ -132,6 +186,32 @@ export default class StartScreen extends React.Component {
       userLocationOutput = 'Bayern'
     } else if (this.state.userLocation === 'berlin') {
       userLocationOutput = 'Berlin'
+    } else if (this.state.userLocation === 'brandenburg') {
+      userLocationOutput = 'Brandenburg'
+    } else if (this.state.userLocation === 'bremen') {
+      userLocationOutput = 'Bremen'
+    } else if (this.state.userLocation === 'hamburg') {
+      userLocationOutput = 'Hamburg'
+    } else if (this.state.userLocation === 'hessen') {
+      userLocationOutput = 'Hessen'
+    } else if (this.state.userLocation === 'mecklenburgVorpommern') {
+      userLocationOutput = 'Mecklenburg-Vorpommern'
+    } else if (this.state.userLocation === 'niedersachsen') {
+      userLocationOutput = 'Niedersachsen'
+    } else if (this.state.userLocation === 'nordrheinWestfalen') {
+      userLocationOutput = 'Nordrhein-Westfalen'
+    } else if (this.state.userLocation === 'rheinlandPfalz') {
+      userLocationOutput = 'Rheinland-Pfalz'
+    } else if (this.state.userLocation === 'saarland') {
+      userLocationOutput = 'Saarland'
+    } else if (this.state.userLocation === 'sachsen') {
+      userLocationOutput = 'Sachsen'
+    } else if (this.state.userLocation === 'sachsenAnhalt') {
+      userLocationOutput = 'Sachsen-Anhalt'
+    } else if (this.state.userLocation === 'schleswigHolstein') {
+      userLocationOutput = 'Schleswig-Holstein'
+    } else if (this.state.userLocation === 'thuringen') {
+      userLocationOutput = 'Thüringen'
     }
 
     return (
@@ -155,33 +235,114 @@ export default class StartScreen extends React.Component {
             visible={this.state.modalOpen}
             animationType={'slide'}
             onRequestClose={() => {this.closeModal()}}
+            style={styles.ModalContainer}
             >
-            <View style={styles.ModalContainer}>
-              <TouchableOpacity
-                key={'none'}
-                onPress={() => {this.handleChangeOfLocation("none")}}
-                style={ this.state.userLocation === "none" ? styles.selectedLocationOption : styles.locationOption }>
-                  <RenderText style='p2' text="keiner" />
-              </TouchableOpacity>
-              <TouchableOpacity
-                key={'badenWurttemberg'}
-                onPress={() => {this.handleChangeOfLocation("badenWurttemberg")}}
-                style={ this.state.userLocation === "badenWurttemberg" ? styles.selectedLocationOption : styles.locationOption }>
-                  <RenderText style='p2' text="Baden-Württemberg" />
-              </TouchableOpacity>
-              <TouchableOpacity
-                key={'bayern'}
-                onPress={() => {this.handleChangeOfLocation("bayern")}}
-                style={ this.state.userLocation === "bayern" ? styles.selectedLocationOption : styles.locationOption }>
-                  <RenderText style='p2' text="Bayern" />
-              </TouchableOpacity>
-              <TouchableOpacity
-                key={'berlin'}
-                onPress={() => {this.handleChangeOfLocation("berlin")}}
-                style={ this.state.userLocation === "berlin" ? styles.selectedLocationOption : styles.locationOption }>
-                  <RenderText style='p2' text="Berlin" />
-              </TouchableOpacity>
-            </View>
+            <SafeAreaView style={styles.safeArea}>
+              <ScrollView contentContainerStyle={styles.ListContainer}>
+                <TouchableOpacity
+                  key={'none'}
+                  onPress={() => {this.handleChangeOfLocation("none")}}
+                  style={ this.state.userLocation === "none" ? styles.selectedLocationOption : styles.locationOption }>
+                    <RenderText style='p2' text="keiner" />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  key={'badenWurttemberg'}
+                  onPress={() => {this.handleChangeOfLocation("badenWurttemberg")}}
+                  style={ this.state.userLocation === "badenWurttemberg" ? styles.selectedLocationOption : styles.locationOption }>
+                    <RenderText style='p2' text="Baden-Württemberg" />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  key={'bayern'}
+                  onPress={() => {this.handleChangeOfLocation("bayern")}}
+                  style={ this.state.userLocation === "bayern" ? styles.selectedLocationOption : styles.locationOption }>
+                    <RenderText style='p2' text="Bayern" />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  key={'berlin'}
+                  onPress={() => {this.handleChangeOfLocation("berlin")}}
+                  style={ this.state.userLocation === "berlin" ? styles.selectedLocationOption : styles.locationOption }>
+                    <RenderText style='p2' text="Berlin" />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  key={'brandenburg'}
+                  onPress={() => {this.handleChangeOfLocation("brandenburg")}}
+                  style={ this.state.userLocation === "brandenburg" ? styles.selectedLocationOption : styles.locationOption }>
+                    <RenderText style='p2' text="Brandenburg" />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  key={'bremen'}
+                  onPress={() => {this.handleChangeOfLocation("bremen")}}
+                  style={ this.state.userLocation === "bremen" ? styles.selectedLocationOption : styles.locationOption }>
+                    <RenderText style='p2' text="Bremen" />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  key={'hamburg'}
+                  onPress={() => {this.handleChangeOfLocation("hamburg")}}
+                  style={ this.state.userLocation === "hamburg" ? styles.selectedLocationOption : styles.locationOption }>
+                    <RenderText style='p2' text="Hamburg" />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  key={'hessen'}
+                  onPress={() => {this.handleChangeOfLocation("hessen")}}
+                  style={ this.state.userLocation === "hessen" ? styles.selectedLocationOption : styles.locationOption }>
+                    <RenderText style='p2' text="Hessen" />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  key={'mecklenburgVorpommern'}
+                  onPress={() => {this.handleChangeOfLocation("mecklenburgVorpommern")}}
+                  style={ this.state.userLocation === "mecklenburgVorpommern" ? styles.selectedLocationOption : styles.locationOption }>
+                    <RenderText style='p2' text="Mecklenburg-Vorpommern" />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  key={'niedersachsen'}
+                  onPress={() => {this.handleChangeOfLocation("niedersachsen")}}
+                  style={ this.state.userLocation === "niedersachsen" ? styles.selectedLocationOption : styles.locationOption }>
+                    <RenderText style='p2' text="Niedersachsen" />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  key={'nordrheinWestfalen'}
+                  onPress={() => {this.handleChangeOfLocation("nordrheinWestfalen")}}
+                  style={ this.state.userLocation === "nordrheinWestfalen" ? styles.selectedLocationOption : styles.locationOption }>
+                    <RenderText style='p2' text="Nordrhein-Westfalen" />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  key={'rheinlandPfalz'}
+                  onPress={() => {this.handleChangeOfLocation("rheinlandPfalz")}}
+                  style={ this.state.userLocation === "rheinlandPfalz" ? styles.selectedLocationOption : styles.locationOption }>
+                    <RenderText style='p2' text="Rheinland-Pfalz" />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  key={'saarland'}
+                  onPress={() => {this.handleChangeOfLocation("saarland")}}
+                  style={ this.state.userLocation === "saarland" ? styles.selectedLocationOption : styles.locationOption }>
+                    <RenderText style='p2' text="Saarland" />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  key={'sachsen'}
+                  onPress={() => {this.handleChangeOfLocation("sachsen")}}
+                  style={ this.state.userLocation === "sachsen" ? styles.selectedLocationOption : styles.locationOption }>
+                    <RenderText style='p2' text="Sachsen" />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  key={'sachsenAnhalt'}
+                  onPress={() => {this.handleChangeOfLocation("sachsenAnhalt")}}
+                  style={ this.state.userLocation === "sachsenAnhalt" ? styles.selectedLocationOption : styles.locationOption }>
+                    <RenderText style='p2' text="Sachsen-Anhalt" />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  key={'schleswigHolstein'}
+                  onPress={() => {this.handleChangeOfLocation("schleswigHolstein")}}
+                  style={ this.state.userLocation === "schleswigHolstein" ? styles.selectedLocationOption : styles.locationOption }>
+                    <RenderText style='p2' text="Schleswig-Holstein" />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  key={'thuringen'}
+                  onPress={() => {this.handleChangeOfLocation("thuringen")}}
+                  style={ this.state.userLocation === "thuringen" ? styles.selectedLocationOption : styles.locationOption }>
+                    <RenderText style='p2' text="Thüringen" />
+                </TouchableOpacity>
+              </ScrollView>
+            </SafeAreaView>
             {/*<TouchableHighlight
               underlayColor='#23212b'
               onPress={() => {this.closeModal()}}
@@ -272,18 +433,25 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   ModalContainer: {
-    position: 'absolute',
-    left: 0,
-    top: 0,
-    bottom: 0,
-    right: 0,
+    flex: 1,
     backgroundColor: '#3e4651',
     zIndex: 5,
     alignItems: 'stretch',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
+  },
+  safeArea: {
+    backgroundColor: '#3e4651',
+    flex: 1,
+    alignItems: 'stretch',
+    justifyContent: 'flex-start',
+  },
+  ListContainer: {
+    flex: 1,
+    alignItems: 'stretch',
+    justifyContent: 'flex-start',
   },
   locationOption: {
-    flexBasis: 55,
+    flexBasis: 50,
     alignItems: 'center',
     justifyContent: 'center',
     borderColor: 'rgba(256,256,256,0.2)',
