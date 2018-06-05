@@ -44,9 +44,4 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 12,
   },
-  p2Small: {
-    fontFamily: 'montserrat',
-    color: '#555',
-    fontSize: 12,
-  },
 });

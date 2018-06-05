@@ -256,7 +256,7 @@ export default class StartScreen extends React.Component {
             onRequestClose={() => {this.closeModal()}}
             style={styles.ModalContainer}
             >
-            <SafeAreaView style={styles.safeArea}>
+            <SafeAreaView style={styles.safeAreaModal}>
               <View style={styles.SelectionListView}>
                 <Picker
                   selectedValue = {this.state.userSelectedLocation}
@@ -291,10 +291,10 @@ export default class StartScreen extends React.Component {
                       style={styles.ConfirmationButtonOuter}>
                       <View style={styles.ConfirmationButton}>
                         <View>
-                          <RenderText style='p' text='Bestätigen' />
+                          <RenderText style='p2' text={this.state.userSelectedLocation !== this.state.userLocation ? 'Bestätigen*' : 'Bestätigen'} />
                         </View>
                         <View style={[styles.ConfirmationButtonIcon]}>
-                          <Icon name="done" size={16} color="#555" />
+                          <Icon name="done" size={16} color="#fff" />
                         </View>
                       </View>
                     </TouchableHighlight>
@@ -304,10 +304,10 @@ export default class StartScreen extends React.Component {
                       style={styles.ConfirmationButtonOuter}>
                       <View style={styles.ConfirmationButton}>
                         <View>
-                          <RenderText style='p' text='Stornieren' />
+                          <RenderText style='p2' text='Absagen' />
                         </View>
                         <View style={[styles.ConfirmationButtonIcon]}>
-                          <Icon name="clear" size={16} color="#555" />
+                          <Icon name="clear" size={16} color="#fff" />
                         </View>
                       </View>
                     </TouchableHighlight>
@@ -316,7 +316,7 @@ export default class StartScreen extends React.Component {
                   {
                     this.state.userSelectedLocation !== this.state.userLocation ?
                     (
-                        <RenderText style='p2Small' text='*Ihr Fortschritt wird zurückgesetzt' />
+                        <RenderText style='pSmall' text='*Ihr Fortschritt wird zurückgesetzt' />
                     ) : null
                   }
                   </View>
@@ -397,16 +397,26 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     justifyContent: 'center',
   },
-  safeArea: {
+  safeAreaModal: {
     flex: 1,
     alignItems: 'stretch',
     justifyContent: 'center',
+    backgroundColor: '#3e4651',
   },
   SelectionListView: {
     flex: 1,
     alignItems: 'stretch',
     justifyContent: 'space-around',
     padding: 15,
+  },
+  Picker: {
+    //backgroundColor: '#3e4651',
+    backgroundColor: '#fff',
+    //borderColor: '#fff',
+    borderWidth: 1,
+  },
+  PickerItem: {
+    //color: '#fff',
   },
   ConfirmationButtonContainer: {
     flexBasis: 50,
@@ -424,13 +434,14 @@ const styles = StyleSheet.create({
     flexWrap: 'nowrap',
     alignItems: 'center',
     justifyContent: 'center',
-    borderColor: '#555',
+    borderColor: '#fff',
     borderWidth: 1,
   },
   ConfirmationButtonIcon: {
     paddingLeft: 8
   },
   ConfirmationText: {
+    flexBasis: 15,
     marginTop: 10,
   },
   ConfirmationTextButtonContainer: {
