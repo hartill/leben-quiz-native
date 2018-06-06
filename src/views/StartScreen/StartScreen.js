@@ -258,31 +258,33 @@ export default class StartScreen extends React.Component {
             >
             <SafeAreaView style={styles.safeAreaModal}>
               <View style={styles.SelectionListView}>
-                <Picker
-                  selectedValue = {this.state.userSelectedLocation}
-                  onValueChange={(value) => this.handleLocationSelection(value)}
-                  style={styles.Picker}
-                  itemStyle={styles.PickerItem}
-                  mode='dropdown'
-                >
-                  <Picker.Item label = "keiner" value = "none"/>
-                  <Picker.Item label = "Baden-Württemberg" value = "badenWurttemberg" />
-                  <Picker.Item label = "Bayern" value = "bayern" />
-                  <Picker.Item label = "Berlin" value = "berlin" />
-                  <Picker.Item label = "Brandenburg" value = "brandenburg" />
-                  <Picker.Item label = "Bremen" value = "bremen" />
-                  <Picker.Item label = "Hamburg" value = "hamburg" />
-                  <Picker.Item label = "Hessen" value = "hessen" />
-                  <Picker.Item label = "Mecklenburg-Vorpommern" value = "mecklenburgVorpommern" />
-                  <Picker.Item label = "Niedersachsen" value = "niedersachsen" />
-                  <Picker.Item label = "Nordrhein-Westfalen" value = "nordrheinWestfalen" />
-                  <Picker.Item label = "Rheinland-Pfalz" value = "rheinlandPfalz" />
-                  <Picker.Item label = "Saarland" value = "saarland" />
-                  <Picker.Item label = "Sachsen" value = "sachsen" />
-                  <Picker.Item label = "Sachsen-Anhalt" value = "sachsenAnhalt" />
-                  <Picker.Item label = "Schleswig-Holstein" value = "schleswigHolstein" />
-                  <Picker.Item label = "Thüringen" value = "thuringen" />
-                </Picker>
+                <View style={styles.PickerContainer}>
+                  <Picker
+                    selectedValue = {this.state.userSelectedLocation}
+                    onValueChange={(value) => this.handleLocationSelection(value)}
+                    //style={styles.Picker}
+                    //itemStyle={styles.PickerItem}
+                    mode='dropdown'
+                  >
+                    <Picker.Item label = "keiner" value = "none"/>
+                    <Picker.Item label = "Baden-Württemberg" value = "badenWurttemberg" />
+                    <Picker.Item label = "Bayern" value = "bayern" />
+                    <Picker.Item label = "Berlin" value = "berlin" />
+                    <Picker.Item label = "Brandenburg" value = "brandenburg" />
+                    <Picker.Item label = "Bremen" value = "bremen" />
+                    <Picker.Item label = "Hamburg" value = "hamburg" />
+                    <Picker.Item label = "Hessen" value = "hessen" />
+                    <Picker.Item label = "Mecklenburg-Vorpommern" value = "mecklenburgVorpommern" />
+                    <Picker.Item label = "Niedersachsen" value = "niedersachsen" />
+                    <Picker.Item label = "Nordrhein-Westfalen" value = "nordrheinWestfalen" />
+                    <Picker.Item label = "Rheinland-Pfalz" value = "rheinlandPfalz" />
+                    <Picker.Item label = "Saarland" value = "saarland" />
+                    <Picker.Item label = "Sachsen" value = "sachsen" />
+                    <Picker.Item label = "Sachsen-Anhalt" value = "sachsenAnhalt" />
+                    <Picker.Item label = "Schleswig-Holstein" value = "schleswigHolstein" />
+                    <Picker.Item label = "Thüringen" value = "thuringen" />
+                  </Picker>
+                </View>
                 <View style={styles.ConfirmationTextButtonContainer}>
                   <View style={styles.ConfirmationButtonContainer}>
                     <TouchableHighlight
@@ -304,7 +306,7 @@ export default class StartScreen extends React.Component {
                       style={styles.ConfirmationButtonOuter}>
                       <View style={styles.ConfirmationButton}>
                         <View>
-                          <RenderText style='p2' text='Absagen' />
+                          <RenderText style='p2' text='Abbrechen' />
                         </View>
                         <View style={[styles.ConfirmationButtonIcon]}>
                           <Icon name="clear" size={16} color="#fff" />
@@ -409,11 +411,11 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     padding: 15,
   },
-  Picker: {
+  PickerContainer: {
     //backgroundColor: '#3e4651',
     backgroundColor: '#fff',
     //borderColor: '#fff',
-    borderWidth: 1,
+    //borderWidth: 1,
   },
   PickerItem: {
     //color: '#fff',
