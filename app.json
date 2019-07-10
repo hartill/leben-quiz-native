@@ -4,8 +4,8 @@
     "description": "Practice for the Leben in Deutschland Test.",
     "sdkVersion": "25.0.0",
     "icon": "./assets/leben-in-deutschland-icon.png",
-    "version": "1.0.2",
-    "slug": "310_leben_in_deutschland_test",
+    "version": "1.0.3",
+    "slug": "leben_in_deutschland_test",
     "primaryColor": "#23212b",
     "splash": {
       "image": "./assets/splash.png",
