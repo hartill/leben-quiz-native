@@ -36,7 +36,12 @@ export default class QuizContainer extends React.Component {
           <View style={styles.Question}>
             <RenderText style='p' text={this.props.question.question} />
             {
-              this.props.question.image !== undefined ? <ImageLightbox question = {this.props.question}/> : null
+              this.props.question.image !== undefined ?
+                <ImageLightbox
+                  question = {this.props.question}
+                  images = {this.props.images}
+                /> :
+                null
             }
           </View>
           <Answers
