@@ -26,36 +26,58 @@ export default class ImageLightBox extends React.Component {
   }
 
   renderImage() {
-    const images = {
-      image21: require('./../../../assets/images/021.png'),
-      image55: require('./../../../assets/images/055.png'),
-      image70: require('./../../../assets/images/070.png'),
-      image130: require('./../../../assets/images/130.png'),
-      image176: require('./../../../assets/images/176.png'),
-      image181: require('./../../../assets/images/181.png'),
-      image187: require('./../../../assets/images/187.png'),
-      image209: require('./../../../assets/images/209.png'),
-      image216: require('./../../../assets/images/216.png'),
-      image226: require('./../../../assets/images/226.png'),
-      image235: require('./../../../assets/images/235.png'),
-      image301: require('./../../../assets/images/badenWurttemberg/301.png'),
-      image308: require('./../../../assets/images/badenWurttemberg/308.png'),
-      image311: require('./../../../assets/images/bayern/311.png'),
-      image318: require('./../../../assets/images/bayern/318.png'),
-      image321: require('./../../../assets/images/berlin/321.png'),
-      image328: require('./../../../assets/images/berlin/328.png'),
-    }
+
     let questionId = parseInt(this.props.question.id)
+
     if (this.props.question.category === "Bayern") {
       questionId += 10
     }
     if (this.props.question.category === "Berlin") {
       questionId += 20
     }
+    if (this.props.question.category === "Brandenburg") {
+      questionId += 30
+    }
+    if (this.props.question.category === "Bremen") {
+      questionId += 40
+    }
+    if (this.props.question.category === "Hamburg") {
+      questionId += 50
+    }
+    if (this.props.question.category === "Hessen") {
+      questionId += 60
+    }
+    if (this.props.question.category === "Mecklenburg-Vorpommern") {
+      questionId += 70
+    }
+    if (this.props.question.category === "Niedersachsen") {
+      questionId += 80
+    }
+    if (this.props.question.category === "Nordrhein-Westfalen") {
+      questionId += 90
+    }
+    if (this.props.question.category === "Rheinland-Pfalz") {
+      questionId += 100
+    }
+    if (this.props.question.category === "Saarland") {
+      questionId += 110
+    }
+    if (this.props.question.category === "Sachsen-Anhalt") {
+      questionId += 120
+    }
+    if (this.props.question.category === "Sachsen") {
+      questionId += 130
+    }
+    if (this.props.question.category === "Schleswig-Holstein") {
+      questionId += 140
+    }
+    if (this.props.question.category === "Thüringen") {
+      questionId += 150
+    }
     let imageRef = 'image' + questionId.toString()
     return (
       <View style={styles.LightboxcontainerInner}>
-        <Image source={images[imageRef]} style={styles.LightboxImage} resizeMode={'contain'} />
+        <Image source={this.props.images[imageRef]} style={styles.LightboxImage} resizeMode={'contain'} />
       </View>
     )
   }

@@ -2955,7 +2955,7 @@ key: 0
     "question": "Wen vertreten die Gewerkschaften in Deutschland?",
     "answers": [
 {
-content: " gro\u00dfe Unternehmen",
+content: "gro\u00dfe Unternehmen",
 key: 0
 },
 {

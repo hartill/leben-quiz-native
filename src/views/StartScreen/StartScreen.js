@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, TouchableHighlight, TouchableOpacity, ScrollView, AsyncStorage, Modal, SafeAreaView  } from 'react-native'
+import { StyleSheet, Text, View, TouchableHighlight, TouchableOpacity, Picker, AsyncStorage, Modal, SafeAreaView  } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
@@ -30,12 +30,15 @@ export default class StartScreen extends React.Component {
   super(props)
   this.state = {
     userLocation: 'none',
+    userSelectedLocation: 'none',
     modalOpen: false,
   }
   this.questions = quizQuestions
   this.numberOfQuestions = 300
 
   this.loadQuestionOptions = this.loadQuestionOptions.bind(this)
+  this.handleLocationSelection = this.handleLocationSelection.bind(this)
+  this.cancelLocationSelection = this.cancelLocationSelection.bind(this)
 }
 
   openModal() {
@@ -62,7 +65,10 @@ export default class StartScreen extends React.Component {
   async getKey() {
     try {
       const value = await AsyncStorage.getItem('@LebenStore:userLocation')
-      this.setState({userLocation: value})
+      this.setState({
+        userLocation: value,
+        userSelectedLocation: value
+      })
     } catch (error) {
       console.log("Error retrieving data" + error)
     }
@@ -114,6 +120,19 @@ export default class StartScreen extends React.Component {
       this.removeIncorrect()
       this.removeExamProgress()
     }
+    this.closeModal()
+  }
+
+  handleLocationSelection(value) {
+    this.setState({
+      userSelectedLocation: value,
+    })
+  }
+
+  cancelLocationSelection() {
+    this.setState({
+      userSelectedLocation: this.state.userLocation,
+    })
     this.closeModal()
   }
 
@@ -237,129 +256,75 @@ export default class StartScreen extends React.Component {
             onRequestClose={() => {this.closeModal()}}
             style={styles.ModalContainer}
             >
-            <SafeAreaView style={styles.safeArea}>
-              <ScrollView contentContainerStyle={styles.ListContainer}>
-                <TouchableOpacity
-                  key={'none'}
-                  onPress={() => {this.handleChangeOfLocation("none")}}
-                  style={ this.state.userLocation === "none" ? styles.selectedLocationOption : styles.locationOption }>
-                    <RenderText style='p2' text="keiner" />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  key={'badenWurttemberg'}
-                  onPress={() => {this.handleChangeOfLocation("badenWurttemberg")}}
-                  style={ this.state.userLocation === "badenWurttemberg" ? styles.selectedLocationOption : styles.locationOption }>
-                    <RenderText style='p2' text="Baden-Württemberg" />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  key={'bayern'}
-                  onPress={() => {this.handleChangeOfLocation("bayern")}}
-                  style={ this.state.userLocation === "bayern" ? styles.selectedLocationOption : styles.locationOption }>
-                    <RenderText style='p2' text="Bayern" />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  key={'berlin'}
-                  onPress={() => {this.handleChangeOfLocation("berlin")}}
-                  style={ this.state.userLocation === "berlin" ? styles.selectedLocationOption : styles.locationOption }>
-                    <RenderText style='p2' text="Berlin" />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  key={'brandenburg'}
-                  onPress={() => {this.handleChangeOfLocation("brandenburg")}}
-                  style={ this.state.userLocation === "brandenburg" ? styles.selectedLocationOption : styles.locationOption }>
-                    <RenderText style='p2' text="Brandenburg" />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  key={'bremen'}
-                  onPress={() => {this.handleChangeOfLocation("bremen")}}
-                  style={ this.state.userLocation === "bremen" ? styles.selectedLocationOption : styles.locationOption }>
-                    <RenderText style='p2' text="Bremen" />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  key={'hamburg'}
-                  onPress={() => {this.handleChangeOfLocation("hamburg")}}
-                  style={ this.state.userLocation === "hamburg" ? styles.selectedLocationOption : styles.locationOption }>
-                    <RenderText style='p2' text="Hamburg" />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  key={'hessen'}
-                  onPress={() => {this.handleChangeOfLocation("hessen")}}
-                  style={ this.state.userLocation === "hessen" ? styles.selectedLocationOption : styles.locationOption }>
-                    <RenderText style='p2' text="Hessen" />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  key={'mecklenburgVorpommern'}
-                  onPress={() => {this.handleChangeOfLocation("mecklenburgVorpommern")}}
-                  style={ this.state.userLocation === "mecklenburgVorpommern" ? styles.selectedLocationOption : styles.locationOption }>
-                    <RenderText style='p2' text="Mecklenburg-Vorpommern" />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  key={'niedersachsen'}
-                  onPress={() => {this.handleChangeOfLocation("niedersachsen")}}
-                  style={ this.state.userLocation === "niedersachsen" ? styles.selectedLocationOption : styles.locationOption }>
-                    <RenderText style='p2' text="Niedersachsen" />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  key={'nordrheinWestfalen'}
-                  onPress={() => {this.handleChangeOfLocation("nordrheinWestfalen")}}
-                  style={ this.state.userLocation === "nordrheinWestfalen" ? styles.selectedLocationOption : styles.locationOption }>
-                    <RenderText style='p2' text="Nordrhein-Westfalen" />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  key={'rheinlandPfalz'}
-                  onPress={() => {this.handleChangeOfLocation("rheinlandPfalz")}}
-                  style={ this.state.userLocation === "rheinlandPfalz" ? styles.selectedLocationOption : styles.locationOption }>
-                    <RenderText style='p2' text="Rheinland-Pfalz" />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  key={'saarland'}
-                  onPress={() => {this.handleChangeOfLocation("saarland")}}
-                  style={ this.state.userLocation === "saarland" ? styles.selectedLocationOption : styles.locationOption }>
-                    <RenderText style='p2' text="Saarland" />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  key={'sachsen'}
-                  onPress={() => {this.handleChangeOfLocation("sachsen")}}
-                  style={ this.state.userLocation === "sachsen" ? styles.selectedLocationOption : styles.locationOption }>
-                    <RenderText style='p2' text="Sachsen" />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  key={'sachsenAnhalt'}
-                  onPress={() => {this.handleChangeOfLocation("sachsenAnhalt")}}
-                  style={ this.state.userLocation === "sachsenAnhalt" ? styles.selectedLocationOption : styles.locationOption }>
-                    <RenderText style='p2' text="Sachsen-Anhalt" />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  key={'schleswigHolstein'}
-                  onPress={() => {this.handleChangeOfLocation("schleswigHolstein")}}
-                  style={ this.state.userLocation === "schleswigHolstein" ? styles.selectedLocationOption : styles.locationOption }>
-                    <RenderText style='p2' text="Schleswig-Holstein" />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  key={'thuringen'}
-                  onPress={() => {this.handleChangeOfLocation("thuringen")}}
-                  style={ this.state.userLocation === "thuringen" ? styles.selectedLocationOption : styles.locationOption }>
-                    <RenderText style='p2' text="Thüringen" />
-                </TouchableOpacity>
-              </ScrollView>
+            <SafeAreaView style={styles.safeAreaModal}>
+              <View style={styles.SelectionListView}>
+                <View style={styles.PickerContainer}>
+                  <Picker
+                    selectedValue = {this.state.userSelectedLocation}
+                    onValueChange={(value) => this.handleLocationSelection(value)}
+                    //style={styles.Picker}
+                    //itemStyle={styles.PickerItem}
+                    mode='dropdown'
+                  >
+                    <Picker.Item label = "keiner" value = "none"/>
+                    <Picker.Item label = "Baden-Württemberg" value = "badenWurttemberg" />
+                    <Picker.Item label = "Bayern" value = "bayern" />
+                    <Picker.Item label = "Berlin" value = "berlin" />
+                    <Picker.Item label = "Brandenburg" value = "brandenburg" />
+                    <Picker.Item label = "Bremen" value = "bremen" />
+                    <Picker.Item label = "Hamburg" value = "hamburg" />
+                    <Picker.Item label = "Hessen" value = "hessen" />
+                    <Picker.Item label = "Mecklenburg-Vorpommern" value = "mecklenburgVorpommern" />
+                    <Picker.Item label = "Niedersachsen" value = "niedersachsen" />
+                    <Picker.Item label = "Nordrhein-Westfalen" value = "nordrheinWestfalen" />
+                    <Picker.Item label = "Rheinland-Pfalz" value = "rheinlandPfalz" />
+                    <Picker.Item label = "Saarland" value = "saarland" />
+                    <Picker.Item label = "Sachsen" value = "sachsen" />
+                    <Picker.Item label = "Sachsen-Anhalt" value = "sachsenAnhalt" />
+                    <Picker.Item label = "Schleswig-Holstein" value = "schleswigHolstein" />
+                    <Picker.Item label = "Thüringen" value = "thuringen" />
+                  </Picker>
+                </View>
+                <View style={styles.ConfirmationTextButtonContainer}>
+                  <View style={styles.ConfirmationButtonContainer}>
+                    <TouchableHighlight
+                      underlayColor='#23212b'
+                      onPress={() => this.handleChangeOfLocation(this.state.userSelectedLocation)}
+                      style={styles.ConfirmationButtonOuter}>
+                      <View style={styles.ConfirmationButton}>
+                        <View>
+                          <RenderText style='p2' text={this.state.userSelectedLocation !== this.state.userLocation ? 'Bestätigen*' : 'Bestätigen'} />
+                        </View>
+                        <View style={[styles.ConfirmationButtonIcon]}>
+                          <Icon name="done" size={16} color="#fff" />
+                        </View>
+                      </View>
+                    </TouchableHighlight>
+                    <TouchableHighlight
+                      underlayColor='#23212b'
+                      onPress={() => this.cancelLocationSelection()}
+                      style={styles.ConfirmationButtonOuter}>
+                      <View style={styles.ConfirmationButton}>
+                        <View>
+                          <RenderText style='p2' text='Abbrechen' />
+                        </View>
+                        <View style={[styles.ConfirmationButtonIcon]}>
+                          <Icon name="clear" size={16} color="#fff" />
+                        </View>
+                      </View>
+                    </TouchableHighlight>
+                  </View>
+                  <View style={[styles.ConfirmationText]}>
+                  {
+                    this.state.userSelectedLocation !== this.state.userLocation ?
+                    (
+                        <RenderText style='pSmall' text='*Ihr Fortschritt wird zurückgesetzt' />
+                    ) : null
+                  }
+                  </View>
+                </View>
+              </View>
             </SafeAreaView>
-            {/*<TouchableHighlight
-              underlayColor='#23212b'
-              onPress={() => {this.closeModal()}}
-              style={styles.ModalContainer}>
-                <Picker
-                  selectedValue = {this.state.userLocation}
-                  onValueChange={(value) => this.handleChangeOfLocation(value)}
-                  style={styles.Picker}
-                  itemStyle={styles.PickerItem}
-                  mode='dropdown'
-                >
-                  <Picker.Item color='#fff' label = "keiner" value = "none"/>
-                  <Picker.Item color='#fff' label = "Baden-Württemberg" value = "badenWurttemberg" />
-                  <Picker.Item color='#fff' label = "Bayern" value = "bayern" />
-                  <Picker.Item color='#fff' label = "Berlin" value = "berlin" />
-                </Picker>
-            </TouchableHighlight>*/}
           </Modal>
           <View style={styles.ButtonContainer}>
             <TouchableHighlight
@@ -428,45 +393,62 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     padding: 15,
   },
-  ChooseLocation: {
-    alignItems: 'stretch',
-    justifyContent: 'center',
-  },
   ModalContainer: {
     flex: 1,
-    backgroundColor: '#3e4651',
     zIndex: 5,
     alignItems: 'stretch',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
   },
-  safeArea: {
+  safeAreaModal: {
+    flex: 1,
+    alignItems: 'stretch',
+    justifyContent: 'center',
     backgroundColor: '#3e4651',
+  },
+  SelectionListView: {
     flex: 1,
     alignItems: 'stretch',
-    justifyContent: 'flex-start',
+    justifyContent: 'space-around',
+    padding: 15,
   },
-  ListContainer: {
-    flex: 1,
-    alignItems: 'stretch',
-    justifyContent: 'flex-start',
+  PickerContainer: {
+    //backgroundColor: '#3e4651',
+    backgroundColor: '#fff',
+    //borderColor: '#fff',
+    //borderWidth: 1,
   },
-  locationOption: {
+  PickerItem: {
+    //color: '#fff',
+  },
+  ConfirmationButtonContainer: {
     flexBasis: 50,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderColor: 'rgba(256,256,256,0.2)',
-    borderStyle: 'solid',
-    borderTopWidth: 1,
+    flexDirection: 'row',
+    flexWrap: 'nowrap',
+    alignItems: 'stretch',
+    justifyContent: 'space-between',
   },
-  selectedLocationOption: {
-    flexBasis: 55,
+  ConfirmationButtonOuter: {
+    flexBasis: '48%',
+  },
+  ConfirmationButton: {
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'nowrap',
     alignItems: 'center',
     justifyContent: 'center',
-    borderColor: 'rgba(256,256,256,0.3)',
-    borderStyle: 'solid',
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    backgroundColor: 'rgba(256,256,256,0.1)'
+    borderColor: '#fff',
+    borderWidth: 1,
+  },
+  ConfirmationButtonIcon: {
+    paddingLeft: 8
+  },
+  ConfirmationText: {
+    flexBasis: 15,
+    marginTop: 10,
+  },
+  ConfirmationTextButtonContainer: {
+    alignItems: 'stretch',
+    justifyContent: 'space-between',
   },
   ButtonContainer: {
     alignItems: 'stretch',

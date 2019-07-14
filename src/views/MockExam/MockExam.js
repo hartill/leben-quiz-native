@@ -193,6 +193,7 @@ export default class MockExam extends React.Component {
           onAnswerSelected={this.onAnswerSelected}
           selectedAnswer={this.state.selectedAnswer}
           showAnswer={this.state.showAnswer}
+          images = {this.props.images}
           key='qo2'
           mode={2}
         />

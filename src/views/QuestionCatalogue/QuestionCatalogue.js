@@ -102,6 +102,7 @@ export default class QuestionCatalogue extends React.Component {
           onAnswerSelected={this.onAnswerSelected}
           selectedAnswer={this.state.selectedAnswer}
           showAnswer={this.state.showAnswer}
+          images = {this.props.images}
           key='qo2'
           mode={3}
         />
