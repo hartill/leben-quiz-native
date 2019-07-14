@@ -216,6 +216,7 @@ renderContent() {
           icons={true}
           viewProgress={this.state.viewProgress}
           handleViewProgress={this.handleViewProgress}
+          renderHomeButton={!this.state.viewProgress}
         />
         {this.renderContent()}
         <QuizFooter

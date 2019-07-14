@@ -211,6 +211,7 @@ export default class MockExam extends React.Component {
           icons={true}
           viewProgress={this.state.viewProgress}
           handleViewProgress={this.handleViewProgress}
+          renderHomeButton={!this.state.viewProgress}
         />
         {this.renderContent()}
         <QuizFooter

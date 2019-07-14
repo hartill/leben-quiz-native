@@ -23,7 +23,7 @@ export default class QCFooter extends React.Component {
 
 const styles = StyleSheet.create({
   FooterContainer: {
-    flexBasis: 56,
+    flexBasis: 64,
     backgroundColor: '#23212b',
     alignItems: 'stretch',
     justifyContent: 'center',

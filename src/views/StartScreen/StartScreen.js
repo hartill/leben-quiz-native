@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, TouchableHighlight, TouchableOpacity, Picker, AsyncStorage, Modal, SafeAreaView  } from 'react-native'
+import { StyleSheet, Text, View, TouchableHighlight, TouchableOpacity, ScrollView, AsyncStorage, Picker, Modal, SafeAreaView  } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 

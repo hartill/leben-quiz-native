@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, StatusBar, Dimensions, SafeAreaView } from 'react-native'
 import { Router, Scene } from 'react-native-router-flux'
-import { Font } from 'expo'
+import * as Font from 'expo-font'
 
 import StartScreen from './src/views/StartScreen'
 import PracticeMode from './src/views/PracticeMode'

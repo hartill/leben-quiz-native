@@ -120,6 +120,7 @@ export default class QuestionCatalogue extends React.Component {
           icons={true}
           viewProgress={this.state.viewProgress}
           handleViewProgress={this.handleViewProgress}
+          renderHomeButton={!this.state.viewProgress}
         />
         {this.renderContent()}
         <QCFooter

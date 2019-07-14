@@ -36,12 +36,7 @@ export default class QuizContainer extends React.Component {
           <View style={styles.Question}>
             <RenderText style='p' text={this.props.question.question} />
             {
-              this.props.question.image !== undefined ?
-                <ImageLightbox
-                  question = {this.props.question}
-                  images = {this.props.images}
-                /> :
-                null
+              this.props.question.image !== undefined ? <ImageLightbox question = {this.props.question}/> : null
             }
           </View>
           <Answers
@@ -64,14 +59,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   ContentHeaderContainer: {
-    flexBasis: 56,
+    flexBasis: 64,
     flexDirection: 'row',
     backgroundColor: '#37b1e3',
     alignItems: 'stretch',
     justifyContent: 'center',
   },
   ContentHeaderLeft: {
-    flexBasis: 56,
+    flexBasis: 64,
     backgroundColor: 'rgba(0,0,0,0.3)',
     alignItems: 'center',
     justifyContent: 'center',

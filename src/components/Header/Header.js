@@ -17,10 +17,17 @@ export default class Header extends React.Component {
     if (this.props.icons === true) {
       return (
         <TouchableOpacity onPress={() => Actions.pop()} style={styles.HeaderLeft}>
-          <Icon name="arrow-back" size={16} color="#fff" />
+          <Icon name="arrow-back" size={20} color="#fff" />
         </TouchableOpacity>
       )
     }
+  }
+
+  renderSpacerLeft() {
+    return (
+      <View style={styles.HeaderLeft}>
+      </View>
+    )
   }
 
   renderButtonRight() {
@@ -30,7 +37,7 @@ export default class Header extends React.Component {
           <TouchableOpacity
             onPress={() => {this.props.handleViewProgress()}}
             style={styles.HeaderRight}>
-            <Icon name="view-module" size={16} color="#fff" />
+            <Icon name="view-module" size={20} color="#fff" />
           </TouchableOpacity>
         )
       } else {
@@ -38,7 +45,7 @@ export default class Header extends React.Component {
           <TouchableOpacity
             onPress={() => {this.props.handleViewProgress()}}
             style={styles.HeaderRight}>
-            <Icon name="close" size={16} color="#fff" />
+            <Icon name="close" size={20} color="#fff" />
           </TouchableOpacity>
         )
       }
@@ -48,7 +55,7 @@ export default class Header extends React.Component {
   render() {
     return (
       <View style={styles.HeaderContainer}>
-        {this.renderButtonLeft()}
+        {this.props.renderHomeButton !== false ? this.renderButtonLeft() : this.renderSpacerLeft()}
         <View style={styles.HeaderCenter}>
           <RenderText style='h1' text={this.props.title !== null ? this.props.title : 'untitled'} />
         </View>
@@ -60,7 +67,7 @@ export default class Header extends React.Component {
 
 const styles = StyleSheet.create({
   HeaderContainer: {
-    flexBasis: 56,
+    flexBasis: 64,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -68,19 +75,16 @@ const styles = StyleSheet.create({
   },
   HeaderCenter: {
     flex: 1,
-    //paddingBottom: 15,
     alignItems: 'center',
     justifyContent: 'center',
   },
   HeaderLeft: {
-    flexBasis: 56,
-    //paddingBottom: 15,
+    flexBasis: 64,
     alignItems: 'center',
     justifyContent: 'center',
   },
   HeaderRight: {
-    flexBasis: 56,
-    //paddingBottom: 15,
+    flexBasis: 64,
     alignItems: 'center',
     justifyContent: 'center',
   },
