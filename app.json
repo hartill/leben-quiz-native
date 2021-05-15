@@ -4,7 +4,6 @@
     "description": "Practice for the Leben in Deutschland Test.",
     "slug": "310_leben_in_deutschland_test",
     "privacy": "public",
-    "sdkVersion": "33.0.0",
     "platforms": [
       "ios",
       "android",
@@ -17,16 +16,16 @@
     "splash": {
       "image": "./assets/splash.png",
       "backgroundColor": "#23212b",
-      "resizeMode": "contain",
+      "resizeMode": "contain"
     },
     "android": {
       "package": "com.jameshartill.leben_in_deutschland_test",
       "permissions": [],
-      "versionCode": 9,
+      "versionCode": 9
     },
     "androidStatusBar": {
       "barStyle": "dark-content",
-      "backgroundColor": "#23212b",
+      "backgroundColor": "#23212b"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
