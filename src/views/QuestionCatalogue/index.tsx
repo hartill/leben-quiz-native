@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AppContainer, ContentContainer } from '../../components/Layout'
+import { AppContainer } from '../../components/Layout'
 import Header from '../../components/Header'
 import QuizContainer from '../../components/Quiz/QuizContainer'
 import QCFooter from '../../components/QuestionCatalogue/QCFooter'

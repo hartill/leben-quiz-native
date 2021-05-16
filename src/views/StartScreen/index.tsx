@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import { TouchableHighlight, AsyncStorage } from 'react-native'
+import { TouchableHighlight } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import SelectLocation from '../../components/SelectLocation'
 import Header from '../../components/Header'
 import RenderText from '../../components/RenderText'
 import { AppContainer, PaddedContentContainer, ButtonContainer, Button, ButtonText, ButtonIcon } from '../../components/Layout/index'
+import { theme } from '../../theme'
+import Storage from '../../storage'
 
 import quizQuestions from '../../data/quizQuestions'
 import badenWurttembergQuestions from '../../data/badenWurttembergQuestions'
@@ -24,11 +26,11 @@ import sachsenQuestions from '../../data/sachsenQuestions'
 import sachsenAnhaltQuestions from '../../data/sachsenAnhaltQuestions'
 import schleswigHolsteinQuestions from '../../data/schleswigHolsteinQuestions'
 import thuringenQuestions from '../../data/thuringenQuestions'
-import { theme } from '../../theme'
 
 interface IStartScreen {}
 
 const StartScreen: React.FC<IStartScreen> = () => {
+  const storage = new Storage()
   const [userLocation, setUserLocation] = useState<string>('none')
   const [modalOpen, setModalOpen] = useState<boolean>(false)
   const [questions, setQuestions] = useState<any>(quizQuestions)
@@ -42,68 +44,30 @@ const StartScreen: React.FC<IStartScreen> = () => {
     setModalOpen(false)
   }
 
+  const loadUserLocation = async() => {
+    const userLocation = await storage.getLocation()
+    if (userLocation) {
+      setUserLocation(userLocation)
+      setNumberOfQuestions(userLocation === 'none' ? 300 : 310)
+    }
+  }
+
   useEffect(() => {
-    getKey()
+    loadUserLocation()
     loadQuestionOptions()
   }, [])
 
   useEffect(() => {
+    storage.storeLocation(userLocation)
     loadQuestionOptions()
   }, [userLocation])
 
-  const getKey = async () => {
-    try {
-      const value = await AsyncStorage.getItem('@LebenStore:userLocation')
-      if (value) {
-        setUserLocation(value)
-      }
-    } catch (error) {
-      console.log('Error retrieving location data' + error)
-    }
-  }
-
-  const saveKey = async (value: string) => {
-    try {
-      await AsyncStorage.setItem('@LebenStore:userLocation', value)
-      setUserLocation(value)
-    } catch (error) {
-      console.log('Error saving location data' + error)
-    }
-  }
-
-  const removeProgress = async () => {
-    try {
-      await AsyncStorage.removeItem('@LebenStore:progress')
-      return true
-    } catch (exception) {
-      return false
-    }
-  }
-
-  const removeIncorrect = async () => {
-    try {
-      await AsyncStorage.removeItem('@LebenStore:incorrect')
-      return true
-    } catch (exception) {
-      return false
-    }
-  }
-
-  const removeExamProgress = async () => {
-    try {
-      await AsyncStorage.removeItem('@LebenStore:examProgress')
-      return true
-    } catch (exception) {
-      return false
-    }
-  }
-
   const handleChangeOfLocation = (value: string) => {
     if (userLocation !== value) {
-      saveKey(value)
-      removeProgress()
-      removeIncorrect()
-      removeExamProgress()
+      setUserLocation(value)
+      storage.deleteProgress()
+      storage.deleteIncorrect()
+      storage.deleteExamProgress()
     }
     closeModal()
   }
@@ -239,8 +203,6 @@ const StartScreen: React.FC<IStartScreen> = () => {
               Actions.practiceMode({
                 questions: questions,
                 numberOfQuestions: numberOfQuestions,
-                removeProgress: removeProgress,
-                removeIncorrect: removeIncorrect,
               })
             }
           >
@@ -258,7 +220,7 @@ const StartScreen: React.FC<IStartScreen> = () => {
             onPress={() =>
               Actions.mockExam({
                 questions: questions,
-                numberOfQuestions: numberOfQuestions,
+                numberOfQuestions: numberOfQuestions === 300 ? 30 : 33,
               })
             }
           >

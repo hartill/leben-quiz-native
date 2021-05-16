@@ -1,87 +1,56 @@
 import React, { useEffect, useState } from 'react'
-import { AsyncStorage } from 'react-native'
-
 import Header from '../../components/Header'
-
 import QuizContainer from '../../components/Quiz/QuizContainer'
 import QuizFooter from '../../components/Quiz/QuizFooter'
 import QuestionOverview from '../../components/Quiz/QuestionOverview'
 import Gameover from '../../components/Quiz/Gameover'
 import { generateNextRandomQuestion } from '../../helpers'
 import { AppContainer } from '../../components/Layout'
+import Storage from '../../storage'
 
 interface IPracticeQuiz {
   questions: any[]
   numberOfQuestions: number
   images: any[]
-  removeProgress: Function
-  removeIncorrect: Function
 }
 
-const PracticeQuiz: React.FC<IPracticeQuiz> = ({
-  questions,
-  numberOfQuestions,
-  images,
-  removeProgress,
-  removeIncorrect,
-}) => {
+const PracticeQuiz: React.FC<IPracticeQuiz> = ({ questions, numberOfQuestions, images }) => {
+  const storage = new Storage()
   const [completed, setCompleted] = useState(false)
   const [question, setQuestion] = useState(null)
   const [showAnswer, setShowAnswer] = useState(false)
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
   const [viewProgress, setViewProgress] = useState<Boolean>(false)
-  const [progress, setProgress] = useState<string[]>([])
-  const [incorrect, setIncorrect] = useState<string[]>([])
-  const [loadingData, setLoadingData] = useState<Boolean>(true)
+  const [progress, setProgress] = useState<any>([])
+  const [incorrect, setIncorrect] = useState<any>([])
+  const [loadingProgress, setLoadingProgress] = useState<Boolean>(true)
+  const [loadingIncorrect, setLoadingIncorrect] = useState<Boolean>(true)
 
-  const getProgress = async () => {
-    try {
-      let value = await AsyncStorage.getItem('@LebenStore:progress').then((req) => req ? JSON.parse(req) : null)
-      if (value) {
-        setProgress(value)
+  const loadProgress = () => {
+    storage.getProgress().then((data) => {
+      if (data) {
+        setProgress(data)
       }
-    } catch (error) {
-      console.log('Error retrieving data' + error)
-    } finally {
-      setLoadingData(false)
-    }
+      setLoadingProgress(false)
+    })
   }
 
-  const getIncorrect = async() => {
-    try {
-      const value = await AsyncStorage.getItem('@LebenStore:incorrect').then((req) => req ? JSON.parse(req) : null)
-      if (value) {
-        setIncorrect(value)
+  const loadIncorrect = () => {
+    storage.getIncorrect().then((data) => {
+      if (data) {
+        setIncorrect(data)
       }
-    } catch (error) {
-      console.log('Error retrieving data' + error)
-    } finally {
-      setLoadingData(false)
-    }
+      setLoadingIncorrect(false)
+    })
   }
 
-  if(loadingData) {
-    getProgress()
-    getIncorrect()
+  useEffect(() => {
+    loadProgress()
+    loadIncorrect()
+  }, [])
+
+  if (loadingProgress || loadingIncorrect) {
     return null
-  }
-
-  const saveProgress = async (progress: any[]) => {
-    setProgress(progress)
-    try {
-      await AsyncStorage.setItem('@LebenStore:progress', JSON.stringify(progress))
-    } catch (error) {
-      console.log('Error saving data' + error)
-    }
-  }
-
-  const saveIncorrect = async(incorrect: any[]) => {
-    setIncorrect(incorrect)
-    try {
-      await AsyncStorage.setItem('@LebenStore:incorrect', JSON.stringify(incorrect))
-    } catch (error) {
-      console.log('Error saving data' + error)
-    }
   }
 
   const addToProgress = (questionId: string) => {
@@ -90,7 +59,7 @@ const PracticeQuiz: React.FC<IPracticeQuiz> = ({
       return a - b
     })
     setProgress(sortedProgress)
-    saveProgress(sortedProgress)
+    storage.storeProgress(sortedProgress)
   }
 
   const addToIncorrect = (questionId: string) => {
@@ -99,7 +68,7 @@ const PracticeQuiz: React.FC<IPracticeQuiz> = ({
       return a - b
     })
     setIncorrect(sortedIncorrect)
-    saveIncorrect(sortedIncorrect)
+    storage.storeIncorrect(sortedIncorrect)
   }
 
   const onAnswerSelected = (key: number, order: string, questionId: string) => {
@@ -131,8 +100,8 @@ const PracticeQuiz: React.FC<IPracticeQuiz> = ({
   }
 
   const restart = () => {
-    removeProgress()
-    removeIncorrect()
+    storage.deleteProgress()
+    storage.deleteIncorrect()
     setProgress([])
     setIncorrect([])
     setCompleted(false)

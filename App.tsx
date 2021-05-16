@@ -1,16 +1,20 @@
-import React, { useEffect, useState } from 'react'
-import { StyleSheet, StatusBar, Dimensions, SafeAreaView } from 'react-native'
-import { Router, Scene } from 'react-native-router-flux'
-import * as Font from 'expo-font'
-
+import React from 'react'
+import { Router, Stack, Scene } from 'react-native-router-flux'
+import { useFonts } from 'expo-font'
 import StartScreen from './src/views/StartScreen'
 import PracticeMode from './src/views/PracticeMode'
 import MockExam from './src/views/MockExam'
 import QuestionCatalogue from './src/views/QuestionCatalogue'
-import { theme } from './src/theme'
+import { StyledSafeAreaView } from './styles'
 
-function App() {
-  const [loading, setLoading] = useState<Boolean>(true)
+const App = () => {
+  const [loaded] = useFonts({
+    montserrat: require('./assets/fonts/Montserrat-Regular.ttf'),
+  })
+
+  if (!loaded) {
+    return null;
+  }
 
   const images = {
     image21: require('./assets/images/021.png'),
@@ -58,30 +62,8 @@ function App() {
     image458: require('./assets/images/thuringen/458.png'),
   }
 
-  StatusBar.setHidden(true)
-
-  useEffect(() => {
-    loadAssetsAsync()
-  }, [])
-
-  const loadAssetsAsync = async () => {
-    try {
-      await Font.loadAsync({
-        montserrat: require('./assets/fonts/Montserrat-Regular.ttf'),
-      })
-    } catch (e) {
-      console.log(e)
-    } finally {
-      setLoading(false)
-    }
-  }
-
-  if (loading) {
-    return null
-  }
-
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <StyledSafeAreaView>
       <Router
         getSceneStyle={() => ({
           elevation: 0,
@@ -89,25 +71,15 @@ function App() {
           borderBottomWidth: 0,
         })}
       >
-        <Scene key="root" hideNavBar={true}>
+        <Stack key="root" hideNavBar={true}>
           <Scene key="startScreen" component={StartScreen} direction="RightToleft" initial />
           <Scene key="practiceMode" component={PracticeMode} images={images} />
           <Scene key="mockExam" component={MockExam} images={images} />
           <Scene key="questionCatalogue" component={QuestionCatalogue} images={images} />
-        </Scene>
+        </Stack>
       </Router>
-    </SafeAreaView>
+    </StyledSafeAreaView>
   )
 }
 
 export default App
-
-const styles = StyleSheet.create({
-  Montserrat: {
-    fontFamily: 'montserrat',
-  },
-  safeArea: {
-    flex: 1,
-    backgroundColor: theme.colors.primary,
-  },
-})
