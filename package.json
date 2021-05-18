@@ -1,6 +1,6 @@
 {
   "main": "node_modules/expo/AppEntry.js",
-  "name": "leben-in-deutschland-test",
+  "name": "leben-in-deutschland-native-app",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -12,8 +12,10 @@
     "@emotion/native": "^11.0.0",
     "@emotion/react": "^11.4.0",
     "@react-native-async-storage/async-storage": "^1.15.4",
+    "@react-native-community/masked-view": "0.1.10",
     "@types/react-native-vector-icons": "^6.4.6",
     "expo": "^38.0.0",
+    "expo-updates": "^0.2.8",
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
