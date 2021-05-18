@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { TouchableHighlight } from 'react-native'
+import { StatusBar, TouchableHighlight } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import SelectLocation from '../../components/SelectLocation'
@@ -44,7 +44,7 @@ const StartScreen: React.FC<IStartScreen> = () => {
     setModalOpen(false)
   }
 
-  const loadUserLocation = async() => {
+  const loadUserLocation = async () => {
     const userLocation = await storage.getLocation()
     if (userLocation) {
       setUserLocation(userLocation)
@@ -173,6 +173,7 @@ const StartScreen: React.FC<IStartScreen> = () => {
 
   return (
     <AppContainer>
+      <StatusBar hidden />
       <Header title="Leben In Deutschland Test" icons={false} />
       <PaddedContentContainer>
         <TouchableHighlight

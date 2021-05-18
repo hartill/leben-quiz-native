@@ -1,5 +1,6 @@
 import styled from '@emotion/native'
 import { TouchableHighlight } from 'react-native'
+import { theme } from '../../../theme'
 
 const QuestionOverviewBox = styled.View`
   width: 20%;
@@ -10,7 +11,7 @@ const QuestionOverviewBox = styled.View`
 const QuestionOverviewBoxInner = styled(TouchableHighlight)`
   position: relative;
   flex: 1;
-  background-color: #11a6ce;
+  background-color: ${theme.colors.midGrey};
   align-items: center;
   justify-content: center;
 `

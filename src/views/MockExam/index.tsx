@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../../components/Header'
 import { generateQuestionArray } from '../../helpers'
-import QuizContainer from '../../components/Quiz/QuizContainer'
-import QuizFooter from '../../components/Quiz/QuizFooter'
-import ExamQuestionOverview from '../../components/MockExam/ExamQuestionOverview'
+import Quiz from '../../components/Quiz'
+import MockExamFooter from '../../components/Footer/MockExamFooter'
+import MockExamReview from '../../components/MockExam/Review'
 import Results from '../../components/MockExam/Results'
 import Storage from '../../storage'
 import { AppContainer } from '../../components/Layout'
+import { StatusBar } from 'react-native'
 
 interface IMockExam {
   questions: any[]
@@ -68,6 +69,10 @@ const MockExam: React.FC<IMockExam> = ({ questions, images, numberOfQuestions })
     return null
   }
 
+  if (examProgress.length >= numberOfQuestions && !examCompleted) {
+    setExamCompleted(true)
+  }
+
   const restart = () => {
     storage.deleteExamProgress()
     storage.deleteExamQuestions()
@@ -126,48 +131,46 @@ const MockExam: React.FC<IMockExam> = ({ questions, images, numberOfQuestions })
     return null
   }
 
-  const renderContent = () => {
-    let renderOutput = []
-    if (viewProgress) {
-      renderOutput.push(<ExamQuestionOverview numberOfQuestions={numberOfQuestions} examProgress={examProgress} key="qo1" />)
-    } else if (examCompleted) {
-      renderOutput.push(<Results examProgress={examProgress} numberOfQuestions={numberOfQuestions} key="qo3" />)
-    } else {
-      renderOutput.push(
-        <QuizContainer
-          question={question}
-          onAnswerSelected={onAnswerSelected}
-          selectedAnswer={selectedAnswer}
-          showAnswer={showAnswer}
-          images={images}
-          key="qo2"
-          mode={2}
-        />
-      )
-    }
-    return renderOutput
+  let output = []
+  if (viewProgress) {
+    output.push(<MockExamReview numberOfQuestions={numberOfQuestions} examProgress={examProgress} key="qo1" />)
+  } else if (examCompleted) {
+    output.push(<Results examProgress={examProgress} numberOfQuestions={numberOfQuestions} key="qo3" />)
+  } else {
+    output.push(
+      <Quiz
+        question={question}
+        onAnswerSelected={onAnswerSelected}
+        selectedAnswer={selectedAnswer}
+        showAnswer={showAnswer}
+        images={images}
+        key="qo2"
+        mode={2}
+      />
+    )
   }
 
-  let title = viewProgress ? 'Fragenübersicht' : 'Probeprüfung'
+  const title = viewProgress ? 'Fragenübersicht' : 'Probeprüfung'
+
   return (
     <AppContainer>
+      <StatusBar hidden />
       <Header
         title={title}
         icons={true}
         viewProgress={viewProgress}
         handleViewProgress={handleViewProgress}
-        renderHomeButton={!viewProgress}
+        withHomeButton={!viewProgress}
       />
-      {renderContent()}
-      <QuizFooter
+      {output}
+      <MockExamFooter
         showAnswer={showAnswer}
         nextQuestion={nextQuestion}
         progress={examProgress}
         viewProgress={viewProgress}
-        completed={examCompleted}
+        examCompleted={examCompleted}
         numberOfQuestions={numberOfQuestions}
         restart={restart}
-        mode={2}
       />
     </AppContainer>
   )

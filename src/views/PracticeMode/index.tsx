@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../../components/Header'
-import QuizContainer from '../../components/Quiz/QuizContainer'
-import QuizFooter from '../../components/Quiz/QuizFooter'
+import Quiz from '../../components/Quiz'
+import QuizFooter from '../../components/Footer/PracticeFooter'
 import QuestionOverview from '../../components/Quiz/QuestionOverview'
-import Gameover from '../../components/Quiz/Gameover'
+import GameOver from '../../components/Quiz/GameOver'
 import { generateNextRandomQuestion } from '../../helpers'
 import { AppContainer } from '../../components/Layout'
 import Storage from '../../storage'
+import { StatusBar } from 'react-native'
 
 interface IPracticeQuiz {
   questions: any[]
@@ -20,11 +21,11 @@ const PracticeQuiz: React.FC<IPracticeQuiz> = ({ questions, numberOfQuestions, i
   const [question, setQuestion] = useState(null)
   const [showAnswer, setShowAnswer] = useState(false)
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
-  const [viewProgress, setViewProgress] = useState<Boolean>(false)
+  const [viewProgress, setViewProgress] = useState<boolean>(false)
   const [progress, setProgress] = useState<any>([])
   const [incorrect, setIncorrect] = useState<any>([])
-  const [loadingProgress, setLoadingProgress] = useState<Boolean>(true)
-  const [loadingIncorrect, setLoadingIncorrect] = useState<Boolean>(true)
+  const [loadingProgress, setLoadingProgress] = useState<boolean>(true)
+  const [loadingIncorrect, setLoadingIncorrect] = useState<boolean>(true)
 
   const loadProgress = () => {
     storage.getProgress().then((data) => {
@@ -121,15 +122,16 @@ const PracticeQuiz: React.FC<IPracticeQuiz> = ({ questions, numberOfQuestions, i
     if (viewProgress) {
       renderOutput.push(<QuestionOverview numberOfQuestions={numberOfQuestions} progress={progress} incorrect={incorrect} key="qo1" />)
     } else if (completed) {
-      renderOutput.push(<Gameover key="qo3" />)
+      renderOutput.push(<GameOver key="qo3" />)
     } else {
       renderOutput.push(
-        <QuizContainer
+        <Quiz
           question={question}
           onAnswerSelected={onAnswerSelected}
           selectedAnswer={selectedAnswer}
           showAnswer={showAnswer}
           images={images}
+          mode={1}
           key="qo2"
         />
       )
@@ -143,15 +145,17 @@ const PracticeQuiz: React.FC<IPracticeQuiz> = ({ questions, numberOfQuestions, i
   }
   return (
     <AppContainer>
+      <StatusBar hidden />
       <Header
         title={title}
         icons={true}
         viewProgress={viewProgress}
         handleViewProgress={handleViewProgress}
-        renderHomeButton={!viewProgress}
+        withHomeButton={!viewProgress}
       />
       {renderContent()}
       <QuizFooter
+        mode={1}
         showAnswer={showAnswer}
         nextQuestion={nextQuestion}
         progress={progress}

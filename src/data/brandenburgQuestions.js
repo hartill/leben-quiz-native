@@ -1,7 +1,7 @@
 var brandenburgQuestions = [{
     "id": "301",
     "question": "Welches Wappen gehört zum Bundesland Brandenburg?",
-	  "image": "brandenburg/331.png",
+	  "image": "331",
     "answers": [
   		{
   			content: "1",
@@ -163,7 +163,7 @@ var brandenburgQuestions = [{
     {
       "id": "308",
       "question": "Welches Bundesland ist Brandenburg?",
-      "image": "brandenburg/338.png",
+      "image": "338",
       "answers": [
       {
         content: "1",

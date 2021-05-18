@@ -1,7 +1,7 @@
 var berlinQuestions = [{
     "id": "301",
     "question": "Welches Wappen gehört zum Bundesland Berlin?",
-	  "image": "berlin/321.png",
+	  "image": "321",
     "answers": [
 		{
 			content: "1",
@@ -156,7 +156,7 @@ var berlinQuestions = [{
 	},{
     "id": "308",
     "question": "Welches Bundesland ist Berlin?",
-	  "image": "berlin/328.png",
+	  "image": "328",
     "answers": [
 		{
 			content: "1",

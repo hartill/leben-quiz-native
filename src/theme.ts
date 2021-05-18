@@ -9,9 +9,9 @@ export const theme = {
     darkFont: '#222222',
     midFont: '#555555',
     midGrey: '#3e4651',
+    lightGrey: '#e6e6e6',
     white: '#ffffff',
     black: '#000000',
-    darkPrimary: '#11A6CE',
   },
   size: {
     maxColumnWidth: '40rem',

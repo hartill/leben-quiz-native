@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { AppContainer } from '../../components/Layout'
 import Header from '../../components/Header'
-import QuizContainer from '../../components/Quiz/QuizContainer'
-import QCFooter from '../../components/QuestionCatalogue/QCFooter'
+import Quiz from '../../components/Quiz'
+import CatalogueFooter from '../../components/Footer/CatalogueFooter'
 import QuestionOverview from '../../components/QuestionCatalogue/QuestionOverview'
+import { StatusBar } from 'react-native'
 
 interface IQuestionCatalogue {
   questions: any[]
@@ -53,7 +54,7 @@ const QuestionCatalogue: React.FC<IQuestionCatalogue> = ({ questions, images, nu
         />
       )
     } else {
-      renderOutput.push(<QuizContainer question={question} showAnswer={showAnswer} images={images} key="qo2" mode={3} />)
+      renderOutput.push(<Quiz question={question} showAnswer={showAnswer} images={images} key="qo2" mode={3} />)
     }
     return renderOutput
   }
@@ -61,15 +62,16 @@ const QuestionCatalogue: React.FC<IQuestionCatalogue> = ({ questions, images, nu
   let title = viewProgress ? 'Fragenübersicht' : 'Fragenkatalog'
   return (
     <AppContainer>
+      <StatusBar hidden />
       <Header
         title={title}
         icons={true}
         viewProgress={viewProgress}
         handleViewProgress={handleViewProgress}
-        renderHomeButton={!viewProgress}
+        withHomeButton={!viewProgress}
       />
       {renderContent()}
-      <QCFooter nextQuestion={nextQuestion} />
+      <CatalogueFooter nextQuestion={nextQuestion} />
     </AppContainer>
   )
 }

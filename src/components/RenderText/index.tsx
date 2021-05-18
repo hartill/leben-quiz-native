@@ -1,19 +1,27 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { Font } from 'expo';
+import { StyleSheet, Text } from 'react-native';
 
-export default class RenderText extends React.Component {
-
-  render() {
-    let fontStyle = this.props.style === null ? styles[p] : styles[this.props.style]
-    let text = this.props.text === null ? 'undefined' : this.props.text
-    return (
-      <Text style={fontStyle}>{text}</Text>
-    )
-  }
+interface ISelectLocation {
+  text: string
+  style: string
 }
 
-const styles = StyleSheet.create({
+const RenderText: React.FC<ISelectLocation> = ({ text, style }) => {
+
+  let fontStyle: any = !style ? styles['p'] : styles[style]
+
+  if(!text) {
+    text = 'undefined'
+  }
+
+  return (
+    <Text style={fontStyle}>{text}</Text>
+  )
+}
+
+export default RenderText
+
+const styles: any = StyleSheet.create({
   h1: {
     fontFamily: 'montserrat',
     color: '#fff',
@@ -33,11 +41,13 @@ const styles = StyleSheet.create({
     fontFamily: 'montserrat',
     color: '#555',
     fontSize: 16,
+    lineHeight: 22,
   },
   p2: {
     fontFamily: 'montserrat',
     color: '#fff',
     fontSize: 16,
+    lineHeight: 22,
   },
   pSmall: {
     fontFamily: 'montserrat',

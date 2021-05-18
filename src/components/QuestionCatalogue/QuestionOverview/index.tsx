@@ -15,7 +15,7 @@ const QuestionOverview: React.FC<IQuestionOverview> = ({ question, numberOfQuest
   let markup = []
   for (let i = 1; i < numberOfQuestions + 1; i++) {
     const questionId = i
-    const boxStyle = parseFloat(question.id) === questionId ? theme.colors.darkPrimary : 'rgba(0,0,0,0.3)'
+    const boxStyle = parseFloat(question.id) === questionId ? theme.colors.blue : theme.colors.midGrey
 
     markup.push({ key: questionId, boxStyle: boxStyle })
   }
@@ -33,9 +33,9 @@ const QuestionOverview: React.FC<IQuestionOverview> = ({ question, numberOfQuest
                 handleQuestionSelected(item.key)
               }}
               style={{ backgroundColor: item.boxStyle }}
-              underlayColor={theme.colors.primary}
+              underlayColor={theme.colors.midGrey}
             >
-              <RenderText style="p2" text={item.key} />
+              <RenderText style="p2" text={item.key.toString()} />
             </QuestionOverviewBoxInner>
           </QuestionOverviewBox>
         )}

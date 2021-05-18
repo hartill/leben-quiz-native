@@ -1,4 +1,5 @@
 import styled from '@emotion/native'
+import { theme } from '../../theme'
 
 const AppContainer = styled.View`
   flex: 1;
@@ -13,7 +14,7 @@ const PaddedContentContainer = styled.View`
   display: flex;
   justify-content: space-around;
   align-items: stretch;
-  background-color: #23212b;
+  background-color: ${theme.colors.primary};
   padding: 15px;
 `
 
@@ -22,7 +23,15 @@ const ContentContainer = styled.View`
   display: flex;
   justify-content: space-around;
   align-items: stretch;
-  background-color: #23212b;
+  background-color: ${theme.colors.primary};
+`
+
+const WhiteContentContainer = styled.View`
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  background-color: #ffffff;
 `
 
 const ButtonContainer = styled.View`
@@ -33,7 +42,7 @@ const ButtonContainer = styled.View`
 
 const Button = styled.View`
   flex-basis: 50px;
-  background-color: #37b1e3;
+  background-color: ${theme.colors.blue};
   display: flex;
   flex-flow: row;
   align-items: center;
@@ -58,5 +67,6 @@ export {
   ButtonContainer,
   Button,
   ButtonText,
-  ButtonIcon
+  ButtonIcon,
+  WhiteContentContainer
 }
