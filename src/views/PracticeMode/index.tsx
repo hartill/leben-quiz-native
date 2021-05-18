@@ -8,6 +8,7 @@ import { generateNextRandomQuestion } from '../../helpers'
 import { AppContainer } from '../../components/Layout'
 import Storage from '../../storage'
 import { StatusBar } from 'react-native'
+import { theme } from '../../theme'
 
 interface IPracticeQuiz {
   questions: any[]
@@ -112,8 +113,12 @@ const PracticeQuiz: React.FC<IPracticeQuiz> = ({ questions, numberOfQuestions, i
   }
 
   if (!question && !completed) {
-    const nextQuestion = generateNextRandomQuestion(questions, progress, numberOfQuestions)
-    setQuestion(nextQuestion)
+    if (progress.length >= numberOfQuestions) {
+      setCompleted(true)
+    } else {
+      const nextQuestion = generateNextRandomQuestion(questions, progress, numberOfQuestions)
+      setQuestion(nextQuestion)
+    }
     return null
   }
 
@@ -126,12 +131,12 @@ const PracticeQuiz: React.FC<IPracticeQuiz> = ({ questions, numberOfQuestions, i
     } else {
       renderOutput.push(
         <Quiz
+          headerColor={theme.colors.blue}
           question={question}
           onAnswerSelected={onAnswerSelected}
           selectedAnswer={selectedAnswer}
           showAnswer={showAnswer}
           images={images}
-          mode={1}
           key="qo2"
         />
       )
@@ -155,7 +160,6 @@ const PracticeQuiz: React.FC<IPracticeQuiz> = ({ questions, numberOfQuestions, i
       />
       {renderContent()}
       <QuizFooter
-        mode={1}
         showAnswer={showAnswer}
         nextQuestion={nextQuestion}
         progress={progress}

@@ -2,9 +2,7 @@ import React from 'react'
 import { FlatList } from 'react-native'
 import { theme } from '../../../theme'
 import { ContentContainer } from '../../Layout'
-
-import RenderText from '../../RenderText'
-import { QuestionOverviewBox, QuestionOverviewBoxInner } from './styles'
+import QuestionOverviewBox from '../../Quiz/QuestionOverview/QuestionOverviewBox'
 
 interface IQuestionOverview {
   question: any
@@ -15,9 +13,9 @@ const QuestionOverview: React.FC<IQuestionOverview> = ({ question, numberOfQuest
   let markup = []
   for (let i = 1; i < numberOfQuestions + 1; i++) {
     const questionId = i
-    const boxStyle = parseFloat(question.id) === questionId ? theme.colors.blue : theme.colors.midGrey
+    const backgroundColor = parseFloat(question.id) === questionId ? theme.colors.blue : theme.colors.midGrey
 
-    markup.push({ key: questionId, boxStyle: boxStyle })
+    markup.push({ questionId: questionId, backgroundColor: backgroundColor })
   }
 
   return (
@@ -26,18 +24,14 @@ const QuestionOverview: React.FC<IQuestionOverview> = ({ question, numberOfQuest
         style={{ flex: 1 }}
         numColumns={5}
         data={markup}
-        renderItem={({ item }) => (
-          <QuestionOverviewBox key={item.key}>
-            <QuestionOverviewBoxInner
-              onPress={() => {
-                handleQuestionSelected(item.key)
-              }}
-              style={{ backgroundColor: item.boxStyle }}
-              underlayColor={theme.colors.midGrey}
-            >
-              <RenderText style="p2" text={item.key.toString()} />
-            </QuestionOverviewBoxInner>
-          </QuestionOverviewBox>
+        renderItem={({ item, index }) => (
+          <QuestionOverviewBox
+            key={index}
+            questionId={item.questionId.toString()}
+            backgroundColor={item.backgroundColor}
+            incorrectCount={0}
+            onClick={handleQuestionSelected}
+          />
         )}
       />
     </ContentContainer>

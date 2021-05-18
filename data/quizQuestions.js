@@ -1,7 +1,7 @@
 var quizQuestions = [
   {
     id: '1',
-    question: 'In Deutschland d\u00fcrfen Menschen offen etwas gegen die Regierung sagen, weil \u2026',
+    question: 'In Deutschland dürfen Menschen offen etwas gegen die Regierung sagen, weil ...',
     answers: [
       {
         content: 'hier Religionsfreiheit gilt.',
@@ -24,7 +24,7 @@ var quizQuestions = [
   },
   {
     id: '2',
-    question: 'In Deutschland k\u00f6nnen Eltern bis zum 14. Lebensjahr ihres Kindes entscheiden, ob es in der Schule am...',
+    question: 'In Deutschland können Eltern bis zum 14. Lebensjahr ihres Kindes entscheiden, ob es in der Schule am...',
     answers: [
       {
         content: 'Geschichtsunterricht teilnimmt.',
@@ -50,7 +50,7 @@ var quizQuestions = [
     question: 'Deutschland ist ein Rechtsstaat. Was ist damit gemeint?',
     answers: [
       {
-        content: 'Alle Einwohner / Einwohnerinnen und der Staat m\u00fcssen sich an die Gesetze halten.',
+        content: 'Alle Einwohner / Einwohnerinnen und der Staat müssen sich an die Gesetze halten.',
         key: 1,
       },
       {
@@ -58,7 +58,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Nur Deutsche m\u00fcssen die Gesetze befolgen.',
+        content: 'Nur Deutsche müssen die Gesetze befolgen.',
         key: 0,
       },
       {
@@ -70,7 +70,7 @@ var quizQuestions = [
   },
   {
     id: '4',
-    question: 'Welches Recht geh\u00f6rt zu den Grundrechten in Deutschland?',
+    question: 'Welches Recht gehört zu den Grundrechten in Deutschland?',
     answers: [
       {
         content: 'Waffenbesitz',
@@ -96,20 +96,20 @@ var quizQuestions = [
     question: 'Wahlen in Deutschland sind frei. Was bedeutet das?',
     answers: [
       {
-        content: 'Man darf Geld annehmen, wenn man daf\u00fcr einen bestimmten Kandidaten / eine bestimmte Kandidatin w\u00e4hlt.',
+        content: 'Man darf Geld annehmen, wenn man dafür einen bestimmten Kandidaten / eine bestimmte Kandidatin wählt.',
+        key: 0,
+      },
+      {
+        content: 'Nur Personen, die noch nie im Gefängnis waren, dürfen wählen.',
         key: 0,
       },
       {
         content:
-          'Der W\u00e4hler darf bei der Wahl weder beeinflusst noch zu einer bestimmten Stimmabgabe gezwungen werden und keine Nachteile durch die Wahl haben.',
+          'Der Wähler darf bei der Wahl weder beeinflusst noch zu einer bestimmten Stimmabgabe gezwungen werden und keine Nachteile durch die Wahl haben.',
         key: 1,
       },
       {
-        content: 'Nur Personen, die noch nie im Gef\u00e4ngnis waren, d\u00fcrfen w\u00e4hlen.',
-        key: 0,
-      },
-      {
-        content: 'Alle wahlberechtigten Personen m\u00fcssen w\u00e4hlen.',
+        content: 'Alle wahlberechtigten Personen müssen wählen.',
         key: 0,
       },
     ],
@@ -117,7 +117,7 @@ var quizQuestions = [
   },
   {
     id: '6',
-    question: 'Wie hei\u00dft die deutsche Verfassung?',
+    question: 'Wie heißt die deutsche Verfassung?',
     answers: [
       {
         content: 'Volksgesetz',
@@ -140,22 +140,22 @@ var quizQuestions = [
   },
   {
     id: '7',
-    question: 'Welches Recht geh\u00f6rt zu den Grundrechten, die nach der deutschen Verfassung garantiert werden? Das Recht auf...',
+    question: 'Welches Recht gehört zu den Grundrechten, die nach der deutschen Verfassung garantiert werden? Das Recht auf...',
     answers: [
       {
-        content: 'Glaubens- und Gewissensfreiheit',
+        content: 'Glaubens- und Gewissensfreiheit.',
         key: 1,
       },
       {
-        content: 'Unterhaltung',
+        content: 'Unterhaltung.',
         key: 0,
       },
       {
-        content: 'Arbeit',
+        content: 'Arbeit.',
         key: 0,
       },
       {
-        content: 'Wohnung',
+        content: 'Wohnung.',
         key: 0,
       },
     ],
@@ -166,7 +166,7 @@ var quizQuestions = [
     question: 'Was steht nicht im Grundgesetz von Deutschland?',
     answers: [
       {
-        content: 'Die W\u00fcrde des Menschen ist unantastbar.',
+        content: 'Die Würde des Menschen ist unantastbar.',
         key: 0,
       },
       {
@@ -186,14 +186,14 @@ var quizQuestions = [
   },
   {
     id: '9',
-    question: 'Welches Grundrecht gilt in Deutschland nur f\u00fcr Ausl\u00e4nder / Ausl\u00e4nderinnen? Das Grundrecht auf...',
+    question: 'Welches Grundrecht gilt in Deutschland nur für Ausländer / Ausländerinnen? Das Grundrecht auf...',
     answers: [
       {
         content: 'Schutz der Familie',
         key: 0,
       },
       {
-        content: 'Menschenw\u00fcrde',
+        content: 'Menschenwürde',
         key: 0,
       },
       {
@@ -212,7 +212,7 @@ var quizQuestions = [
     question: 'Was ist mit dem deutschen Grundgesetz vereinbar?',
     answers: [
       {
-        content: 'die Pr\u00fcgelstrafe',
+        content: 'die Prügelstrafe',
         key: 0,
       },
       {
@@ -255,14 +255,14 @@ var quizQuestions = [
   },
   {
     id: '12',
-    question: 'Eine Partei im Deutschen Bundestag will die Pressefreiheit abschaffen. Ist das m\u00f6glich?',
+    question: 'Eine Partei im Deutschen Bundestag will die Pressefreiheit abschaffen. Ist das möglich?',
     answers: [
       {
-        content: 'Ja, wenn mehr als die H\u00e4lfte der Abgeordneten im Bundestag daf\u00fcr sind.',
+        content: 'Ja, wenn mehr als die Hälfte der Abgeordneten im Bundestag dafür sind.',
         key: 0,
       },
       {
-        content: 'Ja, aber dazu m\u00fcssen zwei Drittel der Abgeordneten im Bundestag daf\u00fcr sein.',
+        content: 'Ja, aber dazu müssen zwei Drittel der Abgeordneten im Bundestag dafür sein.',
         key: 0,
       },
       {
@@ -278,37 +278,37 @@ var quizQuestions = [
   },
   {
     id: '13',
-    question: 'Im Parlament steht der Begriff \u201eOpposition\u201c f\u00fcr...',
+    question: 'Im Parlament steht der Begriff \u201eOpposition\u201c für...',
     answers: [
       {
         content: 'die regierenden Parteien.',
         key: 0,
       },
       {
-        content: 'alle Abgeordneten, die nicht zu der Regierungspartei/den Regierungsparteien geh\u00f6ren.',
-        key: 1,
-      },
-      {
         content: 'die Fraktion mit den meisten Abgeordneten.',
         key: 0,
       },
       {
-        content: 'alle Parteien, die bei der letzten Wahl die 5%-H\u00fcrde erreichen konnten.',
+        content: 'alle Parteien, die bei der letzten Wahl die 5%-Hürde erreichen konnten.',
         key: 0,
+      },
+      {
+        content: 'alle Abgeordneten, die nicht zu der Regierungspartei/den Regierungsparteien gehören.',
+        key: 1,
       },
     ],
     category: 'Verfassungsorgane',
   },
   {
     id: '14',
-    question: 'Meinungsfreiheit in Deutschland hei\u00dft, dass ich...',
+    question: 'Meinungsfreiheit in Deutschland heißt, dass ich...',
     answers: [
       {
-        content: 'auf Flugbl\u00e4ttern falsche Tatsachen behaupten darf.',
+        content: 'auf Flugblättern falsche Tatsachen behaupten darf.',
         key: 0,
       },
       {
-        content: 'meine Meinung in Leserbriefen \u00e4u\u00dfern kann.',
+        content: 'meine Meinung in Leserbriefen äußern kann.',
         key: 1,
       },
       {
@@ -327,7 +327,7 @@ var quizQuestions = [
     question: 'Was verbietet das deutsche Grundgesetz?',
     answers: [
       {
-        content: 'Milit\u00e4rdienst',
+        content: 'Militärdienst',
         key: 0,
       },
       {
@@ -347,18 +347,18 @@ var quizQuestions = [
   },
   {
     id: '16',
-    question: 'Wann ist die Meinungsfreiheit in Deutschland eingeschr\u00e4nkt?',
+    question: 'Wann ist die Meinungsfreiheit in Deutschland eingeschränkt?',
     answers: [
       {
-        content: 'bei der \u00f6ffentlichen Verbreitung falscher Behauptungen \u00fcber einzelne Personen',
+        content: 'bei der öffentlichen Verbreitung falscher Behauptungen über einzelne Personen',
         key: 1,
       },
       {
-        content: 'bei Meinungs\u00e4u\u00dferungen \u00fcber die Bundesregierung',
+        content: 'bei Meinungsäußerungen über die Bundesregierung',
         key: 0,
       },
       {
-        content: 'bei Diskussionen \u00fcber Religionen',
+        content: 'bei Diskussionen über Religionen',
         key: 0,
       },
       {
@@ -377,7 +377,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Petitionen der B\u00fcrger und B\u00fcrgerinnen.',
+        content: 'Petitionen der Bürger und Bürgerinnen.',
         key: 0,
       },
       {
@@ -385,7 +385,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Ungleichbehandlung der B\u00fcrger und B\u00fcrgerinnen durch den Staat.',
+        content: 'Ungleichbehandlung der Bürger und Bürgerinnen durch den Staat.',
         key: 1,
       },
     ],
@@ -396,7 +396,7 @@ var quizQuestions = [
     question: 'Welches Grundrecht ist in Artikel 1 des Grundgesetzes der Bundesrepublik Deutschland garantiert?',
     answers: [
       {
-        content: 'die Unantastbarkeit der Menschenw\u00fcrde',
+        content: 'die Unantastbarkeit der Menschenwürde',
         key: 1,
       },
       {
@@ -416,7 +416,7 @@ var quizQuestions = [
   },
   {
     id: '19',
-    question: 'Was versteht man unter dem Recht der \u201eFreiz\u00fcgigkeit\u201c in Deutschland?',
+    question: 'Was versteht man unter dem Recht der \u201eFreizügigkeit\u201c in Deutschland?',
     answers: [
       {
         content: 'Man darf sich seinen Wohnort selbst aussuchen.',
@@ -427,7 +427,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Man darf sich f\u00fcr eine andere Religion entscheiden.',
+        content: 'Man darf sich für eine andere Religion entscheiden.',
         key: 0,
       },
       {
@@ -439,7 +439,7 @@ var quizQuestions = [
   },
   {
     id: '20',
-    question: 'Eine Partei in Deutschland verfolgt das Ziel, eine Diktatur zu errichten. Sie ist dann \u2026',
+    question: 'Eine Partei in Deutschland verfolgt das Ziel, eine Diktatur zu errichten. Sie ist dann ...',
     answers: [
       {
         content: 'tolerant.',
@@ -486,7 +486,7 @@ var quizQuestions = [
   },
   {
     id: '22',
-    question: 'Was f\u00fcr eine Staatsform hat Deutschland?',
+    question: 'Was für eine Staatsform hat Deutschland?',
     answers: [
       {
         content: 'Monarchie',
@@ -501,7 +501,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'F\u00fcrstentum',
+        content: 'Fürstentum',
         key: 0,
       },
     ],
@@ -509,22 +509,22 @@ var quizQuestions = [
   },
   {
     id: '23',
-    question: 'In Deutschland sind die meisten Erwerbst\u00e4tigen...',
+    question: 'In Deutschland sind die meisten Erwerbstätigen...',
     answers: [
       {
-        content: 'selbst\u00e4ndig mit einer eigenen Firma t\u00e4tig.',
+        content: 'in kleinen Familienunternehmen beschäftigt.',
         key: 0,
       },
       {
-        content: 'in kleinen Familienunternehmen besch\u00e4ftigt.',
+        content: 'ehrenamtlich für ein Bundesland tätig.',
         key: 0,
       },
       {
-        content: 'ehrenamtlich f\u00fcr ein Bundesland t\u00e4tig.',
+        content: 'selbständig mit einer eigenen Firma tätig.',
         key: 0,
       },
       {
-        content: 'bei einer Firma oder Beh\u00f6rde besch\u00e4ftigt.',
+        content: 'bei einer Firma oder Behörde beschäftigt.',
         key: 1,
       },
     ],
@@ -532,7 +532,7 @@ var quizQuestions = [
   },
   {
     id: '24',
-    question: 'Wie viele Bundesl\u00e4nder hat die Bundesrepublik Deutschland?',
+    question: 'Wie viele Bundesländer hat die Bundesrepublik Deutschland?',
     answers: [
       {
         content: '14',
@@ -558,12 +558,12 @@ var quizQuestions = [
     question: 'Was ist kein Bundesland der Bundesrepublik Deutschland?',
     answers: [
       {
-        content: 'Nordrhein-Westfalen',
-        key: 0,
-      },
-      {
         content: 'Elsass-Lothringen',
         key: 1,
+      },
+      {
+        content: 'Nordrhein-Westfalen',
+        key: 0,
       },
       {
         content: 'Mecklenburg-Vorpommern',
@@ -624,10 +624,10 @@ var quizQuestions = [
   },
   {
     id: '28',
-    question: 'Wer w\u00e4hlt in Deutschland die Abgeordneten zum Bundestag?',
+    question: 'Wer wählt in Deutschland die Abgeordneten zum Bundestag?',
     answers: [
       {
-        content: 'das Milit\u00e4r',
+        content: 'das Militär',
         key: 0,
       },
       {
@@ -650,7 +650,7 @@ var quizQuestions = [
     question: 'Welches Tier ist das Wappentier der Bundesrepublik Deutschland?',
     answers: [
       {
-        content: 'L\u00f6we',
+        content: 'Löwe',
         key: 0,
       },
       {
@@ -658,7 +658,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'B\u00e4r',
+        content: 'Bär',
         key: 0,
       },
       {
@@ -673,7 +673,7 @@ var quizQuestions = [
     question: 'Was ist kein Merkmal unserer Demokratie?',
     answers: [
       {
-        content: 'regelm\u00e4\u00dfige Wahlen',
+        content: 'regelmäßige Wahlen',
         key: 0,
       },
       {
@@ -750,7 +750,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'ist der Staat abh\u00e4ngig von den Religionsgemeinschaften.',
+        content: 'ist der Staat abhängig von den Religionsgemeinschaften.',
         key: 0,
       },
       {
@@ -800,7 +800,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Vereinsbeitr\u00e4gen',
+        content: 'Vereinsbeiträgen',
         key: 0,
       },
     ],
@@ -808,7 +808,7 @@ var quizQuestions = [
   },
   {
     id: '36',
-    question: 'Welche Ma\u00dfnahme schafft in Deutschland soziale Sicherheit?',
+    question: 'Welche Maßnahme schafft in Deutschland soziale Sicherheit?',
     answers: [
       {
         content: 'die Krankenversicherung',
@@ -819,7 +819,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'die Geb\u00e4udeversicherung',
+        content: 'die Gebäudeversicherung',
         key: 0,
       },
       {
@@ -831,7 +831,7 @@ var quizQuestions = [
   },
   {
     id: '37',
-    question: 'Wie werden die Regierungschefs / Regierungschefinnen der meisten Bundesl\u00e4nder in Deutschland genannt?',
+    question: 'Wie werden die Regierungschefs / Regierungschefinnen der meisten Bundesländer in Deutschland genannt?',
     answers: [
       {
         content: 'Erster Minister / Erste Ministerin',
@@ -846,7 +846,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Ministerpr\u00e4sident / Ministerpr\u00e4sidentin',
+        content: 'Ministerpräsident / Ministerpräsidentin',
         key: 1,
       },
     ],
@@ -880,11 +880,11 @@ var quizQuestions = [
     question: 'Was hat jedes deutsche Bundesland?',
     answers: [
       {
-        content: 'einen eigenen Au\u00dfenminister / eine eigene Au\u00dfenministerin',
+        content: 'einen eigenen Außenminister / eine eigene Außenministerin',
         key: 0,
       },
       {
-        content: 'eine eigene W\u00e4hrung',
+        content: 'eine eigene Währung',
         key: 0,
       },
       {
@@ -903,7 +903,7 @@ var quizQuestions = [
     question: 'Mit welchen Worten beginnt die deutsche Nationalhymne?',
     answers: [
       {
-        content: 'V\u00f6lker, h\u00f6rt die Signale...',
+        content: 'Völker, hört die Signale...',
         key: 0,
       },
       {
@@ -911,7 +911,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'Freude sch\u00f6ner G\u00f6tterfunken...',
+        content: 'Freude schöner Götterfunken...',
         key: 0,
       },
       {
@@ -926,7 +926,7 @@ var quizQuestions = [
     question: 'Warum gibt es in einer Demokratie mehr als eine Partei?',
     answers: [
       {
-        content: 'weil dadurch die unterschiedlichen Meinungen der B\u00fcrger und B\u00fcrgerinnen vertreten werden',
+        content: 'weil dadurch die unterschiedlichen Meinungen der Bürger und Bürgerinnen vertreten werden',
         key: 1,
       },
       {
@@ -946,7 +946,7 @@ var quizQuestions = [
   },
   {
     id: '42',
-    question: 'Wer beschlie\u00dft in Deutschland ein neues Gesetz?',
+    question: 'Wer beschließt in Deutschland ein neues Gesetz?',
     answers: [
       {
         content: 'die Regierung',
@@ -976,15 +976,15 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'wenn sie gegen die Verfassung k\u00e4mpft',
+        content: 'wenn sie gegen die Verfassung kämpft',
         key: 1,
       },
       {
-        content: 'wenn sie Kritik am Staatsoberhaupt \u00e4u\u00dfert',
+        content: 'wenn sie Kritik am Staatsoberhaupt äußert',
         key: 0,
       },
       {
-        content: 'wenn ihr Programm eine neue Richtung vorschl\u00e4gt',
+        content: 'wenn ihr Programm eine neue Richtung vorschlägt',
         key: 0,
       },
     ],
@@ -992,14 +992,14 @@ var quizQuestions = [
   },
   {
     id: '44',
-    question: 'Wen kann man als B\u00fcrger / B\u00fcrgerin in Deutschland nicht direkt w\u00e4hlen?',
+    question: 'Wen kann man als Bürger / Bürgerin in Deutschland nicht direkt wählen?',
     answers: [
       {
         content: 'Abgeordnete des EU-Parlaments',
         key: 0,
       },
       {
-        content: 'den Bundespr\u00e4sidenten / die Bundespr\u00e4sidentin',
+        content: 'den Bundespräsidenten / die Bundespräsidentin',
         key: 1,
       },
       {
@@ -1015,7 +1015,7 @@ var quizQuestions = [
   },
   {
     id: '45',
-    question: 'Zu welcher Versicherung geh\u00f6rt die Pflegeversicherung?',
+    question: 'Zu welcher Versicherung gehört die Pflegeversicherung?',
     answers: [
       {
         content: 'Sozialversicherung',
@@ -1038,10 +1038,10 @@ var quizQuestions = [
   },
   {
     id: '46',
-    question: 'Der deutsche Staat hat viele Aufgaben. Welche Aufgabe geh\u00f6rt dazu?',
+    question: 'Der deutsche Staat hat viele Aufgaben. Welche Aufgabe gehört dazu?',
     answers: [
       {
-        content: 'Er baut Stra\u00dfen und Schulen.',
+        content: 'Er baut Straßen und Schulen.',
         key: 1,
       },
       {
@@ -1061,10 +1061,10 @@ var quizQuestions = [
   },
   {
     id: '47',
-    question: 'Der deutsche Staat hat viele Aufgaben. Welche Aufgabe geh\u00f6rt nicht dazu?',
+    question: 'Der deutsche Staat hat viele Aufgaben. Welche Aufgabe gehört nicht dazu?',
     answers: [
       {
-        content: 'Er bezahlt f\u00fcr alle Staatsangeh\u00f6rigen Urlaubsreisen.',
+        content: 'Er bezahlt für alle Staatsangehörigen Urlaubsreisen.',
         key: 1,
       },
       {
@@ -1072,11 +1072,11 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Er unterst\u00fctzt Museen.',
+        content: 'Er unterstützt Museen.',
         key: 0,
       },
       {
-        content: 'Er f\u00f6rdert Sportler und Sportlerinnen.',
+        content: 'Er fördert Sportler und Sportlerinnen.',
         key: 0,
       },
     ],
@@ -1084,18 +1084,18 @@ var quizQuestions = [
   },
   {
     id: '48',
-    question: 'Welches Organ geh\u00f6rt nicht zu den Verfassungsorganen Deutschlands?',
+    question: 'Welches Organ gehört nicht zu den Verfassungsorganen Deutschlands?',
     answers: [
       {
         content: 'der Bundesrat',
         key: 0,
       },
       {
-        content: 'der Bundespr\u00e4sident / die Bundespr\u00e4sidentin',
+        content: 'der Bundespräsident / die Bundespräsidentin',
         key: 0,
       },
       {
-        content: 'die B\u00fcrgerversammlung',
+        content: 'die Bürgerversammlung',
         key: 1,
       },
       {
@@ -1114,7 +1114,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'die Bundesl\u00e4nder',
+        content: 'die Bundesländer',
         key: 1,
       },
       {
@@ -1122,7 +1122,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'die Universit\u00e4ten',
+        content: 'die Universitäten',
         key: 0,
       },
     ],
@@ -1153,14 +1153,14 @@ var quizQuestions = [
   },
   {
     id: '51',
-    question: 'Zu einem demokratischen Rechtsstaat geh\u00f6rt es nicht, dass...',
+    question: 'Zu einem demokratischen Rechtsstaat gehört es nicht, dass...',
     answers: [
       {
-        content: 'Menschen sich kritisch \u00fcber die Regierung \u00e4u\u00dfern k\u00f6nnen.',
+        content: 'Menschen sich kritisch über die Regierung äußern können.',
         key: 0,
       },
       {
-        content: 'B\u00fcrger friedlich demonstrieren gehen d\u00fcrfen.',
+        content: 'Bürger friedlich demonstrieren gehen dürfen.',
         key: 0,
       },
       {
@@ -1176,7 +1176,7 @@ var quizQuestions = [
   },
   {
     id: '52',
-    question: 'Was bedeutet \u201eVolkssouver\u00e4nit\u00e4t\u201c? Alle Staatsgewalt geht vom...',
+    question: 'Was bedeutet \u201eVolkssouveränität\u201c? Alle Staatsgewalt geht vom...',
     answers: [
       {
         content: 'Volke aus.',
@@ -1187,7 +1187,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'preu\u00dfischen K\u00f6nig aus.',
+        content: 'preußischen König aus.',
         key: 0,
       },
       {
@@ -1210,7 +1210,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Die B\u00fcrger und B\u00fcrgerinnen entscheiden \u00fcber Gesetze.',
+        content: 'Die Bürger und Bürgerinnen entscheiden über Gesetze.',
         key: 0,
       },
       {
@@ -1257,7 +1257,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'das Bundesratsgeb\u00e4ude in Berlin',
+        content: 'das Bundesratsgebäude in Berlin',
         key: 0,
       },
       {
@@ -1269,7 +1269,7 @@ var quizQuestions = [
   },
   {
     id: '56',
-    question: 'Welches Amt geh\u00f6rt in Deutschland zur Gemeindeverwaltung?',
+    question: 'Welches Amt gehört in Deutschland zur Gemeindeverwaltung?',
     answers: [
       {
         content: 'Pfarramt',
@@ -1284,7 +1284,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Ausw\u00e4rtiges Amt',
+        content: 'Auswärtiges Amt',
         key: 0,
       },
     ],
@@ -1292,18 +1292,18 @@ var quizQuestions = [
   },
   {
     id: '57',
-    question: 'Wer wird meistens zum Pr\u00e4sidenten / zur Pr\u00e4sidentin des Deutschen Bundestages gew\u00e4hlt?',
+    question: 'Wer wird meistens zum Präsidenten / zur Präsidentin des Deutschen Bundestages gewählt?',
     answers: [
       {
-        content: 'der / die \u00e4lteste Abgeordnete im Parlament',
+        content: 'der / die älteste Abgeordnete im Parlament',
         key: 0,
       },
       {
-        content: 'der Ministerpr\u00e4sident / die Ministerpr\u00e4sidentin des gr\u00f6\u00dften Bundeslandes',
+        content: 'der Ministerpräsident / die Ministerpräsidentin des größten Bundeslandes',
         key: 0,
       },
       {
-        content: 'ein Abgeordneter / eine Abgeordnete der st\u00e4rksten Fraktion',
+        content: 'ein Abgeordneter / eine Abgeordnete der stärksten Fraktion',
         key: 1,
       },
       {
@@ -1318,19 +1318,19 @@ var quizQuestions = [
     question: 'Wer ernennt in Deutschland die Minister / die Ministerinnen der Bundesregierung?',
     answers: [
       {
-        content: 'der Pr\u00e4sident / die Pr\u00e4sidentin des Bundesverfassungsgerichtes',
+        content: 'der Präsident / die Präsidentin des Bundesverfassungsgerichtes',
         key: 0,
       },
       {
-        content: 'der Bundespr\u00e4sident / die Bundespr\u00e4sidentin',
+        content: 'der Bundespräsident / die Bundespräsidentin',
         key: 1,
       },
       {
-        content: 'der Bundesratspr\u00e4sident / die Bundesratspr\u00e4sidentin',
+        content: 'der Bundesratspräsident / die Bundesratspräsidentin',
         key: 0,
       },
       {
-        content: 'der Bundestagspr\u00e4sident / die Bundestagspr\u00e4sidentin',
+        content: 'der Bundestagspräsident / die Bundestagspräsidentin',
         key: 0,
       },
     ],
@@ -1353,7 +1353,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'B\u00fcndnis 90/Die Gr\u00fcnen und SPD',
+        content: 'Bündnis 90/Die Grünen und SPD',
         key: 0,
       },
     ],
@@ -1361,7 +1361,7 @@ var quizQuestions = [
   },
   {
     id: '60',
-    question: 'In Deutschland geh\u00f6ren der Bundestag und der Bundesrat zur...',
+    question: 'In Deutschland gehören der Bundestag und der Bundesrat zur...',
     answers: [
       {
         content: 'Exekutive.',
@@ -1384,18 +1384,18 @@ var quizQuestions = [
   },
   {
     id: '61',
-    question: 'Was bedeutet \u201eVolkssouver\u00e4nit\u00e4t\u201c?',
+    question: 'Was bedeutet \u201eVolkssouveränität\u201c?',
     answers: [
       {
-        content: 'Der K\u00f6nig / die K\u00f6nigin herrscht \u00fcber das Volk.',
+        content: 'Der König / die Königin herrscht über das Volk.',
         key: 0,
       },
       {
-        content: 'Das Bundesverfassungsgericht steht \u00fcber der Verfassung.',
+        content: 'Das Bundesverfassungsgericht steht über der Verfassung.',
         key: 0,
       },
       {
-        content: 'Die Interessenverb\u00e4nde \u00fcben die Souver\u00e4nit\u00e4t zusammen mit der Regierung aus.',
+        content: 'Die Interessenverbände üben die Souveränität zusammen mit der Regierung aus.',
         key: 0,
       },
       {
@@ -1407,7 +1407,7 @@ var quizQuestions = [
   },
   {
     id: '62',
-    question: 'Wenn das Parlament eines deutschen Bundeslandes gew\u00e4hlt wird, nennt man das...',
+    question: 'Wenn das Parlament eines deutschen Bundeslandes gewählt wird, nennt man das...',
     answers: [
       {
         content: 'Kommunalwahl.',
@@ -1430,7 +1430,7 @@ var quizQuestions = [
   },
   {
     id: '63',
-    question: 'Was geh\u00f6rt in Deutschland nicht zur Exekutive?',
+    question: 'Was gehört in Deutschland nicht zur Exekutive?',
     answers: [
       {
         content: 'die Polizei',
@@ -1468,7 +1468,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Bund, L\u00e4nder und Kommunen.',
+        content: 'Bund, Länder und Kommunen.',
         key: 1,
       },
     ],
@@ -1476,7 +1476,7 @@ var quizQuestions = [
   },
   {
     id: '65',
-    question: 'Es geh\u00f6rt nicht zu den Aufgaben des Deutschen Bundestages, ...',
+    question: 'Es gehört nicht zu den Aufgaben des Deutschen Bundestages, ...',
     answers: [
       {
         content: 'Gesetze zu entwerfen.',
@@ -1487,7 +1487,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'den Bundeskanzler / die Bundeskanzlerin zu w\u00e4hlen.',
+        content: 'den Bundeskanzler / die Bundeskanzlerin zu wählen.',
         key: 0,
       },
       {
@@ -1522,14 +1522,14 @@ var quizQuestions = [
   },
   {
     id: '67',
-    question: 'Was ist in Deutschland vor allem eine Aufgabe der Bundesl\u00e4nder?',
+    question: 'Was ist in Deutschland vor allem eine Aufgabe der Bundesländer?',
     answers: [
       {
         content: 'Verteidigungspolitik',
         key: 0,
       },
       {
-        content: 'Au\u00dfenpolitik',
+        content: 'Außenpolitik',
         key: 0,
       },
       {
@@ -1552,11 +1552,11 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'weil alle Sch\u00fcler und Sch\u00fclerinnen einen Schulabschluss haben m\u00fcssen',
+        content: 'weil alle Schüler und Schülerinnen einen Schulabschluss haben müssen',
         key: 0,
       },
       {
-        content: 'weil es in den Bundesl\u00e4ndern verschiedene Schulen gibt',
+        content: 'weil es in den Bundesländern verschiedene Schulen gibt',
         key: 0,
       },
       {
@@ -1568,14 +1568,14 @@ var quizQuestions = [
   },
   {
     id: '69',
-    question: 'Die Bundesrepublik Deutschland hat einen dreistufigen Verwaltungsaufbau. Wie hei\u00dft die unterste politische Stufe?',
+    question: 'Die Bundesrepublik Deutschland hat einen dreistufigen Verwaltungsaufbau. Wie heißt die unterste politische Stufe?',
     answers: [
       {
-        content: 'Stadtr\u00e4te',
+        content: 'Stadträte',
         key: 0,
       },
       {
-        content: 'Landr\u00e4te',
+        content: 'Landräte',
         key: 0,
       },
       {
@@ -1583,7 +1583,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'Bezirks\u00e4mter',
+        content: 'Bezirksämter',
         key: 0,
       },
     ],
@@ -1592,11 +1592,11 @@ var quizQuestions = [
   {
     id: '70',
     question:
-      'Der deutsche Bundespr\u00e4sident Gustav Heinemann gibt Helmut Schmidt 1974 die Ernennungsurkunde zum deutschen Bundeskanzler. Was geh\u00f6rt zu den Aufgaben des deutschen Bundespr\u00e4sidenten / der deutschen Bundespr\u00e4sidentin?',
+      'Der deutsche Bundespräsident Gustav Heinemann gibt Helmut Schmidt 1974 die Ernennungsurkunde zum deutschen Bundeskanzler. Was gehört zu den Aufgaben des deutschen Bundespräsidenten / der deutschen Bundespräsidentin?',
     image: '070',
     answers: [
       {
-        content: 'Er / Sie f\u00fchrt die Regierungsgesch\u00e4fte.',
+        content: 'Er / Sie führt die Regierungsgeschäfte.',
         key: 0,
       },
       {
@@ -1604,11 +1604,11 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Er / Sie w\u00e4hlt die Minister / Ministerinnen aus.',
+        content: 'Er / Sie wählt die Minister / Ministerinnen aus.',
         key: 0,
       },
       {
-        content: 'Er / Sie schl\u00e4gt den Kanzler / die Kanzlerin zur Wahl vor.',
+        content: 'Er / Sie schlägt den Kanzler / die Kanzlerin zur Wahl vor.',
         key: 1,
       },
     ],
@@ -1617,7 +1617,7 @@ var quizQuestions = [
   {
     id: '71',
     question:
-      'Wo h\u00e4lt sich der deutsche Bundeskanzler / die deutsche Bundeskanzlerin am h\u00e4ufigsten auf? Am h\u00e4ufigsten ist er / sie...',
+      'Wo hält sich der deutsche Bundeskanzler / die deutsche Bundeskanzlerin am häufigsten auf? Am häufigsten ist er / sie...',
     answers: [
       {
         content: 'in Bonn, weil sich dort das Bundeskanzleramt und der Bundestag befinden.',
@@ -1628,12 +1628,12 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'auf Schloss Meseberg, dem G\u00e4stehaus der Bundesregieung, um Staatsg\u00e4ste zu empfangen.',
+        content: 'auf Schloss Meseberg, dem Gästehaus der Bundesregieung, um Staatsgäste zu empfangen.',
         key: 0,
       },
       {
         content:
-          'auf Schloss Bellevue, dem Amtssitz des Bundespr\u00e4sidenten / der Bundespr\u00e4sidentin, um Staatsg\u00e4ste zu empfangen.',
+          'auf Schloss Bellevue, dem Amtssitz des Bundespräsidenten / der Bundespräsidentin, um Staatsgäste zu empfangen.',
         key: 0,
       },
     ],
@@ -1641,14 +1641,14 @@ var quizQuestions = [
   },
   {
     id: '72',
-    question: 'Wie hei\u00dft der jetzige Bundeskanzler / die jetzige Bundeskanzlerin von Deutschland?',
+    question: 'Wie heißt der jetzige Bundeskanzler / die jetzige Bundeskanzlerin von Deutschland?',
     answers: [
       {
-        content: 'Gerhard Schr\u00f6der',
+        content: 'Gerhard Schröder',
         key: 0,
       },
       {
-        content: 'J\u00fcrgen R\u00fcttgers',
+        content: 'Jürgen Rüttgers',
         key: 0,
       },
       {
@@ -1664,14 +1664,14 @@ var quizQuestions = [
   },
   {
     id: '73',
-    question: 'Die beiden gr\u00f6\u00dften Fraktionen im Deutschen Bundestag hei\u00dfen zurzeit...',
+    question: 'Die beiden größten Fraktionen im Deutschen Bundestag heißen zurzeit...',
     answers: [
       {
         content: 'CDU/CSU und SPD.',
         key: 1,
       },
       {
-        content: 'Die Linke und B\u00fcndnis 90/Die Gr\u00fcnen.',
+        content: 'Die Linke und Bündnis 90/Die Grünen.',
         key: 0,
       },
       {
@@ -1687,7 +1687,7 @@ var quizQuestions = [
   },
   {
     id: '74',
-    question: 'Wie hei\u00dft das Parlament f\u00fcr ganz Deutschland?',
+    question: 'Wie heißt das Parlament für ganz Deutschland?',
     answers: [
       {
         content: 'Bundesversammlung',
@@ -1710,7 +1710,7 @@ var quizQuestions = [
   },
   {
     id: '75',
-    question: 'Wie hei\u00dft Deutschlands heutiges Staatsoberhaupt?',
+    question: 'Wie heißt Deutschlands heutiges Staatsoberhaupt?',
     answers: [
       {
         content: 'Frank-Walter Steinmeier',
@@ -1733,7 +1733,7 @@ var quizQuestions = [
   },
   {
     id: '76',
-    question: 'Was bedeutet die Abk\u00fcrzung CDU in Deutschland?',
+    question: 'Was bedeutet die Abkürzung CDU in Deutschland?',
     answers: [
       {
         content: 'Christliche Deutsche Union',
@@ -1767,7 +1767,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'eine deutsche B\u00fcrgerinitiative',
+        content: 'eine deutsche Bürgerinitiative',
         key: 0,
       },
       {
@@ -1779,7 +1779,7 @@ var quizQuestions = [
   },
   {
     id: '78',
-    question: 'Was bedeutet die Abk\u00fcrzung SPD?',
+    question: 'Was bedeutet die Abkürzung SPD?',
     answers: [
       {
         content: 'Sozialistische Partei Deutschlands',
@@ -1802,7 +1802,7 @@ var quizQuestions = [
   },
   {
     id: '79',
-    question: 'Was bedeutet die Abk\u00fcrzung FDP in Deutschland?',
+    question: 'Was bedeutet die Abkürzung FDP in Deutschland?',
     answers: [
       {
         content: 'Friedliche Demonstrative Partei',
@@ -1813,7 +1813,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'F\u00fchrende Demokratische Partei',
+        content: 'Führende Demokratische Partei',
         key: 0,
       },
       {
@@ -1825,7 +1825,7 @@ var quizQuestions = [
   },
   {
     id: '80',
-    question: 'Welches Gericht in Deutschland ist zust\u00e4ndig f\u00fcr die Auslegung des Grundgesetzes?',
+    question: 'Welches Gericht in Deutschland ist zuständig für die Auslegung des Grundgesetzes?',
     answers: [
       {
         content: 'Oberlandesgericht',
@@ -1848,7 +1848,7 @@ var quizQuestions = [
   },
   {
     id: '81',
-    question: 'Wer w\u00e4hlt den Bundeskanzler / die Bundeskanzlerin in Deutschland?',
+    question: 'Wer wählt den Bundeskanzler / die Bundeskanzlerin in Deutschland?',
     answers: [
       {
         content: 'der Bundesrat',
@@ -1894,7 +1894,7 @@ var quizQuestions = [
   },
   {
     id: '83',
-    question: 'Wer w\u00e4hlt den deutschen Bundeskanzler / die deutsche Bundeskanzlerin?',
+    question: 'Wer wählt den deutschen Bundeskanzler / die deutsche Bundeskanzlerin?',
     answers: [
       {
         content: 'das Volk',
@@ -1917,7 +1917,7 @@ var quizQuestions = [
   },
   {
     id: '84',
-    question: 'Welche Hauptaufgabe hat der deutsche Bundespr\u00e4sident / die deutsche Bundespr\u00e4sidentin? Er / Sie...',
+    question: 'Welche Hauptaufgabe hat der deutsche Bundespräsident / die deutsche Bundespräsidentin? Er / Sie...',
     answers: [
       {
         content: 'regiert das Land.',
@@ -1928,11 +1928,11 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'repr\u00e4sentiert das Land.',
+        content: 'repräsentiert das Land.',
         key: 1,
       },
       {
-        content: '\u00fcberwacht die Einhaltung der Gesetze.',
+        content: 'überwacht die Einhaltung der Gesetze.',
         key: 0,
       },
     ],
@@ -1951,7 +1951,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'die Regierungsvertreter der Bundesl\u00e4nder',
+        content: 'die Regierungsvertreter der Bundesländer',
         key: 1,
       },
       {
@@ -1963,7 +1963,7 @@ var quizQuestions = [
   },
   {
     id: '86',
-    question: 'Wer w\u00e4hlt in Deutschland den Bundespr\u00e4sidenten / die Bundespr\u00e4sidentin?',
+    question: 'Wer wählt in Deutschland den Bundespräsidenten / die Bundespräsidentin?',
     answers: [
       {
         content: 'die Bundesversammlung',
@@ -1993,15 +1993,15 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'der Bundespr\u00e4sident / die Bundespr\u00e4sidentin',
+        content: 'der Bundespräsident / die Bundespräsidentin',
         key: 1,
       },
       {
-        content: 'der Bundesratspr\u00e4sident / die Bundesratspr\u00e4sidentin',
+        content: 'der Bundesratspräsident / die Bundesratspräsidentin',
         key: 0,
       },
       {
-        content: 'der Bundestagspr\u00e4sident / die Bundestagspr\u00e4sidentin',
+        content: 'der Bundestagspräsident / die Bundestagspräsidentin',
         key: 0,
       },
     ],
@@ -2024,7 +2024,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'schl\u00e4gt die Regierungschefs / Regierungschefinnen der L\u00e4nder vor.',
+        content: 'schlägt die Regierungschefs / Regierungschefinnen der Länder vor.',
         key: 0,
       },
     ],
@@ -2039,7 +2039,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: '\u00c4ltestenrat',
+        content: 'Ältestenrat',
         key: 0,
       },
       {
@@ -2055,7 +2055,7 @@ var quizQuestions = [
   },
   {
     id: '90',
-    question: 'Die deutschen Bundesl\u00e4nder wirken an der Gesetzgebung des Bundes mit durch...',
+    question: 'Die deutschen Bundesländer wirken an der Gesetzgebung des Bundes mit durch...',
     answers: [
       {
         content: 'den Bundesrat.',
@@ -2082,7 +2082,7 @@ var quizQuestions = [
       'In Deutschland kann ein Regierungswechsel in einem Bundesland Auswirkungen auf die Bundespolitik haben. Das Regieren wird...',
     answers: [
       {
-        content: 'schwieriger, wenn sich dadurch die Mehrheit im Bundestag \u00e4ndert.',
+        content: 'schwieriger, wenn sich dadurch die Mehrheit im Bundestag ändert.',
         key: 0,
       },
       {
@@ -2090,7 +2090,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'schwieriger, wenn dadurch die Mehrheit im Bundesrat ver\u00e4ndert wird.',
+        content: 'schwieriger, wenn dadurch die Mehrheit im Bundesrat verändert wird.',
         key: 1,
       },
       {
@@ -2102,14 +2102,14 @@ var quizQuestions = [
   },
   {
     id: '92',
-    question: 'Was bedeutet die Abk\u00fcrzung CSU in Deutschland?',
+    question: 'Was bedeutet die Abkürzung CSU in Deutschland?',
     answers: [
       {
         content: 'Christlich Sichere Union',
         key: 0,
       },
       {
-        content: 'Christlich S\u00fcddeutsche Union',
+        content: 'Christlich Süddeutsche Union',
         key: 0,
       },
       {
@@ -2128,7 +2128,7 @@ var quizQuestions = [
     question: 'Je mehr \u201eZweitstimmen\u201c eine Partei bei einer Bundestagswahl bekommt, desto...',
     answers: [
       {
-        content: 'mehr Sitze erh\u00e4lt die Partei im Parlament.',
+        content: 'mehr Sitze erhält die Partei im Parlament.',
         key: 1,
       },
       {
@@ -2140,7 +2140,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'gr\u00f6\u00dfer ist das Risiko, eine Koalition bilden zu m\u00fcssen.',
+        content: 'größer ist das Risiko, eine Koalition bilden zu müssen.',
         key: 0,
       },
     ],
@@ -2171,7 +2171,7 @@ var quizQuestions = [
   },
   {
     id: '95',
-    question: 'Was gilt f\u00fcr die meisten Kinder in Deutschland?',
+    question: 'Was gilt für die meisten Kinder in Deutschland?',
     answers: [
       {
         content: 'Wahlpflicht',
@@ -2194,7 +2194,7 @@ var quizQuestions = [
   },
   {
     id: '96',
-    question: 'Was muss jeder deutsche Staatsb\u00fcrger / jede deutsche Staatsb\u00fcrgerin ab dem 16. Lebensjahr besitzen?',
+    question: 'Was muss jeder deutsche Staatsbürger / jede deutsche Staatsbürgerin ab dem 16. Lebensjahr besitzen?',
     answers: [
       {
         content: 'einen Reisepass',
@@ -2209,7 +2209,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'einen F\u00fchrerschein',
+        content: 'einen Führerschein',
         key: 0,
       },
     ],
@@ -2247,15 +2247,15 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'd\u00fcrfen sie nicht mehr an den Sitzungen des Parlaments teilnehmen.',
+        content: 'dürfen sie nicht mehr an den Sitzungen des Parlaments teilnehmen.',
         key: 0,
       },
       {
-        content: 'muss der Bundespr\u00e4sident / die Bundespr\u00e4sidentin zuvor sein / ihr Einverst\u00e4ndnis geben.',
+        content: 'muss der Bundespräsident / die Bundespräsidentin zuvor sein / ihr Einverständnis geben.',
         key: 0,
       },
       {
-        content: 'd\u00fcrfen die W\u00e4hler / W\u00e4hlerinnen dieser Abgeordneten noch einmal w\u00e4hlen.',
+        content: 'dürfen die Wähler / Wählerinnen dieser Abgeordneten noch einmal wählen.',
         key: 0,
       },
     ],
@@ -2274,7 +2274,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'alle Staatsangeh\u00f6rigen',
+        content: 'alle Staatsangehörigen',
         key: 0,
       },
       {
@@ -2286,7 +2286,7 @@ var quizQuestions = [
   },
   {
     id: '100',
-    question: 'Was geh\u00f6rt nicht zur gesetzlichen Sozialversicherung?',
+    question: 'Was gehört nicht zur gesetzlichen Sozialversicherung?',
     answers: [
       {
         content: 'die gesetzliche Rentenversicherung',
@@ -2309,7 +2309,7 @@ var quizQuestions = [
   },
   {
     id: '101',
-    question: 'Gewerkschaften sind Interessenverb\u00e4nde der...',
+    question: 'Gewerkschaften sind Interessenverbände der...',
     answers: [
       {
         content: 'Jugendlichen.',
@@ -2344,7 +2344,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'Vaterl\u00e4ndischen Verdienstorden',
+        content: 'Vaterländischen Verdienstorden',
         key: 0,
       },
       {
@@ -2363,11 +2363,11 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'von SPD, FDP und B\u00fcndnis 90/Die Gr\u00fcnen in einer Regierung',
+        content: 'von SPD, FDP und Bündnis 90/Die Grünen in einer Regierung',
         key: 1,
       },
       {
-        content: 'von CSU, Die LINKE und B\u00fcndnis 90/Die Gr\u00fcnen in einer Regierung',
+        content: 'von CSU, Die LINKE und Bündnis 90/Die Grünen in einer Regierung',
         key: 0,
       },
       {
@@ -2379,22 +2379,22 @@ var quizQuestions = [
   },
   {
     id: '104',
-    question: 'Eine Frau in Deutschland verliert ihre Arbeit. Was darf nicht der Grund f\u00fcr diese Entlassung sein?',
+    question: 'Eine Frau in Deutschland verliert ihre Arbeit. Was darf nicht der Grund für diese Entlassung sein?',
     answers: [
       {
-        content: 'Die Frau ist lange krank und arbeitsunf\u00e4hig.',
+        content: 'Die Frau ist lange krank und arbeitsunfähig.',
         key: 0,
       },
       {
-        content: 'Die Frau kam oft zu sp\u00e4t zur Arbeit.',
+        content: 'Die Frau kam oft zu spät zur Arbeit.',
         key: 0,
       },
       {
-        content: 'Die Frau erledigt private Sachen w\u00e4hrend der Arbeitszeit.',
+        content: 'Die Frau erledigt private Sachen während der Arbeitszeit.',
         key: 0,
       },
       {
-        content: 'Die Frau bekommt ein Kind und ihr Chef wei\u00df das.',
+        content: 'Die Frau bekommt ein Kind und ihr Chef weiß das.',
         key: 1,
       },
     ],
@@ -2417,7 +2417,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Sie z\u00e4hlen die Stimmen nach dem Ende der Wahl.',
+        content: 'Sie zählen die Stimmen nach dem Ende der Wahl.',
         key: 1,
       },
     ],
@@ -2429,7 +2429,7 @@ var quizQuestions = [
       'In Deutschland helfen ehrenamtliche Wahlhelfer und Wahlhelferinnen bei den Wahlen. Was ist eine Aufgabe von Wahlhelfern / Wahlhelferinnen?',
     answers: [
       {
-        content: 'Sie helfen Kindern und alten Menschen beim W\u00e4hlen.',
+        content: 'Sie helfen Kindern und alten Menschen beim Wählen.',
         key: 0,
       },
       {
@@ -2441,7 +2441,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Sie z\u00e4hlen die Stimmen nach dem Ende der Wahl.',
+        content: 'Sie zählen die Stimmen nach dem Ende der Wahl.',
         key: 1,
       },
     ],
@@ -2449,7 +2449,7 @@ var quizQuestions = [
   },
   {
     id: '107',
-    question: 'F\u00fcr wie viele Jahre wird der Bundestag in Deutschland gew\u00e4hlt?',
+    question: 'Für wie viele Jahre wird der Bundestag in Deutschland gewählt?',
     answers: [
       {
         content: '2 Jahre',
@@ -2472,14 +2472,14 @@ var quizQuestions = [
   },
   {
     id: '108',
-    question: 'Bei einer Bundestagswahl in Deutschland darf jeder w\u00e4hlen, der...',
+    question: 'Bei einer Bundestagswahl in Deutschland darf jeder wählen, der...',
     answers: [
       {
-        content: 'in der Bundesrepublik Deutschland wohnt und w\u00e4hlen m\u00f6chte.',
+        content: 'in der Bundesrepublik Deutschland wohnt und wählen möchte.',
         key: 0,
       },
       {
-        content: 'B\u00fcrger / B\u00fcrgerin der Bundesrepublik Deutschland ist und mindestens 18 Jahre alt ist.',
+        content: 'Bürger / Bürgerin der Bundesrepublik Deutschland ist und mindestens 18 Jahre alt ist.',
         key: 1,
       },
       {
@@ -2487,7 +2487,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'B\u00fcrger / B\u00fcrgerin der Bundesrepublik Deutschland ist und mindestens 21 Jahre alt ist.',
+        content: 'Bürger / Bürgerin der Bundesrepublik Deutschland ist und mindestens 21 Jahre alt ist.',
         key: 0,
       },
     ],
@@ -2506,7 +2506,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'alle f\u00fcnf Jahre',
+        content: 'alle fünf Jahre',
         key: 0,
       },
       {
@@ -2518,7 +2518,7 @@ var quizQuestions = [
   },
   {
     id: '110',
-    question: 'F\u00fcr wie viele Jahre wird der Bundestag in Deutschland gew\u00e4hlt?',
+    question: 'Für wie viele Jahre wird der Bundestag in Deutschland gewählt?',
     answers: [
       {
         content: '2 Jahre',
@@ -2541,22 +2541,22 @@ var quizQuestions = [
   },
   {
     id: '111',
-    question: 'In Deutschland darf man w\u00e4hlen. Was bedeutet das?',
+    question: 'In Deutschland darf man wählen. Was bedeutet das?',
     answers: [
       {
-        content: 'Alle deutschen Staatsangeh\u00f6rigen d\u00fcrfen w\u00e4hlen, wenn sie das Mindestalter erreicht haben.',
+        content: 'Alle deutschen Staatsangehörigen dürfen wählen, wenn sie das Mindestalter erreicht haben.',
         key: 1,
       },
       {
-        content: 'Nur verheiratete Personen d\u00fcrfen w\u00e4hlen.',
+        content: 'Nur verheiratete Personen dürfen wählen.',
         key: 0,
       },
       {
-        content: 'Nur Personen mit einem festen Arbeitsplatz d\u00fcrfen w\u00e4hlen.',
+        content: 'Nur Personen mit einem festen Arbeitsplatz dürfen wählen.',
         key: 0,
       },
       {
-        content: 'Alle Einwohner und Einwohnerinnen in Deutschland m\u00fcssen w\u00e4hlen.',
+        content: 'Alle Einwohner und Einwohnerinnen in Deutschland müssen wählen.',
         key: 0,
       },
     ],
@@ -2579,7 +2579,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'geschlechtsabh\u00e4ngig.',
+        content: 'geschlechtsabhängig.',
         key: 0,
       },
     ],
@@ -2594,7 +2594,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'die meisten M\u00e4nner mehrheitlich gew\u00e4hlt haben.',
+        content: 'die meisten Männer mehrheitlich gewählt haben.',
         key: 0,
       },
       {
@@ -2602,7 +2602,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'die meisten Erststimmen f\u00fcr ihren Kanzlerkandidaten / ihre Kanzlerkandidatin erhalten hat.',
+        content: 'die meisten Erststimmen für ihren Kanzlerkandidaten / ihre Kanzlerkandidatin erhalten hat.',
         key: 0,
       },
     ],
@@ -2636,19 +2636,19 @@ var quizQuestions = [
     question: 'Was bedeutet \u201eaktives Wahlrecht\u201c in Deutschland?',
     answers: [
       {
-        content: 'Man kann gew\u00e4hlt werden.',
+        content: 'Man kann gewählt werden.',
         key: 0,
       },
       {
-        content: 'Man muss w\u00e4hlen gehen.',
+        content: 'Man muss wählen gehen.',
         key: 0,
       },
       {
-        content: 'Man kann w\u00e4hlen.',
+        content: 'Man kann wählen.',
         key: 1,
       },
       {
-        content: 'Man muss zur Ausz\u00e4hlung der Stimmen gehen.',
+        content: 'Man muss zur Auszählung der Stimmen gehen.',
         key: 0,
       },
     ],
@@ -2656,7 +2656,7 @@ var quizQuestions = [
   },
   {
     id: '116',
-    question: 'Wenn Sie bei einer Bundestagswahl in Deutschland w\u00e4hlen d\u00fcrfen, hei\u00dft das...',
+    question: 'Wenn Sie bei einer Bundestagswahl in Deutschland wählen dürfen, heißt das...',
     answers: [
       {
         content: 'aktive Wahlkampagne.',
@@ -2680,7 +2680,7 @@ var quizQuestions = [
   {
     id: '117',
     question:
-      'Wie viel Prozent der Zweitstimmen m\u00fcssen Parteien mindestens bekommen, um in den Deutschen Bundestag gew\u00e4hlt zu werden?',
+      'Wie viel Prozent der Zweitstimmen müssen Parteien mindestens bekommen, um in den Deutschen Bundestag gewählt zu werden?',
     answers: [
       {
         content: '3 %',
@@ -2706,19 +2706,19 @@ var quizQuestions = [
     question: 'Was regelt das Wahlrecht in Deutschland?',
     answers: [
       {
-        content: 'Wer w\u00e4hlen darf, muss w\u00e4hlen.',
+        content: 'Wer wählen darf, muss wählen.',
         key: 0,
       },
       {
-        content: 'Alle die wollen, k\u00f6nnen w\u00e4hlen.',
+        content: 'Alle die wollen, können wählen.',
         key: 0,
       },
       {
-        content: 'Wer nicht w\u00e4hlt, verliert das Recht zu w\u00e4hlen.',
+        content: 'Wer nicht wählt, verliert das Recht zu wählen.',
         key: 0,
       },
       {
-        content: 'Wer w\u00e4hlen darf, kann w\u00e4hlen.',
+        content: 'Wer wählen darf, kann wählen.',
         key: 1,
       },
     ],
@@ -2729,19 +2729,19 @@ var quizQuestions = [
     question: 'Wahlen in Deutschland sind frei. Was bedeutet das?',
     answers: [
       {
-        content: 'Alle verurteilten Straft\u00e4ter / Straft\u00e4terinnen d\u00fcrfen nicht w\u00e4hlen.',
+        content: 'Alle verurteilten Straftäter / Straftäterinnen dürfen nicht wählen.',
         key: 0,
       },
       {
-        content: 'Wenn ich w\u00e4hlen gehen m\u00f6chte, muss mein Arbeitgeber / meine Arbeitgeberin mir frei geben.',
+        content: 'Wenn ich wählen gehen möchte, muss mein Arbeitgeber / meine Arbeitgeberin mir frei geben.',
         key: 0,
       },
       {
-        content: 'Jede Person kann ohne Zwang entscheiden, ob sie w\u00e4hlen m\u00f6chte und wen sie w\u00e4hlen m\u00f6chte.',
+        content: 'Jede Person kann ohne Zwang entscheiden, ob sie wählen möchte und wen sie wählen möchte.',
         key: 1,
       },
       {
-        content: 'Ich kann frei entscheiden, wo ich w\u00e4hlen gehen m\u00f6chte.',
+        content: 'Ich kann frei entscheiden, wo ich wählen gehen möchte.',
         key: 0,
       },
     ],
@@ -2760,11 +2760,11 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Mehrheits- und Verh\u00e4ltniswahlrecht.',
+        content: 'Mehrheits- und Verhältniswahlrecht.',
         key: 1,
       },
       {
-        content: 'allgemeines M\u00e4nnerwahlrecht.',
+        content: 'allgemeines Männerwahlrecht.',
         key: 0,
       },
     ],
@@ -2773,10 +2773,10 @@ var quizQuestions = [
   {
     id: '121',
     question:
-      'Eine Partei m\u00f6chte in den Deutschen Bundestag. Sie muss aber einen Mindestanteil an W\u00e4hlerstimmen haben. Das hei\u00dft...',
+      'Eine Partei möchte in den Deutschen Bundestag. Sie muss aber einen Mindestanteil an Wählerstimmen haben. Das heißt...',
     answers: [
       {
-        content: '5 %-H\u00fcrde.',
+        content: '5 %-Hürde.',
         key: 1,
       },
       {
@@ -2819,22 +2819,22 @@ var quizQuestions = [
   },
   {
     id: '123',
-    question: 'Was ist in Deutschland die \u201e5 %-H\u00fcrde\u201c?',
+    question: 'Was ist in Deutschland die \u201e5 %-Hürde\u201c?',
     answers: [
       {
-        content: 'Abstimmungsregelung im Bundestag f\u00fcr kleine Parteien',
+        content: 'Abstimmungsregelung im Bundestag für kleine Parteien',
         key: 0,
       },
       {
-        content: 'Anwesenheitskontrolle im Bundestag f\u00fcr Abstimmungen',
+        content: 'Anwesenheitskontrolle im Bundestag für Abstimmungen',
         key: 0,
       },
       {
-        content: 'Mindestanteil an W\u00e4hlerstimmen, um ins Parlament zu kommen',
+        content: 'Mindestanteil an Wählerstimmen, um ins Parlament zu kommen',
         key: 1,
       },
       {
-        content: 'Anwesenheitskontrolle im Bundesrat f\u00fcr Abstimmungen',
+        content: 'Anwesenheitskontrolle im Bundesrat für Abstimmungen',
         key: 0,
       },
     ],
@@ -2849,15 +2849,15 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'der Parlamente der L\u00e4nder.',
+        content: 'der Parlamente der Länder.',
         key: 0,
       },
       {
-        content: 'des Parlaments f\u00fcr Deutschland.',
+        content: 'des Parlaments für Deutschland.',
         key: 1,
       },
       {
-        content: 'des Bundespr\u00e4sidenten / der Bundespr\u00e4sidentin.',
+        content: 'des Bundespräsidenten / der Bundespräsidentin.',
         key: 0,
       },
     ],
@@ -2865,14 +2865,14 @@ var quizQuestions = [
   },
   {
     id: '125',
-    question: 'In einer Demokratie ist eine Funktion von regelm\u00e4\u00dfigen Wahlen, ...',
+    question: 'In einer Demokratie ist eine Funktion von regelmäßigen Wahlen, ...',
     answers: [
       {
-        content: 'die B\u00fcrger und B\u00fcrgerinnen zu zwingen, ihre Stimme abzugeben.',
+        content: 'die Bürger und Bürgerinnen zu zwingen, ihre Stimme abzugeben.',
         key: 0,
       },
       {
-        content: 'nach dem Willen der W\u00e4hlermehrheit den Wechsel der Regierung zu erm\u00f6glichen.',
+        content: 'nach dem Willen der Wählermehrheit den Wechsel der Regierung zu ermöglichen.',
         key: 1,
       },
       {
@@ -2888,14 +2888,14 @@ var quizQuestions = [
   },
   {
     id: '126',
-    question: 'Was bekommen wahlberechtigte B\u00fcrger und B\u00fcrgerinnen in Deutschland vor einer Wahl?',
+    question: 'Was bekommen wahlberechtigte Bürger und Bürgerinnen in Deutschland vor einer Wahl?',
     answers: [
       {
         content: 'eine Wahlbenachrichtigung von der Gemeinde',
         key: 1,
       },
       {
-        content: 'eine Wahlerlaubnis vom Bundespr\u00e4sidenten / von der Bundespr\u00e4sidentin',
+        content: 'eine Wahlerlaubnis vom Bundespräsidenten / von der Bundespräsidentin',
         key: 0,
       },
       {
@@ -2911,14 +2911,14 @@ var quizQuestions = [
   },
   {
     id: '127',
-    question: 'Warum gibt es die 5 %-H\u00fcrde im Wahlgesetz der Bundesrepublik Deutschland? Es gibt sie, weil...',
+    question: 'Warum gibt es die 5 %-Hürde im Wahlgesetz der Bundesrepublik Deutschland? Es gibt sie, weil...',
     answers: [
       {
         content: 'die Programme von vielen kleinen Parteien viele Gemeinsamkeiten haben.',
         key: 0,
       },
       {
-        content: 'die B\u00fcrger und B\u00fcrgerinnen bei vielen kleinen Parteien die Orientierung verlieren k\u00f6nnen.',
+        content: 'die Bürger und Bürgerinnen bei vielen kleinen Parteien die Orientierung verlieren können.',
         key: 0,
       },
       {
@@ -2934,7 +2934,7 @@ var quizQuestions = [
   },
   {
     id: '128',
-    question: 'Parlamentsmitglieder, die von den B\u00fcrgern und B\u00fcrgerinnen gew\u00e4hlt werden, nennt man...',
+    question: 'Parlamentsmitglieder, die von den Bürgern und Bürgerinnen gewählt werden, nennt man...',
     answers: [
       {
         content: 'Abgeordnete.',
@@ -2949,7 +2949,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Ministerpr\u00e4sidenten / Ministerpr\u00e4sidentinnen.',
+        content: 'Ministerpräsidenten / Ministerpräsidentinnen.',
         key: 0,
       },
     ],
@@ -2957,14 +2957,14 @@ var quizQuestions = [
   },
   {
     id: '129',
-    question: 'Vom Volk gew\u00e4hlt wird in Deutschland...',
+    question: 'Vom Volk gewählt wird in Deutschland...',
     answers: [
       {
         content: 'der Bundeskanzler / die Bundeskanzlerin.',
         key: 0,
       },
       {
-        content: 'der Ministerpr\u00e4sident / die Ministerpr\u00e4sidentin eines Bundeslandes.',
+        content: 'der Ministerpräsident / die Ministerpräsidentin eines Bundeslandes.',
         key: 0,
       },
       {
@@ -2972,7 +2972,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'der Bundespr\u00e4sident / die Bundespr\u00e4sidentin.',
+        content: 'der Bundespräsident / die Bundespräsidentin.',
         key: 0,
       },
     ],
@@ -2980,7 +2980,7 @@ var quizQuestions = [
   },
   {
     id: '130',
-    question: 'Welcher Stimmzettel w\u00e4re bei einer Bundestagswahl g\u00fcltig?',
+    question: 'Welcher Stimmzettel wäre bei einer Bundestagswahl gültig?',
     image: '130',
     answers: [
       {
@@ -3004,7 +3004,7 @@ var quizQuestions = [
   },
   {
     id: '131',
-    question: 'In Deutschland ist ein B\u00fcrgermeister / eine B\u00fcrgermeisterin...',
+    question: 'In Deutschland ist ein Bürgermeister / eine Bürgermeisterin...',
     answers: [
       {
         content: 'der Leiter / die Leiterin einer Schule.',
@@ -3034,7 +3034,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Sie arbeiten freiwillig und unbezahlt in Vereinen und Verb\u00e4nden.',
+        content: 'Sie arbeiten freiwillig und unbezahlt in Vereinen und Verbänden.',
         key: 1,
       },
       {
@@ -3053,7 +3053,7 @@ var quizQuestions = [
     question: 'Was ist bei Bundestags- und Landtagswahlen in Deutschland erlaubt?',
     answers: [
       {
-        content: 'Der Ehemann w\u00e4hlt f\u00fcr seine Frau mit.',
+        content: 'Der Ehemann wählt für seine Frau mit.',
         key: 0,
       },
       {
@@ -3065,7 +3065,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Kinder ab dem Alter von 14 Jahren d\u00fcrfen w\u00e4hlen.',
+        content: 'Kinder ab dem Alter von 14 Jahren dürfen wählen.',
         key: 0,
       },
     ],
@@ -3074,11 +3074,11 @@ var quizQuestions = [
   {
     id: '134',
     question:
-      'Man will die Buslinie abschaffen, mit der Sie immer zur Arbeit fahren. Was k\u00f6nnen Sie machen, um die Buslinie zu erhalten?',
+      'Man will die Buslinie abschaffen, mit der Sie immer zur Arbeit fahren. Was können Sie machen, um die Buslinie zu erhalten?',
     answers: [
       {
         content:
-          'Ich beteilige mich an einer B\u00fcrgerinitiative f\u00fcr die Erhaltung der Buslinie oder gr\u00fcnde selber eine Initiative.',
+          'Ich beteilige mich an einer Bürgerinitiative für die Erhaltung der Buslinie oder gründe selber eine Initiative.',
         key: 1,
       },
       {
@@ -3101,7 +3101,7 @@ var quizQuestions = [
     question: 'Wen vertreten die Gewerkschaften in Deutschland?',
     answers: [
       {
-        content: 'gro\u00dfe Unternehmen',
+        content: 'große Unternehmen',
         key: 0,
       },
       {
@@ -3109,7 +3109,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Selbstst\u00e4ndige',
+        content: 'Selbstständige',
         key: 0,
       },
       {
@@ -3128,7 +3128,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'ungerechtfertigter K\u00fcndigung durch Ihren Chef / Ihre Chefin.',
+        content: 'ungerechtfertigter Kündigung durch Ihren Chef / Ihre Chefin.',
         key: 1,
       },
       {
@@ -3144,7 +3144,7 @@ var quizQuestions = [
   },
   {
     id: '137',
-    question: 'Welches Gericht ist in Deutschland bei Konflikten in der Arbeitswelt zust\u00e4ndig?',
+    question: 'Welches Gericht ist in Deutschland bei Konflikten in der Arbeitswelt zuständig?',
     answers: [
       {
         content: 'das Familiengericht',
@@ -3167,18 +3167,18 @@ var quizQuestions = [
   },
   {
     id: '138',
-    question: 'Was kann ich in Deutschland machen, wenn mir mein Arbeitgeber / meine Arbeitgeberin zu Unrecht gek\u00fcndigt hat?',
+    question: 'Was kann ich in Deutschland machen, wenn mir mein Arbeitgeber / meine Arbeitgeberin zu Unrecht gekündigt hat?',
     answers: [
       {
         content: 'weiter arbeiten und freundlich zum Chef / zur Chefin sein',
         key: 0,
       },
       {
-        content: 'ein Mahnverfahren gegen den Arbeitgeber / die Arbeitgeberin f\u00fchren',
+        content: 'ein Mahnverfahren gegen den Arbeitgeber / die Arbeitgeberin führen',
         key: 0,
       },
       {
-        content: 'K\u00fcndigungsschutzklage erheben',
+        content: 'Kündigungsschutzklage erheben',
         key: 1,
       },
       {
@@ -3193,7 +3193,7 @@ var quizQuestions = [
     question: 'Wann kommt es in Deutschland zu einem Prozess vor Gericht? Wenn jemand...',
     answers: [
       {
-        content: 'zu einer anderen Religion \u00fcbertritt.',
+        content: 'zu einer anderen Religion übertritt.',
         key: 0,
       },
       {
@@ -3213,14 +3213,14 @@ var quizQuestions = [
   },
   {
     id: '140',
-    question: 'Was macht ein Sch\u00f6ffe / eine Sch\u00f6ffin in Deutschland? Er / Sie...',
+    question: 'Was macht ein Schöffe / eine Schöffin in Deutschland? Er / Sie...',
     answers: [
       {
-        content: 'entscheidet mit Richtern / Richterinnen \u00fcber Schuld und Strafe.',
+        content: 'entscheidet mit Richtern / Richterinnen über Schuld und Strafe.',
         key: 1,
       },
       {
-        content: 'gibt B\u00fcrgern / B\u00fcrgerinnen rechtlichen Rat.',
+        content: 'gibt Bürgern / Bürgerinnen rechtlichen Rat.',
         key: 0,
       },
       {
@@ -3236,10 +3236,10 @@ var quizQuestions = [
   },
   {
     id: '141',
-    question: 'Wer ber\u00e4t in Deutschland Personen bei Rechtsfragen und vertritt sie vor Gericht?',
+    question: 'Wer berät in Deutschland Personen bei Rechtsfragen und vertritt sie vor Gericht?',
     answers: [
       {
-        content: 'ein Rechtsanwalt / eine Rechtsanw\u00e4ltin',
+        content: 'ein Rechtsanwalt / eine Rechtsanwältin',
         key: 1,
       },
       {
@@ -3247,11 +3247,11 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'ein Sch\u00f6ffe / eine Sch\u00f6ffin',
+        content: 'ein Schöffe / eine Schöffin',
         key: 0,
       },
       {
-        content: 'ein Staatsanwalt / eine Staatsanw\u00e4ltin',
+        content: 'ein Staatsanwalt / eine Staatsanwältin',
         key: 0,
       },
     ],
@@ -3262,7 +3262,7 @@ var quizQuestions = [
     question: 'Was ist die Hauptaufgabe eines Richters / einer Richterin in Deutschland? Ein Richter / eine Richterin...',
     answers: [
       {
-        content: 'vertritt B\u00fcrger und B\u00fcrgerinnen vor einem Gericht.',
+        content: 'vertritt Bürger und Bürgerinnen vor einem Gericht.',
         key: 0,
       },
       {
@@ -3270,7 +3270,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: '\u00e4ndert Gesetze.',
+        content: 'ändert Gesetze.',
         key: 0,
       },
       {
@@ -3282,7 +3282,7 @@ var quizQuestions = [
   },
   {
     id: '143',
-    question: 'Ein Richter / eine Richterin in Deutschland geh\u00f6rt zur \u2026',
+    question: 'Ein Richter / eine Richterin in Deutschland gehört zur ...',
     answers: [
       {
         content: 'Judikative.',
@@ -3305,7 +3305,7 @@ var quizQuestions = [
   },
   {
     id: '144',
-    question: 'Ein Richter / eine Richterin geh\u00f6rt in Deutschland zur...',
+    question: 'Ein Richter / eine Richterin gehört in Deutschland zur...',
     answers: [
       {
         content: 'vollziehenden Gewalt.',
@@ -3329,7 +3329,7 @@ var quizQuestions = [
   {
     id: '145',
     question:
-      'In Deutschland wird die Staatsgewalt geteilt. F\u00fcr welche Staatsgewalt arbeitet ein Richter / eine Richterin? F\u00fcr die...',
+      'In Deutschland wird die Staatsgewalt geteilt. Für welche Staatsgewalt arbeitet ein Richter / eine Richterin? Für die...',
     answers: [
       {
         content: 'Judikative.',
@@ -3386,7 +3386,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'Pl\u00e4ne erstellen',
+        content: 'Pläne erstellen',
         key: 0,
       },
       {
@@ -3405,15 +3405,15 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'die B\u00fcrgerinnen und B\u00fcrger abzuh\u00f6ren',
+        content: 'die Bürgerinnen und Bürger abzuhören',
         key: 0,
       },
       {
-        content: 'die Gesetze zu beschlie\u00dfen',
+        content: 'die Gesetze zu beschließen',
         key: 0,
       },
       {
-        content: 'die Einhaltung von Gesetzen zu \u00fcberwachen',
+        content: 'die Einhaltung von Gesetzen zu überwachen',
         key: 1,
       },
     ],
@@ -3421,14 +3421,14 @@ var quizQuestions = [
   },
   {
     id: '149',
-    question: 'Wer kann Gerichtssch\u00f6ffe / Gerichtssch\u00f6ffin in Deutschland werden?',
+    question: 'Wer kann Gerichtsschöffe / Gerichtsschöffin in Deutschland werden?',
     answers: [
       {
-        content: 'alle in Deutschland geborenen Einwohner / Einwohnerinnen \u00fcber 18 Jahre',
+        content: 'alle in Deutschland geborenen Einwohner / Einwohnerinnen über 18 Jahre',
         key: 0,
       },
       {
-        content: 'alle deutschen Staatsangeh\u00f6rigen \u00e4lter als 24 und j\u00fcnger als 70 Jahre',
+        content: 'alle deutschen Staatsangehörigen älter als 24 und jünger als 70 Jahre',
         key: 1,
       },
       {
@@ -3444,7 +3444,7 @@ var quizQuestions = [
   },
   {
     id: '150',
-    question: 'Ein Gerichtssch\u00f6ffe / eine Gerichtssch\u00f6ffin in Deutschland ist...',
+    question: 'Ein Gerichtsschöffe / eine Gerichtsschöffin in Deutschland ist...',
     answers: [
       {
         content: 'der Stellvertreter / die Stellvertreterin des Stadtoberhaupts.',
@@ -3470,7 +3470,7 @@ var quizQuestions = [
     question: 'Wer baute die Mauer in Berlin?',
     answers: [
       {
-        content: 'Gro\u00dfbritannien',
+        content: 'Großbritannien',
         key: 0,
       },
       {
@@ -3605,7 +3605,7 @@ var quizQuestions = [
   },
   {
     id: '157',
-    question: 'Die Nationalsozialisten mit Adolf Hitler errichteten 1933 in Deutschland \u2026',
+    question: 'Die Nationalsozialisten mit Adolf Hitler errichteten 1933 in Deutschland ...',
     answers: [
       {
         content: 'eine Diktatur.',
@@ -3620,7 +3620,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'ein F\u00fcrstentum.',
+        content: 'ein Fürstentum.',
         key: 0,
       },
     ],
@@ -3628,7 +3628,7 @@ var quizQuestions = [
   },
   {
     id: '158',
-    question: 'Das \u201eDritte Reich\u201c war eine \u2026',
+    question: 'Das \u201eDritte Reich\u201c war eine ...',
     answers: [
       {
         content: 'Diktatur.',
@@ -3643,7 +3643,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'R\u00e4terepublik.',
+        content: 'Räterepublik.',
         key: 0,
       },
     ],
@@ -3651,7 +3651,7 @@ var quizQuestions = [
   },
   {
     id: '159',
-    question: 'Was gab es in Deutschland nicht w\u00e4hrend der Zeit des Nationalsozialismus?',
+    question: 'Was gab es in Deutschland nicht während der Zeit des Nationalsozialismus?',
     answers: [
       {
         content: 'freie Wahlen',
@@ -3662,7 +3662,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'willk\u00fcrliche Verhaftungen',
+        content: 'willkürliche Verhaftungen',
         key: 0,
       },
       {
@@ -3697,7 +3697,7 @@ var quizQuestions = [
   },
   {
     id: '161',
-    question: 'Was kennzeichnete den NS-Staat? Eine Politik \u2026',
+    question: 'Was kennzeichnete den NS-Staat? Eine Politik ...',
     answers: [
       {
         content: 'des staatlichen Rassismus',
@@ -3720,14 +3720,14 @@ var quizQuestions = [
   },
   {
     id: '162',
-    question: 'Claus Schenk Graf von Stauffenberg wurde bekannt durch \u2026',
+    question: 'Claus Schenk Graf von Stauffenberg wurde bekannt durch ...',
     answers: [
       {
         content: 'eine Goldmedaille bei den Olympischen Spielen 1936.',
         key: 0,
       },
       {
-        content: 'den Bau des Reichstagsgeb\u00e4udes.',
+        content: 'den Bau des Reichstagsgebäudes.',
         key: 0,
       },
       {
@@ -3743,7 +3743,7 @@ var quizQuestions = [
   },
   {
     id: '163',
-    question: 'In welchem Jahr zerst\u00f6rten die Nationalsozialisten Synagogen und j\u00fcdische Gesch\u00e4fte in Deutschland?',
+    question: 'In welchem Jahr zerstörten die Nationalsozialisten Synagogen und jüdische Geschäfte in Deutschland?',
     answers: [
       {
         content: '1925',
@@ -3773,15 +3773,15 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Die Nationalsozialisten verlieren eine Wahl und l\u00f6sen den Reichstag auf.',
+        content: 'Die Nationalsozialisten verlieren eine Wahl und lösen den Reichstag auf.',
         key: 0,
       },
       {
-        content: 'J\u00fcdische Gesch\u00e4fte und Synagogen werden durch Nationalsozialisten und ihre Anh\u00e4nger zerst\u00f6rt. ',
+        content: 'Jüdische Geschäfte und Synagogen werden durch Nationalsozialisten und ihre Anhänger zerstört. ',
         key: 1,
       },
       {
-        content: 'Hitler wird Reichspr\u00e4sident und l\u00e4sst alle Parteien verbieten.',
+        content: 'Hitler wird Reichspräsident und lässt alle Parteien verbieten.',
         key: 0,
       },
     ],
@@ -3789,7 +3789,7 @@ var quizQuestions = [
   },
   {
     id: '165',
-    question: 'Wie hie\u00df der erste Bundeskanzler der Bundesrepublik Deutschland?',
+    question: 'Wie hieß der erste Bundeskanzler der Bundesrepublik Deutschland?',
     answers: [
       {
         content: 'Konrad Adenauer',
@@ -3836,10 +3836,10 @@ var quizQuestions = [
   {
     id: '167',
     question:
-      'Welche L\u00e4nder wurden nach dem Zweiten Weltkrieg in Deutschland als \u201eAlliierte Besatzungsm\u00e4chte\u201c bezeichnet?',
+      'Welche Länder wurden nach dem Zweiten Weltkrieg in Deutschland als \u201eAlliierte Besatzungsmächte\u201c bezeichnet?',
     answers: [
       {
-        content: 'Sowjetunion, Gro\u00dfbritannien, Polen, Schweden',
+        content: 'Sowjetunion, Großbritannien, Polen, Schweden',
         key: 0,
       },
       {
@@ -3851,7 +3851,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'USA, Sowjetunion, Gro\u00dfbritannien, Frankreich',
+        content: 'USA, Sowjetunion, Großbritannien, Frankreich',
         key: 1,
       },
     ],
@@ -3882,7 +3882,7 @@ var quizQuestions = [
   },
   {
     id: '169',
-    question: 'Wann wurde die Bundesrepublik Deutschland gegr\u00fcndet?',
+    question: 'Wann wurde die Bundesrepublik Deutschland gegründet?',
     answers: [
       {
         content: '1939',
@@ -3905,10 +3905,10 @@ var quizQuestions = [
   },
   {
     id: '170',
-    question: 'Was gab es w\u00e4hrend der Zeit des Nationalsozialismus in Deutschland?',
+    question: 'Was gab es während der Zeit des Nationalsozialismus in Deutschland?',
     answers: [
       {
-        content: 'das Recht zur freien Entfaltung der Pers\u00f6nlichkeit',
+        content: 'das Recht zur freien Entfaltung der Persönlichkeit',
         key: 0,
       },
       {
@@ -3920,7 +3920,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'den Schutz der Menschenw\u00fcrde',
+        content: 'den Schutz der Menschenwürde',
         key: 0,
       },
     ],
@@ -3928,14 +3928,14 @@ var quizQuestions = [
   },
   {
     id: '171',
-    question: 'Soziale Marktwirtschaft bedeutet, die Wirtschaft \u2026',
+    question: 'Soziale Marktwirtschaft bedeutet, die Wirtschaft ...',
     answers: [
       {
         content: 'steuert sich allein nach Angebot und Nachfrage.',
         key: 0,
       },
       {
-        content: 'wird vom Staat geplant und gesteuert, Angebot und Nachfrage werden nicht ber\u00fccksichtigt.',
+        content: 'wird vom Staat geplant und gesteuert, Angebot und Nachfrage werden nicht berücksichtigt.',
         key: 0,
       },
       {
@@ -3943,7 +3943,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'richtet sich nach Angebot und Nachfrage, aber der Staat sorgt f\u00fcr einen sozialen Ausgleich.',
+        content: 'richtet sich nach Angebot und Nachfrage, aber der Staat sorgt für einen sozialen Ausgleich.',
         key: 1,
       },
     ],
@@ -3951,14 +3951,14 @@ var quizQuestions = [
   },
   {
     id: '172',
-    question: 'In welcher Besatzungszone wurde die DDR gegr\u00fcndet? In der \u2026',
+    question: 'In welcher Besatzungszone wurde die DDR gegründet? In der ...',
     answers: [
       {
         content: 'amerikanischen Besatzungszone.',
         key: 0,
       },
       {
-        content: 'franz\u00f6sischen Besatzungszone.',
+        content: 'französischen Besatzungszone.',
         key: 0,
       },
       {
@@ -3974,7 +3974,7 @@ var quizQuestions = [
   },
   {
     id: '173',
-    question: 'Die Bundesrepublik Deutschland ist ein Gr\u00fcndungsmitglied \u2026',
+    question: 'Die Bundesrepublik Deutschland ist ein Gründungsmitglied ...',
     answers: [
       {
         content: 'des Nordatlantikpakts (NATO).',
@@ -3985,7 +3985,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'der Europ\u00e4ischen Union (EU).',
+        content: 'der Europäischen Union (EU).',
         key: 1,
       },
       {
@@ -3997,7 +3997,7 @@ var quizQuestions = [
   },
   {
     id: '174',
-    question: 'Wann wurde die DDR gegr\u00fcndet?',
+    question: 'Wann wurde die DDR gegründet?',
     answers: [
       {
         content: '1947',
@@ -4047,19 +4047,19 @@ var quizQuestions = [
     image: '176',
     answers: [
       {
-        content: '1=Gro\u00dfbritannien, 2=Sowjetunion, 3=Frankreich, 4=USA',
+        content: '1=Großbritannien, 2=Sowjetunion, 3=Frankreich, 4=USA',
         key: 0,
       },
       {
-        content: '1=Sowjetunion, 2=Gro\u00dfbritannien, 3=USA, 4=Frankreich',
+        content: '1=Sowjetunion, 2=Großbritannien, 3=USA, 4=Frankreich',
         key: 0,
       },
       {
-        content: '1=Gro\u00dfbritannien, 2=Sowjetunion, 3=USA, 4=Frankreich',
+        content: '1=Großbritannien, 2=Sowjetunion, 3=USA, 4=Frankreich',
         key: 1,
       },
       {
-        content: '1=Gro\u00dfbritannien, 2=USA, 3=Sowjetunion, 4=Frankreich',
+        content: '1=Großbritannien, 2=USA, 3=Sowjetunion, 4=Frankreich',
         key: 0,
       },
     ],
@@ -4070,7 +4070,7 @@ var quizQuestions = [
     question: 'Welche deutsche Stadt wurde nach dem Zweiten Weltkrieg in vier Sektoren aufgeteilt?',
     answers: [
       {
-        content: 'M\u00fcnchen',
+        content: 'München',
         key: 0,
       },
       {
@@ -4091,18 +4091,18 @@ var quizQuestions = [
   {
     id: '178',
     question:
-      'Vom Juni 1948 bis zum Mai 1949 wurden die B\u00fcrger und B\u00fcrgerinnen von West-Berlin durch eine Luftbr\u00fccke versorgt. Welcher Umstand war daf\u00fcr verantwortlich?',
+      'Vom Juni 1948 bis zum Mai 1949 wurden die Bürger und Bürgerinnen von West-Berlin durch eine Luftbrücke versorgt. Welcher Umstand war dafür verantwortlich?',
     answers: [
       {
-        content: 'F\u00fcr Frankreich war eine Versorgung der West-Berliner Bev\u00f6lkerung mit dem Flugzeug kosteng\u00fcnstiger.',
+        content: 'Für Frankreich war eine Versorgung der West-Berliner Bevölkerung mit dem Flugzeug kostengünstiger.',
         key: 0,
       },
       {
-        content: 'Die amerikanischen Soldaten / Soldatinnen hatten beim Landtransport Angst vor \u00dcberf\u00e4llen.',
+        content: 'Die amerikanischen Soldaten / Soldatinnen hatten beim Landtransport Angst vor Überfällen.',
         key: 0,
       },
       {
-        content: 'F\u00fcr Gro\u00dfbritannien war die Versorgung \u00fcber die Luftbr\u00fccke schneller.',
+        content: 'Für Großbritannien war die Versorgung über die Luftbrücke schneller.',
         key: 0,
       },
       {
@@ -4125,7 +4125,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'mit dem R\u00fcckzug der Deutschen aus den besetzten Gebieten',
+        content: 'mit dem Rückzug der Deutschen aus den besetzten Gebieten',
         key: 0,
       },
       {
@@ -4137,7 +4137,7 @@ var quizQuestions = [
   },
   {
     id: '180',
-    question: 'Der erste Bundeskanzler der Bundesrepublik Deutschland war \u2026',
+    question: 'Der erste Bundeskanzler der Bundesrepublik Deutschland war ...',
     answers: [
       {
         content: 'Ludwig Erhard.',
@@ -4152,7 +4152,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'Gerhard Schr\u00f6der.',
+        content: 'Gerhard Schröder.',
         key: 0,
       },
     ],
@@ -4160,7 +4160,7 @@ var quizQuestions = [
   },
   {
     id: '181',
-    question: 'Was wollte Willy Brandt mit seinem Kniefall 1970 im ehemaligen j\u00fcdischen Ghetto in Warschau ausdr\u00fccken?',
+    question: 'Was wollte Willy Brandt mit seinem Kniefall 1970 im ehemaligen jüdischen Ghetto in Warschau ausdrücken?',
     image: '181',
     answers: [
       {
@@ -4184,7 +4184,7 @@ var quizQuestions = [
   },
   {
     id: '182',
-    question: 'Welche Parteien wurden 1946 zwangsweise zur SED vereint, der Einheitspartei der sp\u00e4teren DDR?',
+    question: 'Welche Parteien wurden 1946 zwangsweise zur SED vereint, der Einheitspartei der späteren DDR?',
     answers: [
       {
         content: 'KPD und SPD',
@@ -4253,14 +4253,14 @@ var quizQuestions = [
   },
   {
     id: '185',
-    question: 'Wof\u00fcr stand der Ausdruck \u201eEiserner Vorhang\u201c? F\u00fcr die Abschottung \u2026',
+    question: 'Wofür stand der Ausdruck \u201eEiserner Vorhang\u201c? Für die Abschottung ...',
     answers: [
       {
         content: 'des Warschauer Pakts gegen den Westen.',
         key: 1,
       },
       {
-        content: 'Norddeutschlands gegen S\u00fcddeutschland.',
+        content: 'Norddeutschlands gegen Süddeutschland.',
         key: 0,
       },
       {
@@ -4300,11 +4300,11 @@ var quizQuestions = [
   },
   {
     id: '187',
-    question: 'Welcher deutsche Staat hatte eine schwarz-rot-goldene Flagge mit Hammer, Zirkel und \u00c4hrenkranz?',
+    question: 'Welcher deutsche Staat hatte eine schwarz-rot-goldene Flagge mit Hammer, Zirkel und Ährenkranz?',
     image: '187',
     answers: [
       {
-        content: 'Preu\u00dfen',
+        content: 'Preußen',
         key: 0,
       },
       {
@@ -4370,7 +4370,7 @@ var quizQuestions = [
   },
   {
     id: '190',
-    question: 'Was bedeutet die Abk\u00fcrzung DDR?',
+    question: 'Was bedeutet die Abkürzung DDR?',
     answers: [
       {
         content: 'Dritter Deutscher Rundfunk',
@@ -4393,7 +4393,7 @@ var quizQuestions = [
   },
   {
     id: '191',
-    question: 'Wann wurde die Mauer in Berlin f\u00fcr alle ge\u00f6ffnet?',
+    question: 'Wann wurde die Mauer in Berlin für alle geöffnet?',
     answers: [
       {
         content: '1987',
@@ -4416,7 +4416,7 @@ var quizQuestions = [
   },
   {
     id: '192',
-    question: 'Welches heutige deutsche Bundesland geh\u00f6rte fr\u00fcher zum Gebiet der DDR?',
+    question: 'Welches heutige deutsche Bundesland gehörte früher zum Gebiet der DDR?',
     answers: [
       {
         content: 'Brandenburg',
@@ -4439,10 +4439,10 @@ var quizQuestions = [
   },
   {
     id: '193',
-    question: 'Von 1961 bis 1989 war Berlin \u2026',
+    question: 'Von 1961 bis 1989 war Berlin ...',
     answers: [
       {
-        content: 'ohne B\u00fcrgermeister.',
+        content: 'ohne Bürgermeister.',
         key: 0,
       },
       {
@@ -4462,7 +4462,7 @@ var quizQuestions = [
   },
   {
     id: '194',
-    question: 'Am 3. Oktober feiert man in Deutschland den Tag der Deutschen \u2026',
+    question: 'Am 3. Oktober feiert man in Deutschland den Tag der Deutschen ...',
     answers: [
       {
         content: 'Einheit.',
@@ -4473,11 +4473,11 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Bundesl\u00e4nder.',
+        content: 'Bundesländer.',
         key: 0,
       },
       {
-        content: 'St\u00e4dte.',
+        content: 'Städte.',
         key: 0,
       },
     ],
@@ -4485,7 +4485,7 @@ var quizQuestions = [
   },
   {
     id: '195',
-    question: 'Welches heutige deutsche Bundesland geh\u00f6rte fr\u00fcher zum Gebiet der DDR?',
+    question: 'Welches heutige deutsche Bundesland gehörte früher zum Gebiet der DDR?',
     answers: [
       {
         content: 'Hessen',
@@ -4509,7 +4509,7 @@ var quizQuestions = [
   {
     id: '196',
     question:
-      'Warum nennt man die Zeit im Herbst 1989 in der DDR \u201eDie Wende\u201c? In dieser Zeit ver\u00e4nderte sich die DDR politisch \u2026',
+      'Warum nennt man die Zeit im Herbst 1989 in der DDR \u201eDie Wende\u201c? In dieser Zeit veränderte sich die DDR politisch ...',
     answers: [
       {
         content: 'von einer Diktatur zur Demokratie.',
@@ -4524,7 +4524,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'von einem religi\u00f6sen Staat zu einem kommunistischen Staat.',
+        content: 'von einem religiösen Staat zu einem kommunistischen Staat.',
         key: 0,
       },
     ],
@@ -4532,10 +4532,10 @@ var quizQuestions = [
   },
   {
     id: '197',
-    question: 'Welches heutige deutsche Bundesland geh\u00f6rte fr\u00fcher zum Gebiet der DDR?',
+    question: 'Welches heutige deutsche Bundesland gehörte früher zum Gebiet der DDR?',
     answers: [
       {
-        content: 'Th\u00fcringen',
+        content: 'Thüringen',
         key: 1,
       },
       {
@@ -4555,7 +4555,7 @@ var quizQuestions = [
   },
   {
     id: '198',
-    question: 'Welches heutige deutsche Bundesland geh\u00f6rte fr\u00fcher zum Gebiet der DDR?',
+    question: 'Welches heutige deutsche Bundesland gehörte früher zum Gebiet der DDR?',
     answers: [
       {
         content: 'Bayern',
@@ -4570,7 +4570,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'Baden-W\u00fcrttemberg',
+        content: 'Baden-Württemberg',
         key: 0,
       },
     ],
@@ -4578,14 +4578,14 @@ var quizQuestions = [
   },
   {
     id: '199',
-    question: 'Mit der Abk\u00fcrzung \u201eStasi\u201c meinte man in der DDR \u2026',
+    question: 'Mit der Abkürzung \u201eStasi\u201c meinte man in der DDR ...',
     answers: [
       {
         content: 'das Parlament.',
         key: 0,
       },
       {
-        content: 'das Ministerium f\u00fcr Staatssicherheit.',
+        content: 'das Ministerium für Staatssicherheit.',
         key: 1,
       },
       {
@@ -4593,7 +4593,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'das Ministerium f\u00fcr Volksbildung.',
+        content: 'das Ministerium für Volksbildung.',
         key: 0,
       },
     ],
@@ -4601,7 +4601,7 @@ var quizQuestions = [
   },
   {
     id: '200',
-    question: 'Welches heutige deutsche Bundesland geh\u00f6rte fr\u00fcher zum Gebiet der DDR?',
+    question: 'Welches heutige deutsche Bundesland gehörte früher zum Gebiet der DDR?',
     answers: [
       {
         content: 'Hessen',
@@ -4624,22 +4624,22 @@ var quizQuestions = [
   },
   {
     id: '201',
-    question: 'Welche der folgenden Auflistungen enth\u00e4lt nur Bundesl\u00e4nder, die zum Gebiet der fr\u00fcheren DDR geh\u00f6rten?',
+    question: 'Welche der folgenden Auflistungen enthält nur Bundesländer, die zum Gebiet der früheren DDR gehörten?',
     answers: [
       {
         content: 'Niedersachsen, Nordrhein-Westfalen, Hessen, Schleswig-Holstein, Brandenburg',
         key: 0,
       },
       {
-        content: 'Mecklenburg-Vorpommern, Brandenburg, Sachsen, Sachsen-Anhalt, Th\u00fcringen',
+        content: 'Mecklenburg-Vorpommern, Brandenburg, Sachsen, Sachsen-Anhalt, Thüringen',
         key: 1,
       },
       {
-        content: 'Bayern, Baden-W\u00fcrttemberg, Rheinland-Pfalz, Th\u00fcringen, Sachsen',
+        content: 'Bayern, Baden-Württemberg, Rheinland-Pfalz, Thüringen, Sachsen',
         key: 0,
       },
       {
-        content: 'Sachsen, Th\u00fcringen, Hessen, Niedersachsen, Brandenburg',
+        content: 'Sachsen, Thüringen, Hessen, Niedersachsen, Brandenburg',
         key: 0,
       },
     ],
@@ -4647,10 +4647,10 @@ var quizQuestions = [
   },
   {
     id: '202',
-    question: 'Zu wem geh\u00f6rte die DDR im \u201eKalten Krieg\u201c?',
+    question: 'Zu wem gehörte die DDR im \u201eKalten Krieg\u201c?',
     answers: [
       {
-        content: 'zu den Westm\u00e4chten',
+        content: 'zu den Westmächten',
         key: 0,
       },
       {
@@ -4670,7 +4670,7 @@ var quizQuestions = [
   },
   {
     id: '203',
-    question: 'Wie hie\u00df das Wirtschaftssystem der DDR?',
+    question: 'Wie hieß das Wirtschaftssystem der DDR?',
     answers: [
       {
         content: 'Marktwirtschaft',
@@ -4700,11 +4700,11 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Die heutigen f\u00fcnf \u00f6stlichen Bundesl\u00e4nder sind der Bundesrepublik Deutschland beigetreten.',
+        content: 'Die heutigen fünf östlichen Bundesländer sind der Bundesrepublik Deutschland beigetreten.',
         key: 1,
       },
       {
-        content: 'Die westlichen Bundesl\u00e4nder sind der DDR beigetreten.',
+        content: 'Die westlichen Bundesländer sind der DDR beigetreten.',
         key: 0,
       },
       {
@@ -4716,10 +4716,10 @@ var quizQuestions = [
   },
   {
     id: '205',
-    question: 'Mit dem Beitritt der DDR zur Bundesrepublik Deutschland geh\u00f6ren die neuen Bundesl\u00e4nder nun auch \u2026',
+    question: 'Mit dem Beitritt der DDR zur Bundesrepublik Deutschland gehören die neuen Bundesländer nun auch ...',
     answers: [
       {
-        content: 'zur Europ\u00e4ischen Union.',
+        content: 'zur Europäischen Union.',
         key: 1,
       },
       {
@@ -4731,7 +4731,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'zur Europ\u00e4ischen Verteidigungsgemeinschaft.',
+        content: 'zur Europäischen Verteidigungsgemeinschaft.',
         key: 0,
       },
     ],
@@ -4762,7 +4762,7 @@ var quizQuestions = [
   },
   {
     id: '207',
-    question: 'In welchem Milit\u00e4rb\u00fcndnis war die DDR Mitglied?',
+    question: 'In welchem Militärbündnis war die DDR Mitglied?',
     answers: [
       {
         content: 'in der NATO',
@@ -4777,7 +4777,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'im Europab\u00fcndnis',
+        content: 'im Europabündnis',
         key: 0,
       },
     ],
@@ -4792,7 +4792,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'eine ber\u00fchmte deutsche Gedenkst\u00e4tte',
+        content: 'eine berühmte deutsche Gedenkstätte',
         key: 0,
       },
       {
@@ -4800,7 +4800,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'ein deutscher Sportverein w\u00e4hrend des Zweiten Weltkrieges',
+        content: 'ein deutscher Sportverein während des Zweiten Weltkrieges',
         key: 0,
       },
     ],
@@ -4855,7 +4855,7 @@ var quizQuestions = [
   },
   {
     id: '211',
-    question: 'Welcher Politiker steht f\u00fcr die \u201eOstvertr\u00e4ge\u201c?',
+    question: 'Welcher Politiker steht für die \u201eOstverträge\u201c?',
     answers: [
       {
         content: 'Helmut Kohl',
@@ -4878,14 +4878,14 @@ var quizQuestions = [
   },
   {
     id: '212',
-    question: 'Wie hei\u00dft Deutschland mit vollem Namen?',
+    question: 'Wie heißt Deutschland mit vollem Namen?',
     answers: [
       {
         content: 'Bundesstaat Deutschland',
         key: 0,
       },
       {
-        content: 'Bundesl\u00e4nder Deutschland',
+        content: 'Bundesländer Deutschland',
         key: 0,
       },
       {
@@ -4931,11 +4931,11 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'rot-wei\u00df-schwarz',
+        content: 'rot-weiß-schwarz',
         key: 0,
       },
       {
-        content: 'schwarz-rot-gr\u00fcn',
+        content: 'schwarz-rot-grün',
         key: 0,
       },
       {
@@ -4950,7 +4950,7 @@ var quizQuestions = [
     question: 'Wer wird als \u201eKanzler der Deutschen Einheit\u201c bezeichnet?',
     answers: [
       {
-        content: 'Gerhard Schr\u00f6der',
+        content: 'Gerhard Schröder',
         key: 0,
       },
       {
@@ -5017,7 +5017,7 @@ var quizQuestions = [
   },
   {
     id: '218',
-    question: 'Wie viele Bundesl\u00e4nder kamen bei der Wiedervereinigung 1990 zur Bundesrepublik Deutschland hinzu?',
+    question: 'Wie viele Bundesländer kamen bei der Wiedervereinigung 1990 zur Bundesrepublik Deutschland hinzu?',
     answers: [
       {
         content: '4',
@@ -5040,7 +5040,7 @@ var quizQuestions = [
   },
   {
     id: '219',
-    question: 'Die Bundesrepublik Deutschland hat die Grenzen von heute seit \u2026',
+    question: 'Die Bundesrepublik Deutschland hat die Grenzen von heute seit ...',
     answers: [
       {
         content: '1933.',
@@ -5089,19 +5089,19 @@ var quizQuestions = [
     question: 'Deutschland ist Mitglied des Schengener Abkommens. Was bedeutet das?',
     answers: [
       {
-        content: 'Deutsche k\u00f6nnen in viele L\u00e4nder Europas ohne Passkontrolle reisen.',
+        content: 'Deutsche können in viele Länder Europas ohne Passkontrolle reisen.',
         key: 1,
       },
       {
-        content: 'Alle Menschen k\u00f6nnen ohne Personenkontrolle in Deutschland einreisen.',
+        content: 'Alle Menschen können ohne Personenkontrolle in Deutschland einreisen.',
         key: 0,
       },
       {
-        content: 'Deutsche k\u00f6nnen ohne Passkontrolle in jedes Land reisen.',
+        content: 'Deutsche können ohne Passkontrolle in jedes Land reisen.',
         key: 0,
       },
       {
-        content: 'Deutsche k\u00f6nnen in jedem Land mit dem Euro bezahlen.',
+        content: 'Deutsche können in jedem Land mit dem Euro bezahlen.',
         key: 0,
       },
     ],
@@ -5135,7 +5135,7 @@ var quizQuestions = [
     question: 'Welches Land ist ein Nachbarland von Deutschland?',
     answers: [
       {
-        content: 'Rum\u00e4nien',
+        content: 'Rumänien',
         key: 0,
       },
       {
@@ -5155,14 +5155,14 @@ var quizQuestions = [
   },
   {
     id: '224',
-    question: 'Was bedeutet die Abk\u00fcrzung EU?',
+    question: 'Was bedeutet die Abkürzung EU?',
     answers: [
       {
-        content: 'Europ\u00e4ische Unternehmen',
+        content: 'Europäische Unternehmen',
         key: 0,
       },
       {
-        content: 'Europ\u00e4ische Union',
+        content: 'Europäische Union',
         key: 1,
       },
       {
@@ -5178,7 +5178,7 @@ var quizQuestions = [
   },
   {
     id: '225',
-    question: 'In welchem anderen Land gibt es eine gro\u00dfe deutschsprachige Bev\u00f6lkerung?',
+    question: 'In welchem anderen Land gibt es eine große deutschsprachige Bevölkerung?',
     answers: [
       {
         content: 'Tschechien',
@@ -5201,7 +5201,7 @@ var quizQuestions = [
   },
   {
     id: '226',
-    question: 'Welche ist die Flagge der Europ\u00e4ischen Union?',
+    question: 'Welche ist die Flagge der Europäischen Union?',
     image: '226',
     answers: [
       {
@@ -5232,7 +5232,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'D\u00e4nemark',
+        content: 'Dänemark',
         key: 1,
       },
       {
@@ -5259,7 +5259,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Europ\u00e4ische Gemeinschaft',
+        content: 'Europäische Gemeinschaft',
         key: 0,
       },
       {
@@ -5294,7 +5294,7 @@ var quizQuestions = [
   },
   {
     id: '230',
-    question: 'Das Europ\u00e4ische Parlament wird regelm\u00e4\u00dfig gew\u00e4hlt, n\u00e4mlich alle \u2026',
+    question: 'Das Europäische Parlament wird regelmäßig gewählt, nämlich alle ...',
     answers: [
       {
         content: '5 Jahre.',
@@ -5317,7 +5317,7 @@ var quizQuestions = [
   },
   {
     id: '231',
-    question: 'Was bedeutet der Begriff \u201eeurop\u00e4ische Integration\u201c?',
+    question: 'Was bedeutet der Begriff \u201eeuropäische Integration\u201c?',
     answers: [
       {
         content: 'Damit sind amerikanische Einwanderer in Europa gemeint.',
@@ -5328,11 +5328,11 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Damit sind europ\u00e4ische Auswanderer in den USA gemeint.',
+        content: 'Damit sind europäische Auswanderer in den USA gemeint.',
         key: 0,
       },
       {
-        content: 'Der Begriff meint den Zusammenschluss europ\u00e4ischer Staaten zur EU.',
+        content: 'Der Begriff meint den Zusammenschluss europäischer Staaten zur EU.',
         key: 1,
       },
     ],
@@ -5340,22 +5340,22 @@ var quizQuestions = [
   },
   {
     id: '232',
-    question: 'Wer wird bei der Europawahl gew\u00e4hlt?',
+    question: 'Wer wird bei der Europawahl gewählt?',
     answers: [
       {
-        content: 'die Europ\u00e4ische Kommission',
+        content: 'die Europäische Kommission',
         key: 0,
       },
       {
-        content: 'die L\u00e4nder, die in die EU eintreten d\u00fcrfen',
+        content: 'die Länder, die in die EU eintreten dürfen',
         key: 0,
       },
       {
-        content: 'die europ\u00e4ische Verfassung',
+        content: 'die europäische Verfassung',
         key: 0,
       },
       {
-        content: 'die Abgeordneten des Europ\u00e4ischen Parlaments',
+        content: 'die Abgeordneten des Europäischen Parlaments',
         key: 1,
       },
     ],
@@ -5386,7 +5386,7 @@ var quizQuestions = [
   },
   {
     id: '234',
-    question: 'Wo ist der Sitz des Europ\u00e4ischen Parlaments?',
+    question: 'Wo ist der Sitz des Europäischen Parlaments?',
     answers: [
       {
         content: 'London',
@@ -5401,7 +5401,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Stra\u00dfburg',
+        content: 'Straßburg',
         key: 1,
       },
     ],
@@ -5410,7 +5410,7 @@ var quizQuestions = [
   {
     id: '235',
     question:
-      'Der franz\u00f6sische Staatspr\u00e4sident Fran\u00e7ois Mitterrand und der deutsche Bundeskanzler Helmut Kohl gedenken in Verdun gemeinsam der Toten beider Weltkriege. Welches Ziel der Europ\u00e4ischen Union wird bei diesem Treffen deutlich?',
+      'Der französische Staatspräsident Fran\u00e7ois Mitterrand und der deutsche Bundeskanzler Helmut Kohl gedenken in Verdun gemeinsam der Toten beider Weltkriege. Welches Ziel der Europäischen Union wird bei diesem Treffen deutlich?',
     image: '235',
     answers: [
       {
@@ -5418,15 +5418,15 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Reisefreiheit in alle L\u00e4nder der EU',
+        content: 'Reisefreiheit in alle Länder der EU',
         key: 0,
       },
       {
-        content: 'Frieden und Sicherheit in den L\u00e4ndern der EU',
+        content: 'Frieden und Sicherheit in den Ländern der EU',
         key: 1,
       },
       {
-        content: 'Einheitliche Feiertage in den L\u00e4ndern der EU',
+        content: 'Einheitliche Feiertage in den Ländern der EU',
         key: 0,
       },
     ],
@@ -5449,7 +5449,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: '28',
+        content: '27',
         key: 1,
       },
     ],
@@ -5458,14 +5458,14 @@ var quizQuestions = [
   {
     id: '237',
     question:
-      '2007 wurde das 50-j\u00e4hrige Jubil\u00e4um der \u201eR\u00f6mischen Vertr\u00e4ge\u201c gefeiert. Was war der Inhalt der Vertr\u00e4ge?',
+      '2007 wurde das 50-jährige Jubiläum der \u201eRömischen Verträge\u201c gefeiert. Was war der Inhalt der Verträge?',
     answers: [
       {
         content: 'Beitritt Deutschlands zur NATO',
         key: 0,
       },
       {
-        content: 'Gr\u00fcndung der Europ\u00e4ischen Wirtschaftsgemeinschaft (EWG)',
+        content: 'Gründung der Europäischen Wirtschaftsgemeinschaft (EWG)',
         key: 1,
       },
       {
@@ -5473,7 +5473,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Festlegung der Oder-Nei\u00dfe-Linie als Ostgrenze',
+        content: 'Festlegung der Oder-Neiße-Linie als Ostgrenze',
         key: 0,
       },
     ],
@@ -5481,14 +5481,14 @@ var quizQuestions = [
   },
   {
     id: '238',
-    question: 'An welchen Orten arbeitet das Europ\u00e4ische Parlament?',
+    question: 'An welchen Orten arbeitet das Europäische Parlament?',
     answers: [
       {
         content: 'Paris, London und Den Haag',
         key: 0,
       },
       {
-        content: 'Stra\u00dfburg, Luxemburg und Br\u00fcssel',
+        content: 'Straßburg, Luxemburg und Brüssel',
         key: 1,
       },
       {
@@ -5496,7 +5496,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Bonn, Z\u00fcrich und Mailand',
+        content: 'Bonn, Zürich und Mailand',
         key: 0,
       },
     ],
@@ -5505,22 +5505,22 @@ var quizQuestions = [
   {
     id: '239',
     question:
-      'Durch welche Vertr\u00e4ge schloss sich die Bundesrepublik Deutschland mit anderen Staaten zur Europ\u00e4ischen Wirtschaftsgemeinschaft zusammen?',
+      'Durch welche Verträge schloss sich die Bundesrepublik Deutschland mit anderen Staaten zur Europäischen Wirtschaftsgemeinschaft zusammen?',
     answers: [
       {
-        content: 'durch die \u201eHamburger Vertr\u00e4ge\u201c',
+        content: 'durch die \u201eHamburger Verträge\u201c',
         key: 0,
       },
       {
-        content: 'durch die \u201eR\u00f6mischen Vertr\u00e4ge\u201c',
+        content: 'durch die \u201eRömischen Verträge\u201c',
         key: 1,
       },
       {
-        content: 'durch die \u201ePariser Vertr\u00e4ge\u201c',
+        content: 'durch die \u201ePariser Verträge\u201c',
         key: 0,
       },
       {
-        content: 'durch die \u201eLondoner Vertr\u00e4ge\u201c',
+        content: 'durch die \u201eLondoner Verträge\u201c',
         key: 0,
       },
     ],
@@ -5581,7 +5581,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'die Bundesl\u00e4nder',
+        content: 'die Bundesländer',
         key: 0,
       },
       {
@@ -5598,22 +5598,22 @@ var quizQuestions = [
   {
     id: '243',
     question:
-      'Maik und Sybille wollen mit Freunden an ihrem deutschen Wohnort eine Demonstration auf der Stra\u00dfe abhalten. Was m\u00fcssen sie vorher tun?',
+      'Maik und Sybille wollen mit Freunden an ihrem deutschen Wohnort eine Demonstration auf der Straße abhalten. Was müssen sie vorher tun?',
     answers: [
       {
-        content: 'Sie m\u00fcssen nichts tun. Man darf in Deutschland jederzeit \u00fcberall demonstrieren.',
+        content: 'Sie müssen nichts tun. Man darf in Deutschland jederzeit überall demonstrieren.',
         key: 0,
       },
       {
-        content: 'Sie m\u00fcssen die Demonstration anmelden.',
+        content: 'Sie müssen die Demonstration anmelden.',
         key: 1,
       },
       {
-        content: 'Sie k\u00f6nnen gar nichts tun, denn Demonstrationen sind in Deutschland grunds\u00e4tzlich verboten.',
+        content: 'Sie können gar nichts tun, denn Demonstrationen sind in Deutschland grundsätzlich verboten.',
         key: 0,
       },
       {
-        content: 'Maik und Sybille m\u00fcssen einen neuen Verein gr\u00fcnden, weil nur Vereine demonstrieren d\u00fcrfen.',
+        content: 'Maik und Sybille müssen einen neuen Verein gründen, weil nur Vereine demonstrieren dürfen.',
         key: 0,
       },
     ],
@@ -5621,7 +5621,7 @@ var quizQuestions = [
   },
   {
     id: '244',
-    question: 'Welchen Schulabschluss braucht man normalerweise, um an einer Universit\u00e4t in Deutschland ein Studium zu beginnen?',
+    question: 'Welchen Schulabschluss braucht man normalerweise, um an einer Universität in Deutschland ein Studium zu beginnen?',
     answers: [
       {
         content: 'das Abitur',
@@ -5636,7 +5636,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'eine Gesellenpr\u00fcfung',
+        content: 'eine Gesellenprüfung',
         key: 0,
       },
     ],
@@ -5667,7 +5667,7 @@ var quizQuestions = [
   },
   {
     id: '246',
-    question: 'Ab welchem Alter ist man in Deutschland vollj\u00e4hrig?',
+    question: 'Ab welchem Alter ist man in Deutschland volljährig?',
     answers: [
       {
         content: '16',
@@ -5691,7 +5691,7 @@ var quizQuestions = [
   {
     id: '247',
     question:
-      'Eine Frau ist schwanger. Sie ist kurz vor und nach der Geburt ihres Kindes vom Gesetz besonders gesch\u00fctzt. Wie hei\u00dft dieser Schutz?',
+      'Eine Frau ist schwanger. Sie ist kurz vor und nach der Geburt ihres Kindes vom Gesetz besonders geschützt. Wie heißt dieser Schutz?',
     answers: [
       {
         content: 'Elternzeit',
@@ -5714,7 +5714,7 @@ var quizQuestions = [
   },
   {
     id: '248',
-    question: 'Die Erziehung der Kinder ist in Deutschland vor allem Aufgabe \u2026',
+    question: 'Die Erziehung der Kinder ist in Deutschland vor allem Aufgabe ...',
     answers: [
       {
         content: 'des Staates.',
@@ -5725,7 +5725,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'der Gro\u00dfeltern.',
+        content: 'der Großeltern.',
         key: 0,
       },
       {
@@ -5737,7 +5737,7 @@ var quizQuestions = [
   },
   {
     id: '249',
-    question: 'Wer ist in Deutschland haupts\u00e4chlich verantwortlich f\u00fcr die Kindererziehung?',
+    question: 'Wer ist in Deutschland hauptsächlich verantwortlich für die Kindererziehung?',
     answers: [
       {
         content: 'der Staat',
@@ -5760,7 +5760,7 @@ var quizQuestions = [
   },
   {
     id: '250',
-    question: 'In Deutschland hat man die besten Chancen auf einen gut bezahlten Arbeitsplatz, wenn man \u2026',
+    question: 'In Deutschland hat man die besten Chancen auf einen gut bezahlten Arbeitsplatz, wenn man ...',
     answers: [
       {
         content: 'katholisch ist.',
@@ -5783,7 +5783,7 @@ var quizQuestions = [
   },
   {
     id: '251',
-    question: 'Wenn man in Deutschland ein Kind schl\u00e4gt, \u2026',
+    question: 'Wenn man in Deutschland ein Kind schlägt, ...',
     answers: [
       {
         content: 'geht das niemanden etwas an.',
@@ -5794,11 +5794,11 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'kann man daf\u00fcr nicht bestraft werden.',
+        content: 'kann man dafür nicht bestraft werden.',
         key: 0,
       },
       {
-        content: 'kann man daf\u00fcr bestraft werden.',
+        content: 'kann man dafür bestraft werden.',
         key: 1,
       },
     ],
@@ -5806,7 +5806,7 @@ var quizQuestions = [
   },
   {
     id: '252',
-    question: 'In Deutschland \u2026',
+    question: 'In Deutschland ...',
     answers: [
       {
         content: 'darf man zur gleichen Zeit nur mit einem Partner / einer Partnerin verheiratet sein.',
@@ -5829,7 +5829,7 @@ var quizQuestions = [
   },
   {
     id: '253',
-    question: 'Wo m\u00fcssen Sie sich anmelden, wenn Sie in Deutschland umziehen?',
+    question: 'Wo müssen Sie sich anmelden, wenn Sie in Deutschland umziehen?',
     answers: [
       {
         content: 'beim Einwohnermeldeamt',
@@ -5853,22 +5853,22 @@ var quizQuestions = [
   {
     id: '254',
     question:
-      'In Deutschland d\u00fcrfen Ehepaare sich scheiden lassen. Meistens m\u00fcssen sie dazu das \u201eTrennungsjahr\u201c einhalten. Was bedeutet das?',
+      'In Deutschland dürfen Ehepaare sich scheiden lassen. Meistens müssen sie dazu das \u201eTrennungsjahr\u201c einhalten. Was bedeutet das?',
     answers: [
       {
         content: 'Der Scheidungsprozess dauert ein Jahr.',
         key: 0,
       },
       {
-        content: 'Mann und Frau sind ein Jahr verheiratet, dann ist die Scheidung m\u00f6glich.',
+        content: 'Mann und Frau sind ein Jahr verheiratet, dann ist die Scheidung möglich.',
         key: 0,
       },
       {
-        content: 'Das Besuchsrecht f\u00fcr die Kinder gilt ein Jahr.',
+        content: 'Das Besuchsrecht für die Kinder gilt ein Jahr.',
         key: 0,
       },
       {
-        content: 'Mann und Frau f\u00fchren mindestens ein Jahr getrennt ihr eigenes Leben. Danach ist die Scheidung m\u00f6glich.',
+        content: 'Mann und Frau führen mindestens ein Jahr getrennt ihr eigenes Leben. Danach ist die Scheidung möglich.',
         key: 1,
       },
     ],
@@ -5876,7 +5876,7 @@ var quizQuestions = [
   },
   {
     id: '255',
-    question: 'Bei Erziehungsproblemen k\u00f6nnen Eltern in Deutschland Hilfe erhalten vom \u2026',
+    question: 'Bei Erziehungsproblemen können Eltern in Deutschland Hilfe erhalten vom ...',
     answers: [
       {
         content: 'Ordnungsamt.',
@@ -5899,7 +5899,7 @@ var quizQuestions = [
   },
   {
     id: '256',
-    question: 'Ein Ehepaar m\u00f6chte in Deutschland ein Restaurant er\u00f6ffnen. Was braucht es dazu unbedingt?',
+    question: 'Ein Ehepaar möchte in Deutschland ein Restaurant eröffnen. Was braucht es dazu unbedingt?',
     answers: [
       {
         content: 'eine Erlaubnis der Polizei',
@@ -5914,7 +5914,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'eine Gastst\u00e4ttenerlaubnis von der zust\u00e4ndigen Beh\u00f6rde',
+        content: 'eine Gaststättenerlaubnis von der zuständigen Behörde',
         key: 1,
       },
     ],
@@ -5922,7 +5922,7 @@ var quizQuestions = [
   },
   {
     id: '257',
-    question: 'Eine erwachsene Frau m\u00f6chte in Deutschland das Abitur nachholen. Das kann sie an \u2026',
+    question: 'Eine erwachsene Frau möchte in Deutschland das Abitur nachholen. Das kann sie an ...',
     answers: [
       {
         content: 'einer Hochschule.',
@@ -5937,7 +5937,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'einer Privatuniversit\u00e4t.',
+        content: 'einer Privatuniversität.',
         key: 0,
       },
     ],
@@ -5968,7 +5968,7 @@ var quizQuestions = [
   },
   {
     id: '259',
-    question: 'Das Berufsinformationszentrum BIZ bei der Bundesagentur f\u00fcr Arbeit in Deutschland hilft bei der \u2026',
+    question: 'Das Berufsinformationszentrum BIZ bei der Bundesagentur für Arbeit in Deutschland hilft bei der ...',
     answers: [
       {
         content: 'Rentenberechnung.',
@@ -5979,7 +5979,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'Steuererkl\u00e4rung.',
+        content: 'Steuererklärung.',
         key: 0,
       },
       {
@@ -5991,14 +5991,14 @@ var quizQuestions = [
   },
   {
     id: '260',
-    question: 'In Deutschland hat ein Kind in der Schule \u2026',
+    question: 'In Deutschland hat ein Kind in der Schule ...',
     answers: [
       {
         content: 'Recht auf unbegrenzte Freizeit.',
         key: 0,
       },
       {
-        content: 'Wahlfreiheit f\u00fcr alle F\u00e4cher.',
+        content: 'Wahlfreiheit für alle Fächer.',
         key: 0,
       },
       {
@@ -6014,7 +6014,7 @@ var quizQuestions = [
   },
   {
     id: '261',
-    question: 'Ein Mann m\u00f6chte mit 30 Jahren in Deutschland sein Abitur nachholen. Wo kann er das tun? An \u2026',
+    question: 'Ein Mann möchte mit 30 Jahren in Deutschland sein Abitur nachholen. Wo kann er das tun? An ...',
     answers: [
       {
         content: 'einer Hochschule',
@@ -6029,7 +6029,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'einer Privatuniversit\u00e4t',
+        content: 'einer Privatuniversität',
         key: 0,
       },
     ],
@@ -6044,7 +6044,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'Man darf andere Personen benachteiligen, wenn ausreichende pers\u00f6nliche Gr\u00fcnde hierf\u00fcr vorliegen.',
+        content: 'Man darf andere Personen benachteiligen, wenn ausreichende persönliche Gründe hierfür vorliegen.',
         key: 0,
       },
       {
@@ -6052,7 +6052,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Es ist f\u00fcr alle Gesetz, benachteiligten Gruppen j\u00e4hrlich Geld zu spenden.',
+        content: 'Es ist für alle Gesetz, benachteiligten Gruppen jährlich Geld zu spenden.',
         key: 0,
       },
     ],
@@ -6061,7 +6061,7 @@ var quizQuestions = [
   {
     id: '263',
     question:
-      'In Deutschland sind Jugendliche ab 14 Jahren strafm\u00fcndig. Das bedeutet: Jugendliche, die 14 Jahre und \u00e4lter sind und gegen Strafgesetze versto\u00dfen, \u2026',
+      'In Deutschland sind Jugendliche ab 14 Jahren strafmündig. Das bedeutet: Jugendliche, die 14 Jahre und älter sind und gegen Strafgesetze verstoßen, ...',
     answers: [
       {
         content: 'werden bestraft.',
@@ -6084,7 +6084,7 @@ var quizQuestions = [
   },
   {
     id: '264',
-    question: 'Zu welchem Fest tragen Menschen in Deutschland bunte Kost\u00fcme und Masken?',
+    question: 'Zu welchem Fest tragen Menschen in Deutschland bunte Kostüme und Masken?',
     answers: [
       {
         content: 'am Rosenmontag',
@@ -6107,7 +6107,7 @@ var quizQuestions = [
   },
   {
     id: '265',
-    question: 'Wohin muss man in Deutschland zuerst gehen, wenn man heiraten m\u00f6chte?',
+    question: 'Wohin muss man in Deutschland zuerst gehen, wenn man heiraten möchte?',
     answers: [
       {
         content: 'zum Einwohnermeldeamt',
@@ -6118,7 +6118,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'zur Agentur f\u00fcr Arbeit',
+        content: 'zur Agentur für Arbeit',
         key: 0,
       },
       {
@@ -6154,22 +6154,22 @@ var quizQuestions = [
   {
     id: '267',
     question:
-      'Eine junge Frau in Deutschland, 22 Jahre alt, lebt mit ihrem Freund zusammen. Die Eltern der Frau finden das nicht gut, weil ihnen der Freund nicht gef\u00e4llt. Was k\u00f6nnen die Eltern tun?',
+      'Eine junge Frau in Deutschland, 22 Jahre alt, lebt mit ihrem Freund zusammen. Die Eltern der Frau finden das nicht gut, weil ihnen der Freund nicht gefällt. Was können die Eltern tun?',
     answers: [
       {
-        content: 'Sie m\u00fcssen die Entscheidung der vollj\u00e4hrigen Tochter respektieren.',
+        content: 'Sie müssen die Entscheidung der volljährigen Tochter respektieren.',
         key: 1,
       },
       {
-        content: 'Sie haben das Recht, die Tochter in die elterliche Wohnung zur\u00fcckzuholen.',
+        content: 'Sie haben das Recht, die Tochter in die elterliche Wohnung zurückzuholen.',
         key: 0,
       },
       {
-        content: 'Sie k\u00f6nnen zur Polizei gehen und die Tochter anzeigen.',
+        content: 'Sie können zur Polizei gehen und die Tochter anzeigen.',
         key: 0,
       },
       {
-        content: 'Sie suchen einen anderen Mann f\u00fcr die Tochter.',
+        content: 'Sie suchen einen anderen Mann für die Tochter.',
         key: 0,
       },
     ],
@@ -6178,22 +6178,22 @@ var quizQuestions = [
   {
     id: '268',
     question:
-      'Eine junge Frau will den F\u00fchrerschein machen. Sie hat Angst vor der Pr\u00fcfung weil ihre Muttersprache nicht Deutsch ist. Was ist richtig?',
+      'Eine junge Frau will den Führerschein machen. Sie hat Angst vor der Prüfung weil ihre Muttersprache nicht Deutsch ist. Was ist richtig?',
     answers: [
       {
-        content: 'Sie muss mindestens zehn Jahre in Deutschland leben, bevor sie den F\u00fchrerschein machen kann.',
+        content: 'Sie muss mindestens zehn Jahre in Deutschland leben, bevor sie den Führerschein machen kann.',
         key: 0,
       },
       {
-        content: 'Sie kann die Theorie-Pr\u00fcfung vielleicht in ihrer Muttersprache machen. Es gibt mehr als zehn Sprachen zur Auswahl.',
+        content: 'Sie kann die Theorie-Prüfung vielleicht in ihrer Muttersprache machen. Es gibt mehr als zehn Sprachen zur Auswahl.',
         key: 1,
       },
       {
-        content: 'Wenn sie kein Deutsch kann, darf sie keinen F\u00fchrerschein haben.',
+        content: 'Wenn sie kein Deutsch kann, darf sie keinen Führerschein haben.',
         key: 0,
       },
       {
-        content: 'Sie muss den F\u00fchrerschein in dem Land machen, in dem man ihre Sprache spricht.',
+        content: 'Sie muss den Führerschein in dem Land machen, in dem man ihre Sprache spricht.',
         key: 0,
       },
     ],
@@ -6201,7 +6201,7 @@ var quizQuestions = [
   },
   {
     id: '269',
-    question: 'In Deutschland haben Kinder ab dem Alter von drei Jahren bis zur Ersteinschulung einen Anspruch auf \u2026',
+    question: 'In Deutschland haben Kinder ab dem Alter von drei Jahren bis zur Ersteinschulung einen Anspruch auf ...',
     answers: [
       {
         content: 'monatliches Taschengeld.',
@@ -6224,14 +6224,14 @@ var quizQuestions = [
   },
   {
     id: '270',
-    question: 'Die Volkshochschule in Deutschland ist eine Einrichtung \u2026',
+    question: 'Die Volkshochschule in Deutschland ist eine Einrichtung ...',
     answers: [
       {
-        content: 'f\u00fcr den Religionsunterricht.',
+        content: 'für den Religionsunterricht.',
         key: 0,
       },
       {
-        content: 'nur f\u00fcr Jugendliche.',
+        content: 'nur für Jugendliche.',
         key: 0,
       },
       {
@@ -6239,7 +6239,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'nur f\u00fcr Rentner und Rentnerinnen.',
+        content: 'nur für Rentner und Rentnerinnen.',
         key: 0,
       },
     ],
@@ -6254,15 +6254,15 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'einen Tannenbaum schm\u00fccken',
+        content: 'einen Tannenbaum schmücken',
         key: 1,
       },
       {
-        content: 'sich mit Masken und Kost\u00fcmen verkleiden',
+        content: 'sich mit Masken und Kostümen verkleiden',
         key: 0,
       },
       {
-        content: 'K\u00fcrbisse vor die T\u00fcr stellen',
+        content: 'Kürbisse vor die Tür stellen',
         key: 0,
       },
     ],
@@ -6293,10 +6293,10 @@ var quizQuestions = [
   },
   {
     id: '273',
-    question: 'Bei Erziehungsproblemen gehen Sie in Deutschland \u2026',
+    question: 'Bei Erziehungsproblemen gehen Sie in Deutschland ...',
     answers: [
       {
-        content: 'zum Arzt / zur \u00c4rztin.',
+        content: 'zum Arzt / zur Ärztin.',
         key: 0,
       },
       {
@@ -6317,7 +6317,7 @@ var quizQuestions = [
   {
     id: '274',
     question:
-      'Sie haben in Deutschland absichtlich einen Brief ge\u00f6ffnet, der an eine andere Person adressiert ist. Was haben Sie nicht beachtet?',
+      'Sie haben in Deutschland absichtlich einen Brief geöffnet, der an eine andere Person adressiert ist. Was haben Sie nicht beachtet?',
     answers: [
       {
         content: 'das Schweigerecht',
@@ -6340,14 +6340,14 @@ var quizQuestions = [
   },
   {
     id: '275',
-    question: 'Was braucht man in Deutschland f\u00fcr eine Ehescheidung?',
+    question: 'Was braucht man in Deutschland für eine Ehescheidung?',
     answers: [
       {
         content: 'die Einwilligung der Eltern',
         key: 0,
       },
       {
-        content: 'ein Attest eines Arztes / einer \u00c4rztin',
+        content: 'ein Attest eines Arztes / einer Ärztin',
         key: 0,
       },
       {
@@ -6355,7 +6355,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'die Unterst\u00fctzung eines Anwalts / einer Anw\u00e4ltin',
+        content: 'die Unterstützung eines Anwalts / einer Anwältin',
         key: 1,
       },
     ],
@@ -6364,7 +6364,7 @@ var quizQuestions = [
   {
     id: '276',
     question:
-      'Was sollten Sie tun, wenn Sie von Ihrem Ansprechpartner / Ihrer Ansprechpartnerin in einer deutschen Beh\u00f6rde schlecht behandelt werden?',
+      'Was sollten Sie tun, wenn Sie von Ihrem Ansprechpartner / Ihrer Ansprechpartnerin in einer deutschen Behörde schlecht behandelt werden?',
     answers: [
       {
         content: 'Ich kann nichts tun.',
@@ -6379,7 +6379,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Ich kann mich beim Beh\u00f6rdenleiter / bei der Beh\u00f6rdenleiterin beschweren.',
+        content: 'Ich kann mich beim Behördenleiter / bei der Behördenleiterin beschweren.',
         key: 1,
       },
     ],
@@ -6388,7 +6388,7 @@ var quizQuestions = [
   {
     id: '277',
     question:
-      'Eine Frau, die ein zweij\u00e4hriges Kind hat, bewirbt sich in Deutschland um eine Stelle. Was ist ein Beispiel f\u00fcr Diskriminierung? Sie bekommt die Stelle nur deshalb nicht, weil sie \u2026',
+      'Eine Frau, die ein zweijähriges Kind hat, bewirbt sich in Deutschland um eine Stelle. Was ist ein Beispiel für Diskriminierung? Sie bekommt die Stelle nur deshalb nicht, weil sie ...',
     answers: [
       {
         content: 'kein Englisch spricht.',
@@ -6412,7 +6412,7 @@ var quizQuestions = [
   {
     id: '278',
     question:
-      'Ein Mann im Rollstuhl hat sich auf eine Stelle als Buchhalter beworben. Was ist ein Beispiel f\u00fcr Diskriminierung? Er bekommt die Stelle nur deshalb nicht, weil er \u2026',
+      'Ein Mann im Rollstuhl hat sich auf eine Stelle als Buchhalter beworben. Was ist ein Beispiel für Diskriminierung? Er bekommt die Stelle nur deshalb nicht, weil er ...',
     answers: [
       {
         content: 'im Rollstuhl sitzt.',
@@ -6436,10 +6436,10 @@ var quizQuestions = [
   {
     id: '279',
     question:
-      'In den meisten Mietsh\u00e4usern in Deutschland gibt es eine \u201eHausordnung\u201c. Was steht in einer solchen \u201eHausordnung\u201c? Sie nennt \u2026',
+      'In den meisten Mietshäusern in Deutschland gibt es eine \u201eHausordnung\u201c. Was steht in einer solchen \u201eHausordnung\u201c? Sie nennt ...',
     answers: [
       {
-        content: 'Regeln f\u00fcr die Benutzung \u00f6ffentlicher Verkehrsmittel.',
+        content: 'Regeln für die Benutzung öffentlicher Verkehrsmittel.',
         key: 0,
       },
       {
@@ -6447,11 +6447,11 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Regeln, an die sich alle Bewohner und Bewohnerinnen halten m\u00fcssen.',
+        content: 'Regeln, an die sich alle Bewohner und Bewohnerinnen halten müssen.',
         key: 1,
       },
       {
-        content: 'die Adresse des n\u00e4chsten Ordnungsamtes.',
+        content: 'die Adresse des nächsten Ordnungsamtes.',
         key: 0,
       },
     ],
@@ -6459,7 +6459,7 @@ var quizQuestions = [
   },
   {
     id: '280',
-    question: 'Wenn Sie sich in Deutschland gegen einen falschen Steuerbescheid wehren wollen, m\u00fcssen Sie \u2026',
+    question: 'Wenn Sie sich in Deutschland gegen einen falschen Steuerbescheid wehren wollen, müssen Sie ...',
     answers: [
       {
         content: 'nichts machen.',
@@ -6483,7 +6483,7 @@ var quizQuestions = [
   {
     id: '281',
     question:
-      'Zwei Freunde wollen in ein \u00f6ffentliches Schwimmbad in Deutschland. Beide haben eine dunkle Hautfarbe und werden deshalb nicht hineingelassen. Welches Recht wird in dieser Situation verletzt? Das Recht auf \u2026',
+      'Zwei Freunde wollen in ein öffentliches Schwimmbad in Deutschland. Beide haben eine dunkle Hautfarbe und werden deshalb nicht hineingelassen. Welches Recht wird in dieser Situation verletzt? Das Recht auf ...',
     answers: [
       {
         content: 'Meinungsfreiheit',
@@ -6498,7 +6498,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Freiz\u00fcgigkeit',
+        content: 'Freizügigkeit',
         key: 0,
       },
     ],
@@ -6507,7 +6507,7 @@ var quizQuestions = [
   {
     id: '282',
     question:
-      'Welches Ehrenamt m\u00fcssen deutsche Staatsb\u00fcrger / Staatsb\u00fcrgerinnen \u00fcbernehmen, wenn sie dazu aufgefordert werden?',
+      'Welches Ehrenamt müssen deutsche Staatsbürger / Staatsbürgerinnen übernehmen, wenn sie dazu aufgefordert werden?',
     answers: [
       {
         content: 'Vereinstrainer / Vereinstrainerin',
@@ -6530,18 +6530,18 @@ var quizQuestions = [
   },
   {
     id: '283',
-    question: 'Was tun Sie, wenn Sie eine falsche Rechnung von einer deutschen Beh\u00f6rde bekommen?',
+    question: 'Was tun Sie, wenn Sie eine falsche Rechnung von einer deutschen Behörde bekommen?',
     answers: [
       {
         content: 'Ich lasse die Rechnung liegen.',
         key: 0,
       },
       {
-        content: 'Ich lege Widerspruch bei der Beh\u00f6rde ein.',
+        content: 'Ich lege Widerspruch bei der Behörde ein.',
         key: 1,
       },
       {
-        content: 'Ich schicke die Rechnung an die Beh\u00f6rde zur\u00fcck.',
+        content: 'Ich schicke die Rechnung an die Behörde zurück.',
         key: 0,
       },
       {
@@ -6553,7 +6553,7 @@ var quizQuestions = [
   },
   {
     id: '284',
-    question: 'Was man f\u00fcr die Arbeit k\u00f6nnen muss, \u00e4ndert sich in der Zukunft sehr schnell. Was kann man tun?',
+    question: 'Was man für die Arbeit können muss, ändert sich in der Zukunft sehr schnell. Was kann man tun?',
     answers: [
       {
         content: 'Es ist egal, was man lernt.',
@@ -6564,11 +6564,11 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Erwachsene m\u00fcssen auch nach der Ausbildung immer weiter lernen.',
+        content: 'Erwachsene müssen auch nach der Ausbildung immer weiter lernen.',
         key: 1,
       },
       {
-        content: 'Alle m\u00fcssen fr\u00fcher aufh\u00f6ren zu arbeiten, weil sich alles \u00e4ndert.',
+        content: 'Alle müssen früher aufhören zu arbeiten, weil sich alles ändert.',
         key: 0,
       },
     ],
@@ -6576,7 +6576,7 @@ var quizQuestions = [
   },
   {
     id: '285',
-    question: 'Frau Frost arbeitet als fest angestellte Mitarbeiterin in einem B\u00fcro. Was muss sie nicht von ihrem Gehalt bezahlen?',
+    question: 'Frau Frost arbeitet als fest angestellte Mitarbeiterin in einem Büro. Was muss sie nicht von ihrem Gehalt bezahlen?',
     answers: [
       {
         content: 'Umsatzsteuer',
@@ -6587,11 +6587,11 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Beitr\u00e4ge zur Arbeitslosenversicherung',
+        content: 'Beiträge zur Arbeitslosenversicherung',
         key: 0,
       },
       {
-        content: 'Beitr\u00e4ge zur Renten- und Krankenversicherung',
+        content: 'Beiträge zur Renten- und Krankenversicherung',
         key: 0,
       },
     ],
@@ -6607,7 +6607,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'der Betriebspr\u00fcfer / die Betriebspr\u00fcferin',
+        content: 'der Betriebsprüfer / die Betriebsprüferin',
         key: 0,
       },
       {
@@ -6623,7 +6623,7 @@ var quizQuestions = [
   },
   {
     id: '287',
-    question: 'Sie m\u00f6chten bei einer Firma in Deutschland Ihr Arbeitsverh\u00e4ltnis beenden. Was m\u00fcssen Sie beachten?',
+    question: 'Sie möchten bei einer Firma in Deutschland Ihr Arbeitsverhältnis beenden. Was müssen Sie beachten?',
     answers: [
       {
         content: 'die Gehaltszahlungen',
@@ -6634,7 +6634,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'die K\u00fcndigungsfrist',
+        content: 'die Kündigungsfrist',
         key: 1,
       },
       {
@@ -6670,7 +6670,7 @@ var quizQuestions = [
   {
     id: '289',
     question:
-      'Ein Mann mit dunkler Hautfarbe bewirbt sich um eine Stelle als Kellner in einem Restaurant in Deutschland. Was ist ein Beispiel f\u00fcr Diskriminierung? Er bekommt die Stelle nur deshalb nicht, weil \u2026',
+      'Ein Mann mit dunkler Hautfarbe bewirbt sich um eine Stelle als Kellner in einem Restaurant in Deutschland. Was ist ein Beispiel für Diskriminierung? Er bekommt die Stelle nur deshalb nicht, weil ...',
     answers: [
       {
         content: 'seine Deutschkenntnisse zu gering sind.',
@@ -6694,7 +6694,7 @@ var quizQuestions = [
   {
     id: '290',
     question:
-      'Sie haben in Deutschland einen Fernseher gekauft. Zu Hause packen Sie den Fernseher aus, doch er funktioniert nicht. Der Fernseher ist kaputt. Was k\u00f6nnen Sie machen?',
+      'Sie haben in Deutschland einen Fernseher gekauft. Zu Hause packen Sie den Fernseher aus, doch er funktioniert nicht. Der Fernseher ist kaputt. Was können Sie machen?',
     answers: [
       {
         content: 'eine Anzeige schreiben',
@@ -6705,11 +6705,11 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'das Ger\u00e4t ungefragt austauschen',
+        content: 'das Gerät ungefragt austauschen',
         key: 0,
       },
       {
-        content: 'die Garantie verl\u00e4ngern',
+        content: 'die Garantie verlängern',
         key: 0,
       },
     ],
@@ -6718,22 +6718,22 @@ var quizQuestions = [
   {
     id: '291',
     question:
-      'Warum muss man in Deutschland bei der Steuererkl\u00e4rung aufschreiben, ob man zu einer Kirche geh\u00f6rt oder nicht? Weil \u2026',
+      'Warum muss man in Deutschland bei der Steuererklärung aufschreiben, ob man zu einer Kirche gehört oder nicht? Weil ...',
     answers: [
       {
-        content: 'das f\u00fcr die Statistik in Deutschland wichtig ist.',
+        content: 'das für die Statistik in Deutschland wichtig ist.',
         key: 0,
       },
       {
-        content: 'es eine Kirchensteuer gibt, die an die Einkommen- und Lohnsteuer gekn\u00fcpft ist.',
+        content: 'es eine Kirchensteuer gibt, die an die Einkommen- und Lohnsteuer geknüpft ist.',
         key: 1,
       },
       {
-        content: 'man mehr Steuern zahlen muss, wenn man nicht zu einer Kirche geh\u00f6rt.',
+        content: 'man mehr Steuern zahlen muss, wenn man nicht zu einer Kirche gehört.',
         key: 0,
       },
       {
-        content: 'die Kirche f\u00fcr die Steuererkl\u00e4rung verantwortlich ist.',
+        content: 'die Kirche für die Steuererklärung verantwortlich ist.',
         key: 0,
       },
     ],
@@ -6741,10 +6741,10 @@ var quizQuestions = [
   },
   {
     id: '292',
-    question: 'Die Menschen in Deutschland leben nach dem Grundsatz der religi\u00f6sen Toleranz. Was bedeutet das?',
+    question: 'Die Menschen in Deutschland leben nach dem Grundsatz der religiösen Toleranz. Was bedeutet das?',
     answers: [
       {
-        content: 'Es d\u00fcrfen keine Moscheen gebaut werden.',
+        content: 'Es dürfen keine Moscheen gebaut werden.',
         key: 0,
       },
       {
@@ -6752,7 +6752,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Jeder kann glauben, was er m\u00f6chte.',
+        content: 'Jeder kann glauben, was er möchte.',
         key: 1,
       },
       {
@@ -6767,11 +6767,11 @@ var quizQuestions = [
     question: 'Was ist in Deutschland ein Brauch an Ostern?',
     answers: [
       {
-        content: 'K\u00fcrbisse vor die T\u00fcr stellen',
+        content: 'Kürbisse vor die Tür stellen',
         key: 0,
       },
       {
-        content: 'einen Tannenbaum schm\u00fccken',
+        content: 'einen Tannenbaum schmücken',
         key: 0,
       },
       {
@@ -6779,7 +6779,7 @@ var quizQuestions = [
         key: 1,
       },
       {
-        content: 'Raketen in die Luft schie\u00dfen',
+        content: 'Raketen in die Luft schießen',
         key: 0,
       },
     ],
@@ -6787,7 +6787,7 @@ var quizQuestions = [
   },
   {
     id: '294',
-    question: 'Pfingsten ist ein \u2026',
+    question: 'Pfingsten ist ein ...',
     answers: [
       {
         content: 'christlicher Feiertag.',
@@ -6810,7 +6810,7 @@ var quizQuestions = [
   },
   {
     id: '295',
-    question: 'Welche Religion hat die europ\u00e4ische und deutsche Kultur gepr\u00e4gt?',
+    question: 'Welche Religion hat die europäische und deutsche Kultur geprägt?',
     answers: [
       {
         content: 'der Hinduismus',
@@ -6833,10 +6833,10 @@ var quizQuestions = [
   },
   {
     id: '296',
-    question: 'In Deutschland nennt man die letzten vier Wochen vor Weihnachten \u2026',
+    question: 'In Deutschland nennt man die letzten vier Wochen vor Weihnachten ...',
     answers: [
       {
-        content: 'den Bu\u00df- und Bettag.',
+        content: 'den Buß- und Bettag.',
         key: 0,
       },
       {
@@ -6871,7 +6871,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'T\u00fcrkei',
+        content: 'Türkei',
         key: 1,
       },
     ],
@@ -6879,14 +6879,14 @@ var quizQuestions = [
   },
   {
     id: '298',
-    question: 'In der DDR lebten vor allem Migranten aus \u2026',
+    question: 'In der DDR lebten vor allem Migranten aus ...',
     answers: [
       {
         content: 'Vietnam, Polen, Mosambik.',
         key: 1,
       },
       {
-        content: 'Frankreich, Rum\u00e4nien, Somalia.',
+        content: 'Frankreich, Rumänien, Somalia.',
         key: 0,
       },
       {
@@ -6894,7 +6894,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'Nordkorea, Mexiko, \u00c4gypten.',
+        content: 'Nordkorea, Mexiko, Ägypten.',
         key: 0,
       },
     ],
@@ -6903,7 +6903,7 @@ var quizQuestions = [
   {
     id: '299',
     question:
-      'Ausl\u00e4ndische Arbeitnehmer und Arbeitnehmerinnen, die in den 50er und 60er Jahren von der Bundesrepublik Deutschland angeworben wurden, nannte man \u2026',
+      'Ausländische Arbeitnehmer und Arbeitnehmerinnen, die in den 50er und 60er Jahren von der Bundesrepublik Deutschland angeworben wurden, nannte man ...',
     answers: [
       {
         content: 'Schwarzarbeiter / Schwarzarbeiterinnen',
@@ -6942,7 +6942,7 @@ var quizQuestions = [
         key: 0,
       },
       {
-        content: 'T\u00fcrkei',
+        content: 'Türkei',
         key: 0,
       },
     ],

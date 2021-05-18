@@ -34,6 +34,14 @@ const WhiteContentContainer = styled.View`
   background-color: #ffffff;
 `
 
+const ContentHeaderContainer = styled.View`
+  flex-basis: 64px;
+  flex-direction: row;
+  background-color: ${theme.colors.blue};
+  align-items: stretch;
+  justify-content: center;
+`
+
 const ButtonContainer = styled.View`
   display: flex;
   align-items: stretch;
@@ -68,5 +76,6 @@ export {
   Button,
   ButtonText,
   ButtonIcon,
-  WhiteContentContainer
+  WhiteContentContainer,
+  ContentHeaderContainer,
 }

@@ -1,9 +1,8 @@
 import React from 'react'
-import { StyleSheet, Text, View, FlatList } from 'react-native'
+import { FlatList } from 'react-native'
 import { theme } from '../../../theme'
 import { ContentContainer } from '../../Layout'
-import { QuestionOverviewBox, QuestionOverviewBoxInner } from '../../Quiz/QuestionOverview/styles'
-import RenderText from '../../RenderText'
+import QuestionOverviewBox from '../../Quiz/QuestionOverview/QuestionOverviewBox'
 
 interface IMockExamReview {
   examProgress: any
@@ -40,12 +39,13 @@ const MockExamReview: React.FC<IMockExamReview> = ({ examProgress, numberOfQuest
       <FlatList
         numColumns={5}
         data={listData}
-        renderItem={({ item }) => (
-          <QuestionOverviewBox key={item.key}>
-            <QuestionOverviewBoxInner style={{ backgroundColor: item.backgroundColor }}>
-              <RenderText style="p2" text={item.questionId} />
-            </QuestionOverviewBoxInner>
-          </QuestionOverviewBox>
+        renderItem={({ item, index }) => (
+          <QuestionOverviewBox
+            key={index}
+            questionId={item.questionId.toString()}
+            backgroundColor={item.backgroundColor}
+            incorrectCount={0}
+          />
         )}
       />
     </ContentContainer>

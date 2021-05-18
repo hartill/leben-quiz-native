@@ -1,14 +1,6 @@
 import styled from '@emotion/native'
 import { theme } from '../../../theme'
 
-const ContentHeaderContainer = styled.View`
-  flex-basis: 56px;
-  flex-direction: row;
-  background-color: ${theme.colors.blue};
-  align-items: stretch;
-  justify-content: center;
-`
-
 const ContentHeaderMain = styled.View`
   flex: 1;
   align-items: center;
@@ -59,4 +51,4 @@ const IncorrectAnswers = styled.View`
   background-color: ${theme.colors.red};
 `
 
-export { ContentHeaderContainer, ContentHeaderMain, ContentBody, ResultRow, ResultFinalPercentage, CorrectAnswers, IncorrectAnswers }
+export { ContentHeaderMain, ContentBody, ResultRow, ResultFinalPercentage, CorrectAnswers, IncorrectAnswers }

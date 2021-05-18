@@ -1,9 +1,8 @@
 import React from 'react'
 import { theme } from '../../../theme'
-import { ContentContainer, WhiteContentContainer } from '../../Layout'
+import { ContentContainer, WhiteContentContainer, ContentHeaderContainer } from '../../Layout'
 import RenderText from '../../RenderText'
 import {
-  ContentHeaderContainer,
   ContentHeaderMain,
   ContentBody,
   ResultRow,

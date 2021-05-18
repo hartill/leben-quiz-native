@@ -5,6 +5,7 @@ import Quiz from '../../components/Quiz'
 import CatalogueFooter from '../../components/Footer/CatalogueFooter'
 import QuestionOverview from '../../components/QuestionCatalogue/QuestionOverview'
 import { StatusBar } from 'react-native'
+import { theme } from '../../theme'
 
 interface IQuestionCatalogue {
   questions: any[]
@@ -54,7 +55,7 @@ const QuestionCatalogue: React.FC<IQuestionCatalogue> = ({ questions, images, nu
         />
       )
     } else {
-      renderOutput.push(<Quiz question={question} showAnswer={showAnswer} images={images} key="qo2" mode={3} />)
+      renderOutput.push(<Quiz question={question} showAnswer={showAnswer} images={images} key="qo2" headerColor={theme.colors.green} />)
     }
     return renderOutput
   }

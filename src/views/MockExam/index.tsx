@@ -8,6 +8,7 @@ import Results from '../../components/MockExam/Results'
 import Storage from '../../storage'
 import { AppContainer } from '../../components/Layout'
 import { StatusBar } from 'react-native'
+import { theme } from '../../theme'
 
 interface IMockExam {
   questions: any[]
@@ -51,13 +52,6 @@ const MockExam: React.FC<IMockExam> = ({ questions, images, numberOfQuestions })
   }, [])
 
   useEffect(() => {
-    if (!examQuestions?.length) {
-      const newExamQuestions = generateQuestionArray(numberOfQuestions)
-      setExamQuestions(newExamQuestions)
-    }
-  }, [numberOfQuestions, examQuestions?.length])
-
-  useEffect(() => {
     storage.storeExamQuestions(examQuestions)
   }, [examQuestions])
 
@@ -69,8 +63,9 @@ const MockExam: React.FC<IMockExam> = ({ questions, images, numberOfQuestions })
     return null
   }
 
-  if (examProgress.length >= numberOfQuestions && !examCompleted) {
-    setExamCompleted(true)
+  if (!examQuestions?.length) {
+    const newExamQuestions = generateQuestionArray(numberOfQuestions)
+    setExamQuestions(newExamQuestions)
   }
 
   const restart = () => {
@@ -127,7 +122,11 @@ const MockExam: React.FC<IMockExam> = ({ questions, images, numberOfQuestions })
   }
 
   if (!question && !examCompleted) {
-    setQuestion(questions[examQuestions[examProgress.length]])
+    if (examProgress.length >= numberOfQuestions && !examCompleted) {
+      setExamCompleted(true)
+    } else {
+      setQuestion(questions[examQuestions[examProgress.length]])
+    }
     return null
   }
 
@@ -139,13 +138,13 @@ const MockExam: React.FC<IMockExam> = ({ questions, images, numberOfQuestions })
   } else {
     output.push(
       <Quiz
+        headerColor={theme.colors.red}
         question={question}
         onAnswerSelected={onAnswerSelected}
         selectedAnswer={selectedAnswer}
         showAnswer={showAnswer}
         images={images}
         key="qo2"
-        mode={2}
       />
     )
   }

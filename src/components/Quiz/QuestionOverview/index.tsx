@@ -1,10 +1,8 @@
 import React from 'react'
 import { FlatList } from 'react-native'
 import { ContentContainer } from '../../Layout'
-import { QuestionOverviewBox, StyledTouchableHighlight, IncorrectCircle, QuestionOverviewBoxInner } from './styles'
-
-import RenderText from '../../RenderText'
 import { theme } from '../../../theme'
+import QuestionOverviewBox from './QuestionOverviewBox'
 
 interface IQuestionOverview {
   numberOfQuestions: number
@@ -36,18 +34,10 @@ const QuestionOverview: React.FC<IQuestionOverview> = ({ numberOfQuestions, prog
     }
 
     listData.push({
-      key: questionId,
+      questionId: questionId,
       backgroundColor: backgroundColor,
       incorrectCount: incorrectCount,
     })
-  }
-
-  const renderIncorrectCount = (count: number) => {
-    return (
-      <IncorrectCircle>
-        <RenderText style="pSmall" text={count + 'x'} />
-      </IncorrectCircle>
-    )
   }
 
   return (
@@ -55,15 +45,13 @@ const QuestionOverview: React.FC<IQuestionOverview> = ({ numberOfQuestions, prog
       <FlatList
         numColumns={5}
         data={listData}
-        renderItem={({ item }) => (
-          <QuestionOverviewBox key={item.key}>
-            <StyledTouchableHighlight style={{ backgroundColor: item.backgroundColor }}>
-              <QuestionOverviewBoxInner>
-                <RenderText style="p2" text={item.key} />
-                {item.incorrectCount > 0 ? renderIncorrectCount(item.incorrectCount) : null}
-              </QuestionOverviewBoxInner>
-            </StyledTouchableHighlight>
-          </QuestionOverviewBox>
+        renderItem={({ item, index }) => (
+          <QuestionOverviewBox
+            backgroundColor={item.backgroundColor}
+            incorrectCount={item.incorrectCount}
+            questionId={item.questionId}
+            key={index}
+          />
         )}
       />
     </ContentContainer>

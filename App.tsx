@@ -72,7 +72,7 @@ const App = () => {
         })}
       >
         <Stack key="root" hideNavBar={true}>
-          <Scene key="startScreen" component={StartScreen} direction="RightToleft" initial />
+          <Scene key="startScreen" component={StartScreen} initial />
           <Scene key="practiceMode" component={PracticeMode} images={images} />
           <Scene key="mockExam" component={MockExam} images={images} />
           <Scene key="questionCatalogue" component={QuestionCatalogue} images={images} />

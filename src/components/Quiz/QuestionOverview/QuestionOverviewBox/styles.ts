@@ -1,8 +1,8 @@
 import styled from '@emotion/native'
 import { TouchableHighlight } from 'react-native'
-import { theme } from '../../../theme'
+import { theme } from '../../../../theme'
 
-const QuestionOverviewBox = styled.View`
+const QuestionBox = styled.View`
   width: 20%;
   aspect-ratio: 1;
   padding: 2px;
@@ -35,4 +35,4 @@ const IncorrectCircle = styled.View`
   border-radius: 25px;
 `
 
-export { QuestionOverviewBox, StyledTouchableHighlight, QuestionOverviewBoxInner, IncorrectCircle }
+export { QuestionBox, StyledTouchableHighlight, QuestionOverviewBoxInner, IncorrectCircle }
