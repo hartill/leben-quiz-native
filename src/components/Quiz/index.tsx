@@ -18,11 +18,9 @@ interface IQuiz {
 }
 
 const Quiz: React.FC<IQuiz> = ({ headerColor, images, question, showAnswer, selectedAnswer, onAnswerSelected }) => {
-  let quizHeaderColor = theme.colors.blue
-
   return (
     <WhiteContentContainer>
-      <ContentHeaderContainer style={{ backgroundColor: quizHeaderColor }}>
+      <ContentHeaderContainer style={{ backgroundColor: headerColor }}>
         <ContentHeaderLeft>
           <RenderText style="h2" text={question.id} />
         </ContentHeaderLeft>
